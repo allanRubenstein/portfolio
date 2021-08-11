@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        // will generate class names that are easier to debug (will contain also the component name instead of just hashes)
+        "displayName": true
+      }
+    ]
+  ]
+}

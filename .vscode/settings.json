@@ -1,0 +1,6 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": ["testname"],
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true
+}
