@@ -2,6 +2,7 @@ import React from 'react';
 import { Story } from '@storybook/react';
 import LinkButton from './LinkButton';
 import { LinkButtonProps } from './types';
+import Title from '../typography/Title';
 
 export default {
   component: LinkButton,
@@ -17,12 +18,12 @@ const Template: Story<LinkButtonProps> = (args: LinkButtonProps) => (
 // Template.bind({}) is a standard JavaScript technique for making a copy of a function. We use this technique to allow each exported story to set its own properties, but use the same implementation.
 export const Link: Story<LinkButtonProps> = Template.bind({});
 Link.args = {
-  children: 'default button',
+  children: <Title size={3}>default link</Title>,
   href: '#testHref',
 } as LinkButtonProps;
 
 export const Button: Story<LinkButtonProps> = Template.bind({});
 Button.args = {
   children: 'default button',
-  onClick: () => console.log('clicked')
+  onClick: () => console.log('clicked'),
 } as LinkButtonProps;
