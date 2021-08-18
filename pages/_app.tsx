@@ -4,6 +4,9 @@ import 'what-input';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+  /* font-family: 'Open Sans Condensed', sans-serif; */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+  
   html {
     box-sizing: border-box;
     font-size: 62.5%;
