@@ -6,11 +6,11 @@ import { TypographyProps } from './types';
 export const TitleStyle = (
   props: TypographyProps,
 ): FlattenSimpleInterpolation => css`
-  font-family: 'Arial', 'sans-serif';
   line-height: 1.2;
   font-size: ${props.size}rem;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
 
   /* TODO: come up with breakpoints */
   @media (min-width: 600px) {

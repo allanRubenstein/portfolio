@@ -17,7 +17,7 @@ const Template: Story<DynamicComponentProps> = (
 // Template.bind({}) is a standard JavaScript technique for making a copy of a function. We use this technique to allow each exported story to set its own properties, but use the same implementation.
 export const Default: Story<DynamicComponentProps> = Template.bind({});
 Default.args = {
-  children: 'test',
+  children: 'Allan Rubenstein',
   tag: 'h1',
   whatever: 'cool',
   size: 3.0,

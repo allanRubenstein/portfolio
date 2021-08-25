@@ -9,25 +9,33 @@ test('works', () => {
 
   expect(container).toMatchInlineSnapshot(`
 .c1 {
-  font-family: 'Arial','sans-serif';
   line-height: 1.2;
   font-size: 2rem;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed',sans-serif;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 400;
   font-weight: 700;
 }
 
 .c0 {
-  background-color: #d70000;
-  box-shadow: 0 4px 0 0 #940000;
-  color: #fff;
+  border: none;
+  background-color: var(--red);
+  box-shadow: 0 4px 0 0 var(--red-dark);
+  color: var(--white);
   display: block;
   border-radius: 2px;
   padding: 1rem 2rem 0.8rem;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
+}
+
+.c0:hover {
+  background-color: var(--red-light);
+  cursor: pointer;
 }
 
 .c0:active {
-  box-shadow: 0 2px 0 0 #940000;
+  box-shadow: 0 2px 0 0 var(--red-dark);
   -webkit-transform: translateY(2px);
   -ms-transform: translateY(2px);
   transform: translateY(2px);

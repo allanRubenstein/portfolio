@@ -35,14 +35,20 @@ const buttonYPadding = 1;
 // shared css for button and link
 const LinkAndButtonCss = css`
   /* Base styles */
-  background-color: #d70000;
-  box-shadow: 0 4px 0 0 #940000;
-  color: #fff;
+  border: none;
+  background-color: var(--red);
+  box-shadow: 0 4px 0 0 var(--red-dark);
+  color: var(--white);
   display: block;
   border-radius: 2px;
   padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
+  transition: background-color 0.1s;
+  &:hover {
+    background-color: var(--red-light);
+    cursor: pointer;
+  }
   &:active {
-    box-shadow: 0 2px 0 0 #940000;
+    box-shadow: 0 2px 0 0 var(--red-dark);
     transform: translateY(2px);
   }
 `;
