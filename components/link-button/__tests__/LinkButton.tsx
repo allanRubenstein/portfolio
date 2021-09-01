@@ -13,7 +13,6 @@ test('works', () => {
   font-size: 2rem;
   text-transform: uppercase;
   font-family: 'Roboto Condensed',sans-serif;
-  font-weight: 400;
   font-weight: 700;
 }
 
@@ -50,8 +49,7 @@ test('works', () => {
     class="c0"
   >
     <span
-      class="DynamicComponent__StyledDynamicComponent-sc-9g2ehi-0 c1"
-      size="2"
+      class="c1"
     >
       test
     </span>

@@ -1,4 +1,8 @@
 export interface TypographyProps {
-  size: number;
-  desktopSize: string;
+  $fontSize: number;
+  $desktopFontSize?: number;
+}
+
+export interface TitleTypographyProps extends TypographyProps {
+  $isBold?: boolean;
 }

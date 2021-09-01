@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { LinkButtonProps } from './types';
 import Link from 'next/link';
-import { TitleBold } from '../typography/Title';
+import { Title } from '../typography/Title';
 
 const LinkButton: React.FunctionComponent<LinkButtonProps> = (
   props: LinkButtonProps,
@@ -12,9 +12,9 @@ const LinkButton: React.FunctionComponent<LinkButtonProps> = (
       // render a link with an href
       <Link href={props.href} passHref>
         <LinkWrapper>
-          <TitleBold size="2" tag="span">
+          <Title $isBold={true} $fontSize={2} as="span">
             {props.children}
-          </TitleBold>
+          </Title>
         </LinkWrapper>
       </Link>
     );
@@ -22,9 +22,9 @@ const LinkButton: React.FunctionComponent<LinkButtonProps> = (
     return (
       // render a button
       <ButtonWrapper onClick={props.onClick}>
-        <TitleBold size="2" tag="span">
+        <Title $isBold={true} $fontSize={2} as="span">
           {props.children}
-        </TitleBold>
+        </Title>
       </ButtonWrapper>
     );
   }
