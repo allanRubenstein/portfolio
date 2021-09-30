@@ -29,3 +29,17 @@ Button.args = {
   children: 'default button',
   onClick: () => console.log('clicked'),
 } as LinkButtonProps;
+
+export const OffsetButton: Story<LinkButtonProps> = Template.bind({});
+OffsetButton.args = {
+  children: 'offset button',
+  onClick: () => console.log('clicked'),
+  variant: 'offset',
+} as LinkButtonProps;
+
+export const OffsetLink: Story<LinkButtonProps> = Template.bind({});
+OffsetLink.args = {
+  children: 'offset link',
+  variant: 'offset',
+  href: '#',
+} as LinkButtonProps;

@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     --red: #d70000;
     --red-dark: #940000;
     --white: #fff;
+
+    --transition-short: .1s;
   }
 
   html {
