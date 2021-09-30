@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button snapshot 1`] = `
+.c0 {
+  line-height: 1.2;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 400;
+  color: var(--black);
+}
+
+@media (min-width:600px) {
+
+}
+
+<div>
+  <span
+    class="c0"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`button snapshot 2`] = `
+<div>
+  <span
+    class="Title-xde5hf-0 kazauy"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`button snapshot 3`] = `
+<div>
+  <span
+    class="Title-xde5hf-0 DlKGM"
+  >
+    test
+  </span>
+</div>
+`;
+
+exports[`button snapshot 4`] = `
+<div>
+  <span
+    class="Title-xde5hf-0 ekAQle"
+  >
+    test
+  </span>
+</div>
+`;
