@@ -28,3 +28,11 @@ Bold.args = {
   $fontSize: 6.0,
   $isBold: true,
 };
+
+export const TextShadow: Story<TitleTypographyProps> = Template.bind({});
+TextShadow.args = {
+  $fontSize: 12.0,
+  $isBold: true,
+  $hasTextShadow: true,
+  $color: '--red-light',
+};
