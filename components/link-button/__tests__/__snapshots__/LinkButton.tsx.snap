@@ -7,7 +7,7 @@ exports[`button snapshot 1`] = `
   text-transform: uppercase;
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 700;
-  color: var(--black);
+  color: var(--white);
 }
 
 .c0 {
@@ -15,7 +15,6 @@ exports[`button snapshot 1`] = `
   border: none;
   background-color: var(--red);
   box-shadow: 0 4px 0 0 var(--red-dark);
-  color: var(--white);
   display: block;
   padding: 1rem 2rem 0.8rem;
   -webkit-transition: background-color var(--transition-short);
@@ -55,11 +54,11 @@ exports[`button snapshot 1`] = `
 exports[`button snapshot 2`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 kAwNab"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-1 jmGtyE"
     type="button"
   >
     <span
-      class="Title-xde5hf-0 bMiyco"
+      class="Title-xde5hf-0 inVoLY"
     >
       test
     </span>
@@ -70,7 +69,7 @@ exports[`button snapshot 2`] = `
 exports[`button snapshot 3`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 fVQGOC"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-1 faRjjF"
     type="button"
   >
     .c1 {
@@ -222,7 +221,7 @@ exports[`button snapshot 3`] = `
       class="c0 c1"
     />
     <span
-      class="Title-xde5hf-0 bMiyco"
+      class="Title-xde5hf-0 inVoLY"
     >
       test
     </span>
@@ -237,7 +236,7 @@ exports[`link snapshot 1`] = `
   text-transform: uppercase;
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 700;
-  color: var(--black);
+  color: var(--white);
 }
 
 .c0 {
@@ -245,7 +244,6 @@ exports[`link snapshot 1`] = `
   border: none;
   background-color: var(--red);
   box-shadow: 0 4px 0 0 var(--red-dark);
-  color: var(--white);
   display: block;
   padding: 1rem 2rem 0.8rem;
   -webkit-transition: background-color var(--transition-short);
@@ -285,7 +283,7 @@ exports[`link snapshot 1`] = `
 exports[`link snapshot 2`] = `
 <div>
   <a
-    class="LinkButton__LinkWrapper-sc-4kilkf-0 ruBst"
+    class="LinkButton__LinkWrapper-sc-4kilkf-0 hJmzbW"
     href="/#test2"
   >
     .c1 {
@@ -437,7 +435,7 @@ exports[`link snapshot 2`] = `
       class="c0 c1"
     />
     <span
-      class="Title-xde5hf-0 bMiyco"
+      class="Title-xde5hf-0 inVoLY"
     >
       test 2
     </span>

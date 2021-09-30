@@ -12,7 +12,7 @@ const LinkButton: React.FunctionComponent<LinkButtonProps> = (
    */
   const renderButtonInnerContents = () => {
     return (
-      <Title $isBold={true} $fontSize={2} as="span">
+      <Title $color="--white" $isBold={true} $fontSize={2} as="span">
         {props.children}
       </Title>
     );
@@ -77,7 +77,6 @@ const LinkAndButtonCss = css<LinkButtonProps>`
   border: none;
   background-color: var(--red);
   box-shadow: 0 4px 0 0 var(--red-dark);
-  color: var(--white);
   display: block;
   padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
   transition: background-color var(--transition-short);
