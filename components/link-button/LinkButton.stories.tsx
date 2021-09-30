@@ -6,6 +6,9 @@ import { LinkButtonProps } from './types';
 export default {
   component: LinkButton,
   title: 'Components/LinkButton',
+  parameters: {
+    layout: 'centered',
+  },
 };
 
 // TYPES IN STORYBOOK: This is how you do it
@@ -17,12 +20,26 @@ const Template: Story<LinkButtonProps> = (args: LinkButtonProps) => (
 // Template.bind({}) is a standard JavaScript technique for making a copy of a function. We use this technique to allow each exported story to set its own properties, but use the same implementation.
 export const Link: Story<LinkButtonProps> = Template.bind({});
 Link.args = {
-  children: 'default button',
+  children: 'default link',
   href: '#testHref',
 } as LinkButtonProps;
 
 export const Button: Story<LinkButtonProps> = Template.bind({});
 Button.args = {
   children: 'default button',
-  onClick: () => console.log('clicked')
+  onClick: () => console.log('clicked'),
+} as LinkButtonProps;
+
+export const OffsetButton: Story<LinkButtonProps> = Template.bind({});
+OffsetButton.args = {
+  children: 'offset button',
+  onClick: () => console.log('clicked'),
+  variant: 'offset',
+} as LinkButtonProps;
+
+export const OffsetLink: Story<LinkButtonProps> = Template.bind({});
+OffsetLink.args = {
+  children: 'offset link',
+  variant: 'offset',
+  href: '#',
 } as LinkButtonProps;

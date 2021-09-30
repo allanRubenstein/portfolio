@@ -4,6 +4,15 @@ import 'what-input';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    --red-light: #e60000;
+    --red: #d70000;
+    --red-dark: #940000;
+    --white: #fff;
+
+    --transition-short: .1s;
+  }
+
   html {
     box-sizing: border-box;
     font-size: 62.5%;
