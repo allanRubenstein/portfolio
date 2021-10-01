@@ -3,5 +3,5 @@ export interface LinkButtonProps {
   href?: string;
   buttonType?: 'button' | 'submit';
   onClick?: () => void;
-  variant?: 'offset';
+  variant?: 'primary' | 'offset';
 }

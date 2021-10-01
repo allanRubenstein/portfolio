@@ -13,17 +13,20 @@ exports[`button snapshot 1`] = `
 .c0 {
   position: relative;
   border: none;
+  display: block;
   background-color: var(--red);
   box-shadow: 0 4px 0 0 var(--red-dark);
-  display: block;
   padding: 1rem 2rem 0.8rem;
   -webkit-transition: background-color var(--transition-short);
   transition: background-color var(--transition-short);
 }
 
 .c0:hover {
-  background-color: var(--red-light);
   cursor: pointer;
+}
+
+.c0:hover {
+  background-color: var(--red-light);
 }
 
 .c0:active {
@@ -54,7 +57,7 @@ exports[`button snapshot 1`] = `
 exports[`button snapshot 2`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 jmGtyE"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-1 iSpMIR"
     type="button"
   >
     <span
@@ -69,7 +72,7 @@ exports[`button snapshot 2`] = `
 exports[`button snapshot 3`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 faRjjF"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-1 fhCEPZ"
     type="button"
   >
     .c1 {
@@ -242,17 +245,20 @@ exports[`link snapshot 1`] = `
 .c0 {
   position: relative;
   border: none;
+  display: block;
   background-color: var(--red);
   box-shadow: 0 4px 0 0 var(--red-dark);
-  display: block;
   padding: 1rem 2rem 0.8rem;
   -webkit-transition: background-color var(--transition-short);
   transition: background-color var(--transition-short);
 }
 
 .c0:hover {
-  background-color: var(--red-light);
   cursor: pointer;
+}
+
+.c0:hover {
+  background-color: var(--red-light);
 }
 
 .c0:active {
@@ -283,7 +289,7 @@ exports[`link snapshot 1`] = `
 exports[`link snapshot 2`] = `
 <div>
   <a
-    class="LinkButton__LinkWrapper-sc-4kilkf-0 hJmzbW"
+    class="LinkButton__LinkWrapper-sc-4kilkf-0 BqyLm"
     href="/#test2"
   >
     .c1 {

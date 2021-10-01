@@ -75,29 +75,42 @@ const LinkAndButtonCss = css<LinkButtonProps>`
   /* Base styles */
   position: relative;
   border: none;
-  background-color: var(--red);
-  box-shadow: 0 4px 0 0 var(--red-dark);
   display: block;
-  padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
-  transition: background-color var(--transition-short);
   &:hover {
-    background-color: var(--red-light);
     cursor: pointer;
   }
-  &:active {
-    box-shadow: 0 2px 0 0 var(--red-dark);
-    transform: translateY(2px);
-  }
+
+  /* primary/default */
+  ${({ variant }) =>
+    (variant === 'primary' || !variant) &&
+    css`
+      background-color: var(--red);
+      box-shadow: 0 4px 0 0 var(--red-dark);
+      padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
+      transition: background-color var(--transition-short);
+      &:hover {
+        background-color: var(--red-light);
+      }
+      &:active {
+        box-shadow: 0 2px 0 0 var(--red-dark);
+        transform: translateY(2px);
+      }
+    `}
 
   /* offset button variant */
   ${({ variant }) =>
     variant === 'offset' &&
     css`
-      box-shadow: none;
+      background-color: var(--red);
+      padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
+      transition: background-color var(--transition-short);
+
       transform: translate(-${buttonHeight}, -${buttonHeight});
       transition: var(--transition-short);
+      &:hover {
+        background-color: var(--red-light);
+      }
       &:active {
-        box-shadow: none;
         transform: none;
       }
     `}
