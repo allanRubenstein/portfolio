@@ -34,6 +34,30 @@ test('link snapshot', () => {
   expect(container).toMatchSnapshot();
 });
 
+test('secondary button and link snapshot', () => {
+  // basic link
+  const { container, rerender } = render(
+    <LinkButton href="#" variant="secondary">
+      test
+    </LinkButton>,
+  );
+  expect(container).toMatchSnapshot();
+
+  // offset link
+  rerender(
+    <LinkButton
+      onClick={() => {
+        // do nothing
+      }}
+      variant="secondary"
+      $color="--red"
+    >
+      test 2
+    </LinkButton>,
+  );
+  expect(container).toMatchSnapshot();
+});
+
 test('a11y', async () => {
   const { container } = render(<LinkButton>test</LinkButton>);
   const results = await axe(container);

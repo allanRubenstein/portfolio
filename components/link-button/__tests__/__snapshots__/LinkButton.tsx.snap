@@ -57,7 +57,7 @@ exports[`button snapshot 1`] = `
 exports[`button snapshot 2`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 iSpMIR"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-1 eEEovo"
     type="button"
   >
     <span
@@ -72,7 +72,7 @@ exports[`button snapshot 2`] = `
 exports[`button snapshot 3`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 fhCEPZ"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-1 bUltSg"
     type="button"
   >
     .c1 {
@@ -289,7 +289,7 @@ exports[`link snapshot 1`] = `
 exports[`link snapshot 2`] = `
 <div>
   <a
-    class="LinkButton__LinkWrapper-sc-4kilkf-0 BqyLm"
+    class="LinkButton__LinkWrapper-sc-4kilkf-0 chohRf"
     href="/#test2"
   >
     .c1 {
@@ -446,5 +446,91 @@ exports[`link snapshot 2`] = `
       test 2
     </span>
   </a>
+</div>
+`;
+
+exports[`secondary button and link snapshot 1`] = `
+.c1 {
+  line-height: 1.2;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.c0 {
+  position: relative;
+  border: none;
+  display: block;
+  background-color: transparent;
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+@media (min-width:600px) {
+
+}
+
+<div>
+  <a
+    class="c0"
+    href="/#"
+  >
+    <span
+      class="c1"
+    >
+      test
+    </span>
+  </a>
+</div>
+`;
+
+exports[`secondary button and link snapshot 2`] = `
+<div>
+  .c1 {
+  line-height: 1.2;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.c0 {
+  position: relative;
+  border: none;
+  display: block;
+  background-color: transparent;
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+@media (min-width:600px) {
+
+}
+
+@media (min-width:600px) {
+
+}
+
+<button
+    class="c0"
+    type="button"
+  >
+    <span
+      class="c1"
+    >
+      test 2
+    </span>
+  </button>
 </div>
 `;

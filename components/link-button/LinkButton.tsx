@@ -3,16 +3,22 @@ import { LinkButtonProps } from './types';
 import Link from 'next/link';
 import { Title } from '../typography/Title';
 
-const LinkButton: React.FunctionComponent<LinkButtonProps> = (
-  props: LinkButtonProps,
-): JSX.Element => {
+const LinkButton = (props: LinkButtonProps): JSX.Element => {
   /**
    * Renders title with children as needed by the button
    * @returns
    */
   const renderButtonInnerContents = () => {
     return (
-      <Title $color="--white" $isBold={true} $fontSize={2} as="span">
+      <Title
+        // white by default, but secondary button can have a color prop
+        $color={
+          props.variant === 'secondary' ? props.$color || '--white' : '--white'
+        }
+        $isBold={true}
+        $fontSize={2}
+        as="span"
+      >
         {props.children}
       </Title>
     );
@@ -113,6 +119,14 @@ const LinkAndButtonCss = css<LinkButtonProps>`
       &:active {
         transform: none;
       }
+    `}
+
+  /* secondary button variant */
+  ${({ variant }) =>
+    variant === 'secondary' &&
+    css`
+      background-color: transparent;
+      transition: var(--transition-short);
     `}
 `;
 
