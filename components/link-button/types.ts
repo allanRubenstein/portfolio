@@ -2,7 +2,8 @@ import { Colors } from '../typography/types';
 
 export type LinkButtonProps =
   | UniversalLinkButtonProps
-  | SecondaryLinkButtonProps;
+  | SecondaryLinkButtonProps
+  | TertiaryLinkButtonProps;
 
 export interface UniversalLinkButtonProps {
   children?: any;
@@ -17,5 +18,13 @@ export interface UniversalLinkButtonProps {
 export interface SecondaryLinkButtonProps
   extends Omit<UniversalLinkButtonProps, 'variant'> {
   variant: 'secondary';
+  $color?: Colors;
+  $backgroundColor?: Colors;
+}
+
+// tertiary variant can have a colors prop
+export interface TertiaryLinkButtonProps
+  extends Omit<UniversalLinkButtonProps, 'variant'> {
+  variant: 'tertiary';
   $color?: Colors;
 }

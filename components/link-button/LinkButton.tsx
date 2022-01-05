@@ -11,9 +11,11 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
   const renderButtonInnerContents = () => {
     return (
       <Title
-        // white by default, but secondary button can have a color prop
+        // white by default, but secondary/tertiary button can have a color prop
         $color={
-          props.variant === 'secondary' ? props.$color || '--white' : '--white'
+          props.variant === 'secondary' || props.variant === 'tertiary'
+            ? props.$color || '--white'
+            : '--white'
         }
         $isBold={true}
         $fontSize={2}
@@ -122,9 +124,30 @@ const LinkAndButtonCss = css<LinkButtonProps>`
       }
     `}
 
+
   /* secondary button variant */
+  ${(props) =>
+    props.variant === 'secondary' &&
+    css`
+      background-color: ${props.$backgroundColor
+        ? `var(${props.$backgroundColor})`
+        : `transparent`};
+      border: 1px solid var(${props.$color || '--black'});
+      box-shadow: 0 4px 0 0 var(${props.$color || '--black'});
+      padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
+      transition: background-color var(--transition-short);
+      &:hover {
+        /* background-color: var(--red-light); */
+      }
+      &:active {
+        box-shadow: 0 2px 0 0 var(${props.$color || '--black'});
+        transform: translateY(2px);
+      }
+    `}
+
+  /* tertiary button variant */
   ${({ variant }) =>
-    variant === 'secondary' &&
+    variant === 'tertiary' &&
     css`
       background-color: transparent;
 

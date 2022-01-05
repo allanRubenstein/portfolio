@@ -36,6 +36,15 @@ SecondaryButton.args = {
   variant: 'secondary',
   onClick: () => console.log('clicked'),
   $color: '--black',
+  $backgroundColor: '--white',
+} as LinkButtonProps;
+
+export const TertiaryButton: Story<LinkButtonProps> = Template.bind({});
+TertiaryButton.args = {
+  children: 'tertiary button',
+  variant: 'tertiary',
+  onClick: () => console.log('clicked'),
+  $color: '--black',
 } as LinkButtonProps;
 
 export const OffsetButton: Story<LinkButtonProps> = Template.bind({});
