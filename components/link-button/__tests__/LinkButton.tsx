@@ -37,19 +37,49 @@ test('link snapshot', () => {
 test('secondary button and link snapshot', () => {
   // basic link
   const { container, rerender } = render(
-    <LinkButton href="#" variant="secondary">
+    <LinkButton
+      href="#"
+      variant="secondary"
+      $color="--black"
+      $backgroundColor="--white"
+    >
       test
     </LinkButton>,
   );
   expect(container).toMatchSnapshot();
 
-  // offset link
+  // button
   rerender(
     <LinkButton
       onClick={() => {
         // do nothing
       }}
       variant="secondary"
+      $color="--black"
+      $backgroundColor="--white"
+    >
+      test 2
+    </LinkButton>,
+  );
+  expect(container).toMatchSnapshot();
+});
+
+test('tertiary button and link snapshot', () => {
+  // basic link
+  const { container, rerender } = render(
+    <LinkButton href="#" variant="tertiary" $color="--red-dark">
+      test
+    </LinkButton>,
+  );
+  expect(container).toMatchSnapshot();
+
+  // button
+  rerender(
+    <LinkButton
+      onClick={() => {
+        // do nothing
+      }}
+      variant="tertiary"
       $color="--red"
     >
       test 2
