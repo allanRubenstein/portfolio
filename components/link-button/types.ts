@@ -17,7 +17,7 @@ export interface UniversalLinkButtonProps {
 // secondary variant can have a colors prop
 export interface SecondaryLinkButtonProps
   extends Omit<UniversalLinkButtonProps, 'variant'> {
-  variant: 'secondary';
+  variant: 'secondary' | 'secondary-offset';
   $color?: Colors;
   $backgroundColor?: Colors;
 }

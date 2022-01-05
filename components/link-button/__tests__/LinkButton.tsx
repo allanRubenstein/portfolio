@@ -63,6 +63,35 @@ test('secondary button and link snapshot', () => {
   );
   expect(container).toMatchSnapshot();
 });
+test('secondary offset button and link snapshot', () => {
+  // basic link
+  const { container, rerender } = render(
+    <LinkButton
+      href="#"
+      variant="secondary-offset"
+      $color="--black"
+      $backgroundColor="--white"
+    >
+      test
+    </LinkButton>,
+  );
+  expect(container).toMatchSnapshot();
+
+  // button
+  rerender(
+    <LinkButton
+      onClick={() => {
+        // do nothing
+      }}
+      variant="secondary-offset"
+      $color="--black"
+      $backgroundColor="--white"
+    >
+      test 2
+    </LinkButton>,
+  );
+  expect(container).toMatchSnapshot();
+});
 
 test('tertiary button and link snapshot', () => {
   // basic link

@@ -13,7 +13,9 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
       <Title
         // white by default, but secondary/tertiary button can have a color prop
         $color={
-          props.variant === 'secondary' || props.variant === 'tertiary'
+          props.variant === 'secondary' ||
+          props.variant === 'tertiary' ||
+          props.variant === 'secondary-offset'
             ? props.$color || '--white'
             : '--white'
         }
@@ -45,6 +47,30 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
                 <BorderCornerTopRight></BorderCornerTopRight>
               </>
             )}
+            {props.variant === 'secondary-offset' && (
+              <>
+                <BorderRight
+                  variant={props.variant}
+                  $color={props.$color}
+                  $backgroundColor={props.$backgroundColor}
+                ></BorderRight>
+                <BorderCornerBottomLeft
+                  variant={props.variant}
+                  $color={props.$color}
+                  $backgroundColor={props.$backgroundColor}
+                ></BorderCornerBottomLeft>
+                <BorderBottom
+                  variant={props.variant}
+                  $color={props.$color}
+                  $backgroundColor={props.$backgroundColor}
+                ></BorderBottom>
+                <BorderCornerTopRight
+                  variant={props.variant}
+                  $color={props.$color}
+                  $backgroundColor={props.$backgroundColor}
+                ></BorderCornerTopRight>
+              </>
+            )}
             {renderButtonInnerContents()}
           </LinkWrapper>
         </Link>
@@ -63,6 +89,30 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
               <BorderCornerBottomLeft></BorderCornerBottomLeft>
               <BorderBottom></BorderBottom>
               <BorderCornerTopRight></BorderCornerTopRight>
+            </>
+          )}
+          {props.variant === 'secondary-offset' && (
+            <>
+              <BorderRight
+                variant={props.variant}
+                $color={props.$color}
+                $backgroundColor={props.$backgroundColor}
+              ></BorderRight>
+              <BorderCornerBottomLeft
+                variant={props.variant}
+                $color={props.$color}
+                $backgroundColor={props.$backgroundColor}
+              ></BorderCornerBottomLeft>
+              <BorderBottom
+                variant={props.variant}
+                $color={props.$color}
+                $backgroundColor={props.$backgroundColor}
+              ></BorderBottom>
+              <BorderCornerTopRight
+                variant={props.variant}
+                $color={props.$color}
+                $backgroundColor={props.$backgroundColor}
+              ></BorderCornerTopRight>
             </>
           )}
           {renderButtonInnerContents()}
@@ -124,6 +174,29 @@ const LinkAndButtonCss = css<LinkButtonProps>`
       }
     `}
 
+  /* secondary offset button variant */
+  ${(props) =>
+    props.variant === 'secondary-offset' &&
+    css`
+      color: ${props.$color ? `var(${props.$color})` : 'var(--black)'};
+      background-color: ${props.$backgroundColor
+        ? `var(${props.$backgroundColor})`
+        : `transparent`};
+      border: 1px solid
+        ${props.$color ? `var(${props.$color})` : 'var(--black)'};
+      padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
+      transition: background-color var(--transition-short);
+
+      transform: translate(-${buttonHeight}, -${buttonHeight});
+      transition: var(--transition-short);
+      &:hover {
+        /* background-color: var(--red-light); */
+      }
+      &:active {
+        transform: none;
+      }
+    `}
+
 
   /* secondary button variant */
   ${(props) =>
@@ -136,9 +209,6 @@ const LinkAndButtonCss = css<LinkButtonProps>`
       box-shadow: 0 4px 0 0 var(${props.$color || '--black'});
       padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
       transition: background-color var(--transition-short);
-      &:hover {
-        /* background-color: var(--red-light); */
-      }
       &:active {
         box-shadow: 0 2px 0 0 var(${props.$color || '--black'});
         transform: translateY(2px);
@@ -184,12 +254,17 @@ const ButtonWrapper = styled.button`
   ${LinkAndButtonCss}/* button specific styles */
 `;
 
-const BorderRight = styled.span`
+const BorderRight = styled.span<LinkButtonProps>`
   position: absolute;
   top: 0px;
   bottom: 0px;
   right: 0px;
-  background: var(--red-dark);
+  background: ${(props) =>
+    props.variant === 'secondary-offset' && props.$color
+      ? `var(${props.$color})`
+      : props.variant === 'secondary-offset'
+      ? 'var(--black)'
+      : 'var(--red-dark)'};
   transform-origin: 100% 0%;
   width: ${buttonHeight};
   transition: var(--transition-short);
@@ -202,12 +277,17 @@ const BorderRight = styled.span`
     transform: translate(0rem, 0rem) scaleX(0);
   }
 `;
-const BorderBottom = styled.span`
+const BorderBottom = styled.span<LinkButtonProps>`
   position: absolute;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  background: var(--red-dark);
+  background: ${(props) =>
+    props.variant === 'secondary-offset' && props.$color
+      ? `var(${props.$color})`
+      : props.variant === 'secondary-offset'
+      ? 'var(--black)'
+      : 'var(--red-dark)'};
   transform-origin: 0px 100%;
   height: ${buttonHeight};
   transition: var(--transition-short);
@@ -220,7 +300,7 @@ const BorderBottom = styled.span`
     transform: translate(0rem, 0rem) scaleY(0);
   }
 `;
-const BorderCornerBottomLeft = styled.span`
+const BorderCornerBottomLeft = styled.span<LinkButtonProps>`
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -228,7 +308,13 @@ const BorderCornerBottomLeft = styled.span`
   height: 0px;
   border-left: ${buttonHeight} solid transparent;
   border-right: ${buttonHeight} solid transparent;
-  border-top: ${buttonHeight} solid var(--red-dark);
+  border-top: ${buttonHeight} solid
+    ${(props) =>
+      props.variant === 'secondary-offset' && props.$color
+        ? `var(${props.$color})`
+        : props.variant === 'secondary-offset'
+        ? 'var(--black)'
+        : 'var(--red-dark)'};
   transform-origin: center bottom;
   transition: var(--transition-short);
   transform: translate(0rem, ${buttonHeight}) scale(1);
@@ -240,7 +326,7 @@ const BorderCornerBottomLeft = styled.span`
     transform: translate(-${buttonHeight}, 0rem) scale(0);
   }
 `;
-const BorderCornerTopRight = styled.span`
+const BorderCornerTopRight = styled.span<LinkButtonProps>`
   position: absolute;
   top: 0px;
   right: 0px;
@@ -248,7 +334,13 @@ const BorderCornerTopRight = styled.span`
   height: 0px;
   border-left: 0rem solid transparent;
   border-right: ${buttonHeight} solid transparent;
-  border-bottom: ${buttonHeight} solid var(--red-dark);
+  border-bottom: ${buttonHeight} solid
+    ${(props) =>
+      props.variant === 'secondary-offset' && props.$color
+        ? `var(${props.$color})`
+        : props.variant === 'secondary-offset'
+        ? 'var(--black)'
+        : 'var(--red-dark)'};
   transform-origin: right bottom;
   transition: var(--transition-short);
   transform: translate(${buttonHeight}, 0rem) scale(1);
