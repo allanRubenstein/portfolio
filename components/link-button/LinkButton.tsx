@@ -82,6 +82,7 @@ const LinkAndButtonCss = css<LinkButtonProps>`
   position: relative;
   border: none;
   display: block;
+  padding: 0;
   &:hover {
     cursor: pointer;
   }
@@ -126,7 +127,30 @@ const LinkAndButtonCss = css<LinkButtonProps>`
     variant === 'secondary' &&
     css`
       background-color: transparent;
-      transition: var(--transition-short);
+
+      ${Title}::after {
+        transition: var(--transition-short);
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        /* visibility: hidden; */
+        width: 100%;
+        max-width: 0%;
+        right: 0;
+        left: auto;
+        background-color: currentColor;
+      }
+      &:hover,
+      &:focus {
+        ${Title}::after {
+          /* visibility: visible; */
+          max-width: 100%;
+          top: 100%;
+          left: 0;
+          right: auto;
+        }
+      }
     `}
 `;
 

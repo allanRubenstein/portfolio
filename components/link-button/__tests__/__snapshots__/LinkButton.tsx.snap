@@ -14,6 +14,7 @@ exports[`button snapshot 1`] = `
   position: relative;
   border: none;
   display: block;
+  padding: 0;
   background-color: var(--red);
   box-shadow: 0 4px 0 0 var(--red-dark);
   padding: 1rem 2rem 0.8rem;
@@ -57,7 +58,7 @@ exports[`button snapshot 1`] = `
 exports[`button snapshot 2`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 eEEovo"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-1 fYGPSY"
     type="button"
   >
     <span
@@ -72,7 +73,7 @@ exports[`button snapshot 2`] = `
 exports[`button snapshot 3`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 bUltSg"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-1 kLFqTc"
     type="button"
   >
     .c1 {
@@ -246,6 +247,7 @@ exports[`link snapshot 1`] = `
   position: relative;
   border: none;
   display: block;
+  padding: 0;
   background-color: var(--red);
   box-shadow: 0 4px 0 0 var(--red-dark);
   padding: 1rem 2rem 0.8rem;
@@ -289,7 +291,7 @@ exports[`link snapshot 1`] = `
 exports[`link snapshot 2`] = `
 <div>
   <a
-    class="LinkButton__LinkWrapper-sc-4kilkf-0 chohRf"
+    class="LinkButton__LinkWrapper-sc-4kilkf-0 jcXFIz"
     href="/#test2"
   >
     .c1 {
@@ -450,7 +452,7 @@ exports[`link snapshot 2`] = `
 `;
 
 exports[`secondary button and link snapshot 1`] = `
-.c1 {
+.c2 {
   line-height: 1.2;
   font-size: 2rem;
   text-transform: uppercase;
@@ -463,13 +465,34 @@ exports[`secondary button and link snapshot 1`] = `
   position: relative;
   border: none;
   display: block;
+  padding: 0;
   background-color: transparent;
-  -webkit-transition: var(--transition-short);
-  transition: var(--transition-short);
 }
 
 .c0:hover {
   cursor: pointer;
+}
+
+.c0 .c1::after {
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  max-width: 0%;
+  right: 0;
+  left: auto;
+  background-color: currentColor;
+}
+
+.c0:hover .c1::after,
+.c0:focus .c1::after {
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  right: auto;
 }
 
 @media (min-width:600px) {
@@ -482,7 +505,7 @@ exports[`secondary button and link snapshot 1`] = `
     href="/#"
   >
     <span
-      class="c1"
+      class="c1 c2"
     >
       test
     </span>
@@ -492,7 +515,7 @@ exports[`secondary button and link snapshot 1`] = `
 
 exports[`secondary button and link snapshot 2`] = `
 <div>
-  .c1 {
+  .c2 {
   line-height: 1.2;
   font-size: 2rem;
   text-transform: uppercase;
@@ -501,17 +524,60 @@ exports[`secondary button and link snapshot 2`] = `
   color: var(--red);
 }
 
+.c3 .c1::after {
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  max-width: 0%;
+  right: 0;
+  left: auto;
+  background-color: currentColor;
+}
+
+.c3:hover .c1::after,
+.c3:focus .c1::after {
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  right: auto;
+}
+
 .c0 {
   position: relative;
   border: none;
   display: block;
+  padding: 0;
   background-color: transparent;
-  -webkit-transition: var(--transition-short);
-  transition: var(--transition-short);
 }
 
 .c0:hover {
   cursor: pointer;
+}
+
+.c0 .c1::after {
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  max-width: 0%;
+  right: 0;
+  left: auto;
+  background-color: currentColor;
+}
+
+.c0:hover .c1::after,
+.c0:focus .c1::after {
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  right: auto;
 }
 
 @media (min-width:600px) {
@@ -527,7 +593,7 @@ exports[`secondary button and link snapshot 2`] = `
     type="button"
   >
     <span
-      class="c1"
+      class="c1 c2"
     >
       test 2
     </span>
