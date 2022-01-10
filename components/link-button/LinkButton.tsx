@@ -12,11 +12,11 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
     return (
       <Title
         // white by default, but secondary/tertiary button can have a color prop
-        $color={
+        $fontColor={
           props.variant === 'secondary' ||
           props.variant === 'tertiary' ||
           props.variant === 'secondary-offset'
-            ? props.$color || '--white'
+            ? props.textColor || '--white'
             : '--white'
         }
         $isBold={true}
@@ -49,26 +49,18 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
             )}
             {props.variant === 'secondary-offset' && (
               <>
-                <BorderRight
-                  variant={props.variant}
-                  $color={props.$color}
-                  $backgroundColor={props.$backgroundColor}
-                ></BorderRight>
-                <BorderCornerBottomLeft
-                  variant={props.variant}
-                  $color={props.$color}
-                  $backgroundColor={props.$backgroundColor}
-                ></BorderCornerBottomLeft>
-                <BorderBottom
-                  variant={props.variant}
-                  $color={props.$color}
-                  $backgroundColor={props.$backgroundColor}
-                ></BorderBottom>
-                <BorderCornerTopRight
-                  variant={props.variant}
-                  $color={props.$color}
-                  $backgroundColor={props.$backgroundColor}
-                ></BorderCornerTopRight>
+                <BorderRight {...props} href={undefined}>
+                  {undefined}
+                </BorderRight>
+                <BorderCornerBottomLeft {...props} href={undefined}>
+                  {undefined}
+                </BorderCornerBottomLeft>
+                <BorderBottom {...props} href={undefined}>
+                  {undefined}
+                </BorderBottom>
+                <BorderCornerTopRight {...props} href={undefined}>
+                  {undefined}
+                </BorderCornerTopRight>
               </>
             )}
             {renderButtonInnerContents()}
@@ -93,26 +85,18 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
           )}
           {props.variant === 'secondary-offset' && (
             <>
-              <BorderRight
-                variant={props.variant}
-                $color={props.$color}
-                $backgroundColor={props.$backgroundColor}
-              ></BorderRight>
-              <BorderCornerBottomLeft
-                variant={props.variant}
-                $color={props.$color}
-                $backgroundColor={props.$backgroundColor}
-              ></BorderCornerBottomLeft>
-              <BorderBottom
-                variant={props.variant}
-                $color={props.$color}
-                $backgroundColor={props.$backgroundColor}
-              ></BorderBottom>
-              <BorderCornerTopRight
-                variant={props.variant}
-                $color={props.$color}
-                $backgroundColor={props.$backgroundColor}
-              ></BorderCornerTopRight>
+              <BorderRight {...props} href={undefined}>
+                {undefined}
+              </BorderRight>
+              <BorderCornerBottomLeft {...props} href={undefined}>
+                {undefined}
+              </BorderCornerBottomLeft>
+              <BorderBottom {...props} href={undefined}>
+                {undefined}
+              </BorderBottom>
+              <BorderCornerTopRight {...props} href={undefined}>
+                {undefined}
+              </BorderCornerTopRight>
             </>
           )}
           {renderButtonInnerContents()}
@@ -178,12 +162,12 @@ const LinkAndButtonCss = css<LinkButtonProps>`
   ${(props) =>
     props.variant === 'secondary-offset' &&
     css`
-      color: ${props.$color ? `var(${props.$color})` : 'var(--black)'};
+      color: ${props.textColor ? `var(${props.textColor})` : 'var(--black)'};
       background-color: ${props.$backgroundColor
         ? `var(${props.$backgroundColor})`
         : `transparent`};
       border: 1px solid
-        ${props.$color ? `var(${props.$color})` : 'var(--black)'};
+        ${props.textColor ? `var(${props.textColor})` : 'var(--black)'};
       padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
       transition: background-color var(--transition-short);
 
@@ -205,12 +189,12 @@ const LinkAndButtonCss = css<LinkButtonProps>`
       background-color: ${props.$backgroundColor
         ? `var(${props.$backgroundColor})`
         : `transparent`};
-      border: 1px solid var(${props.$color || '--black'});
-      box-shadow: 0 4px 0 0 var(${props.$color || '--black'});
+      border: 1px solid var(${props.textColor || '--black'});
+      box-shadow: 0 4px 0 0 var(${props.textColor || '--black'});
       padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
       transition: background-color var(--transition-short);
       &:active {
-        box-shadow: 0 2px 0 0 var(${props.$color || '--black'});
+        box-shadow: 0 2px 0 0 var(${props.textColor || '--black'});
         transform: translateY(2px);
       }
     `}
@@ -260,8 +244,8 @@ const BorderRight = styled.span<LinkButtonProps>`
   bottom: 0px;
   right: 0px;
   background: ${(props) =>
-    props.variant === 'secondary-offset' && props.$color
-      ? `var(${props.$color})`
+    props.variant === 'secondary-offset' && props.textColor
+      ? `var(${props.textColor})`
       : props.variant === 'secondary-offset'
       ? 'var(--black)'
       : 'var(--red-dark)'};
@@ -283,8 +267,8 @@ const BorderBottom = styled.span<LinkButtonProps>`
   left: 0px;
   right: 0px;
   background: ${(props) =>
-    props.variant === 'secondary-offset' && props.$color
-      ? `var(${props.$color})`
+    props.variant === 'secondary-offset' && props.textColor
+      ? `var(${props.textColor})`
       : props.variant === 'secondary-offset'
       ? 'var(--black)'
       : 'var(--red-dark)'};
@@ -310,8 +294,8 @@ const BorderCornerBottomLeft = styled.span<LinkButtonProps>`
   border-right: ${buttonHeight} solid transparent;
   border-top: ${buttonHeight} solid
     ${(props) =>
-      props.variant === 'secondary-offset' && props.$color
-        ? `var(${props.$color})`
+      props.variant === 'secondary-offset' && props.textColor
+        ? `var(${props.textColor})`
         : props.variant === 'secondary-offset'
         ? 'var(--black)'
         : 'var(--red-dark)'};
@@ -336,8 +320,8 @@ const BorderCornerTopRight = styled.span<LinkButtonProps>`
   border-right: ${buttonHeight} solid transparent;
   border-bottom: ${buttonHeight} solid
     ${(props) =>
-      props.variant === 'secondary-offset' && props.$color
-        ? `var(${props.$color})`
+      props.variant === 'secondary-offset' && props.textColor
+        ? `var(${props.textColor})`
         : props.variant === 'secondary-offset'
         ? 'var(--black)'
         : 'var(--red-dark)'};

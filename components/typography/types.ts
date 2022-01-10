@@ -2,7 +2,7 @@ export interface TypographyProps {
   // these are transient props, indicated by the '$'
   $fontSize: number;
   $desktopFontSize?: number;
-  $color?: Colors;
+  $fontColor?: Colors;
 }
 
 export type Colors =

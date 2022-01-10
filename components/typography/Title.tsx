@@ -13,7 +13,8 @@ export const Title = styled.span<TitleTypographyProps>`
           props.$fontSize / 2.5
         }px 0px rgba(0, 0, 0, .8)`
       : undefined};
-  color: ${(props) => `${props.$color ? `var(${props.$color})` : 'inherit'}`};
+  color: ${(props) =>
+    `${props.$fontColor ? `var(${props.$fontColor})` : 'inherit'}`};
   /* TODO: come up with breakpoints */
   @media (min-width: 600px) {
     ${(props) =>

@@ -18,7 +18,8 @@ export interface UniversalLinkButtonProps {
 export interface SecondaryLinkButtonProps
   extends Omit<UniversalLinkButtonProps, 'variant'> {
   variant: 'secondary' | 'secondary-offset';
-  $color?: Colors;
+  // props with '$' are called transient props
+  textColor?: Colors;
   $backgroundColor?: Colors;
 }
 
@@ -26,5 +27,5 @@ export interface SecondaryLinkButtonProps
 export interface TertiaryLinkButtonProps
   extends Omit<UniversalLinkButtonProps, 'variant'> {
   variant: 'tertiary';
-  $color?: Colors;
+  textColor?: Colors;
 }

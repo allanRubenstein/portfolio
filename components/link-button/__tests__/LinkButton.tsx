@@ -40,7 +40,7 @@ test('secondary button and link snapshot', () => {
     <LinkButton
       href="#"
       variant="secondary"
-      $color="--black"
+      textColor="--black"
       $backgroundColor="--white"
     >
       test
@@ -55,7 +55,7 @@ test('secondary button and link snapshot', () => {
         // do nothing
       }}
       variant="secondary"
-      $color="--black"
+      textColor="--black"
       $backgroundColor="--white"
     >
       test 2
@@ -69,7 +69,7 @@ test('secondary offset button and link snapshot', () => {
     <LinkButton
       href="#"
       variant="secondary-offset"
-      $color="--black"
+      textColor="--black"
       $backgroundColor="--white"
     >
       test
@@ -84,7 +84,7 @@ test('secondary offset button and link snapshot', () => {
         // do nothing
       }}
       variant="secondary-offset"
-      $color="--black"
+      textColor="--black"
       $backgroundColor="--white"
     >
       test 2
@@ -96,7 +96,7 @@ test('secondary offset button and link snapshot', () => {
 test('tertiary button and link snapshot', () => {
   // basic link
   const { container, rerender } = render(
-    <LinkButton href="#" variant="tertiary" $color="--red-dark">
+    <LinkButton href="#" variant="tertiary" textColor="--red-dark">
       test
     </LinkButton>,
   );
@@ -109,7 +109,7 @@ test('tertiary button and link snapshot', () => {
         // do nothing
       }}
       variant="tertiary"
-      $color="--red"
+      textColor="--red"
     >
       test 2
     </LinkButton>,

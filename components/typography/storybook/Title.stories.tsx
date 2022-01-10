@@ -34,5 +34,5 @@ TextShadow.args = {
   $fontSize: 12.0,
   $isBold: true,
   $hasTextShadow: true,
-  $color: '--red-light',
+  $fontColor: '--red-light',
 };
