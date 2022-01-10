@@ -16,7 +16,7 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
           props.variant === 'secondary' ||
           props.variant === 'tertiary' ||
           props.variant === 'secondary-offset'
-            ? props.textColor || '--white'
+            ? props.fontColor || '--white'
             : '--white'
         }
         $isBold={true}
@@ -162,12 +162,12 @@ const LinkAndButtonCss = css<LinkButtonProps>`
   ${(props) =>
     props.variant === 'secondary-offset' &&
     css`
-      color: ${props.textColor ? `var(${props.textColor})` : 'var(--black)'};
+      color: ${props.fontColor ? `var(${props.fontColor})` : 'var(--black)'};
       background-color: ${props.$backgroundColor
         ? `var(${props.$backgroundColor})`
         : `transparent`};
       border: 1px solid
-        ${props.textColor ? `var(${props.textColor})` : 'var(--black)'};
+        ${props.fontColor ? `var(${props.fontColor})` : 'var(--black)'};
       padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
       transition: background-color var(--transition-short);
 
@@ -189,12 +189,12 @@ const LinkAndButtonCss = css<LinkButtonProps>`
       background-color: ${props.$backgroundColor
         ? `var(${props.$backgroundColor})`
         : `transparent`};
-      border: 1px solid var(${props.textColor || '--black'});
-      box-shadow: 0 4px 0 0 var(${props.textColor || '--black'});
+      border: 1px solid var(${props.fontColor || '--black'});
+      box-shadow: 0 4px 0 0 var(${props.fontColor || '--black'});
       padding: ${buttonYPadding}rem 2rem ${buttonYPadding - 0.2}rem;
       transition: background-color var(--transition-short);
       &:active {
-        box-shadow: 0 2px 0 0 var(${props.textColor || '--black'});
+        box-shadow: 0 2px 0 0 var(${props.fontColor || '--black'});
         transform: translateY(2px);
       }
     `}
@@ -244,8 +244,8 @@ const BorderRight = styled.span<LinkButtonProps>`
   bottom: 0px;
   right: 0px;
   background: ${(props) =>
-    props.variant === 'secondary-offset' && props.textColor
-      ? `var(${props.textColor})`
+    props.variant === 'secondary-offset' && props.fontColor
+      ? `var(${props.fontColor})`
       : props.variant === 'secondary-offset'
       ? 'var(--black)'
       : 'var(--red-dark)'};
@@ -267,8 +267,8 @@ const BorderBottom = styled.span<LinkButtonProps>`
   left: 0px;
   right: 0px;
   background: ${(props) =>
-    props.variant === 'secondary-offset' && props.textColor
-      ? `var(${props.textColor})`
+    props.variant === 'secondary-offset' && props.fontColor
+      ? `var(${props.fontColor})`
       : props.variant === 'secondary-offset'
       ? 'var(--black)'
       : 'var(--red-dark)'};
@@ -294,8 +294,8 @@ const BorderCornerBottomLeft = styled.span<LinkButtonProps>`
   border-right: ${buttonHeight} solid transparent;
   border-top: ${buttonHeight} solid
     ${(props) =>
-      props.variant === 'secondary-offset' && props.textColor
-        ? `var(${props.textColor})`
+      props.variant === 'secondary-offset' && props.fontColor
+        ? `var(${props.fontColor})`
         : props.variant === 'secondary-offset'
         ? 'var(--black)'
         : 'var(--red-dark)'};
@@ -320,8 +320,8 @@ const BorderCornerTopRight = styled.span<LinkButtonProps>`
   border-right: ${buttonHeight} solid transparent;
   border-bottom: ${buttonHeight} solid
     ${(props) =>
-      props.variant === 'secondary-offset' && props.textColor
-        ? `var(${props.textColor})`
+      props.variant === 'secondary-offset' && props.fontColor
+        ? `var(${props.fontColor})`
         : props.variant === 'secondary-offset'
         ? 'var(--black)'
         : 'var(--red-dark)'};

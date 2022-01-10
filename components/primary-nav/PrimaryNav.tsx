@@ -19,7 +19,7 @@ const PrimaryNav = ({ links }: PrimaryNavProps) => {
               <StyledLinkButton
                 key={`top-nav-link-${link.text}`}
                 variant="tertiary"
-                textColor="--black"
+                fontColor="--black"
                 href={link.href}
               >
                 {link.text}
