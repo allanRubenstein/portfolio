@@ -13,7 +13,7 @@ export interface UseWindowSizeReturnObj {
   width: number | undefined;
   height: number | undefined;
   breakpoint: BreakpointString | undefined;
-  breakpoints: BreakpointString[] | [];
+  breakpoints: BreakpointString[];
 }
 
 export default function useWindowSize(): UseWindowSizeReturnObj {

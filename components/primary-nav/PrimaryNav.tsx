@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import LinkButton from '../link-button/LinkButton';
 import { ColorsEnum } from '../typography/types';
 import Image from 'next/image';
+import { BREAKPOINTS } from '../../util/constants';
+import useWindowSize from '../../util/hooks/useWindowSize';
 
 export interface PrimaryNavProps {
   links?: Link[];
@@ -12,6 +14,8 @@ export interface PrimaryNavProps {
 // TODO: mobile, tablet
 
 const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
+  const size = useWindowSize();
+
   return (
     <PrimaryNavWrap>
       <LogoSection>
@@ -27,7 +31,7 @@ const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
       </LogoSection>
 
       {/* main nav links */}
-      {links && (
+      {links && size.breakpoints.includes('small') ? (
         <LinksWrap>
           {links.map((link) => {
             return (
@@ -42,12 +46,13 @@ const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
             );
           })}
         </LinksWrap>
+      ) : (
+        // TODO: make this a hamburger menu
+        <p>hamburger</p>
       )}
     </PrimaryNavWrap>
   );
 };
-
-const tablet = '590px';
 
 const PrimaryNavWrap = styled.nav`
   width: 100%;
@@ -58,7 +63,7 @@ const PrimaryNavWrap = styled.nav`
   align-items: center;
   box-shadow: 0px 1px 6px -2px rgba(0, 0, 0, 0.1);
 
-  @media screen and (min-width: ${tablet}) {
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) {
     height: 6.5rem;
     justify-content: flex-start;
   }
@@ -75,7 +80,7 @@ const ImageWrap = styled.div`
   height: auto;
   display: block;
 
-  @media screen and (min-width: ${tablet}) {
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) {
     margin-left: 5rem;
     width: 5.2rem;
   }
@@ -100,7 +105,7 @@ const LogoSection = styled.div`
     border-left: 1rem solid var(${ColorsEnum.red});
   }
 
-  @media screen and (min-width: ${tablet}) {
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) {
     width: 15rem;
     margin-right: 6.5rem;
 
