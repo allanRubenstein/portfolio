@@ -56,12 +56,10 @@ const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
 
 const PrimaryNavWrap = styled.nav`
   width: 100%;
-  padding-right: 1rem;
   height: 4.5rem;
   justify-content: space-between;
   display: flex;
   align-items: center;
-  box-shadow: 0px 1px 6px -2px rgba(0, 0, 0, 0.1);
 
   @media screen and (min-width: ${BREAKPOINTS.medium}px) {
     height: 6.5rem;
@@ -70,6 +68,16 @@ const PrimaryNavWrap = styled.nav`
 `;
 const LinksWrap = styled.div`
   display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  border-bottom: 1px solid var(${ColorsEnum.gray});
+  @media screen and (min-width: ${BREAKPOINTS.medium}px) {
+    padding-left: 6.5rem;
+    justify-content: flex-start;
+  }
 `;
 const StyledLinkButton = styled(LinkButton)`
   margin: 0 1rem;
@@ -88,7 +96,6 @@ const ImageWrap = styled.div`
 const LogoSection = styled.div`
   width: 4rem;
   height: 100%;
-  margin-right: 1.5rem;
   background-color: var(${ColorsEnum.red});
   position: relative;
   display: flex;
@@ -107,7 +114,7 @@ const LogoSection = styled.div`
 
   @media screen and (min-width: ${BREAKPOINTS.medium}px) {
     width: 15rem;
-    margin-right: 6.5rem;
+    flex-shrink: 0;
 
     ::after {
       border-bottom: 6.5rem solid transparent;

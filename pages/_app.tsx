@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     ${ColorsEnum.redDark}: #940000;
     ${ColorsEnum.white}: #fff;
     ${ColorsEnum.black}: #000000;
+    ${ColorsEnum.gray}: #e6e6e6;
 
     --transition-short: .1s;
   }

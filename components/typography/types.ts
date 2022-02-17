@@ -11,7 +11,8 @@ export type Colors =
   | '--red'
   | '--red-dark'
   | '--white'
-  | '--black';
+  | '--black'
+  | '--gray';
 
 // match Colors and css color variables
 export enum ColorsEnum {
@@ -20,6 +21,7 @@ export enum ColorsEnum {
   redDark = '--red-dark',
   white = '--white',
   black = '--black',
+  gray = '--gray',
 }
 
 export interface TitleTypographyProps extends TypographyProps {
