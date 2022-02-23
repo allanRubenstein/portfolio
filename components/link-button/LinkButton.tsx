@@ -10,7 +10,7 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
    */
   const renderButtonInnerContents = () => {
     return (
-      <Title
+      <StyledTitle
         // white by default, but secondary/tertiary button can have a color prop
         $fontColor={
           props.variant === 'secondary' ||
@@ -20,11 +20,11 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
             : '--white'
         }
         $isBold={true}
-        $fontSize={2}
+        $fontSize={props.fontSize || 2}
         as="span"
       >
         {props.children}
-      </Title>
+      </StyledTitle>
     );
   };
 
@@ -231,6 +231,9 @@ const LinkAndButtonCss = css<LinkButtonProps>`
     `}
 `;
 
+const StyledTitle = styled(Title)`
+  position: relative;
+`;
 const LinkWrapper = styled.a`
   ${LinkAndButtonCss}/* link specific styles */
 `;

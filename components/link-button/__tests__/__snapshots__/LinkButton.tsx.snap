@@ -10,6 +10,10 @@ exports[`button snapshot 1`] = `
   color: var(--white);
 }
 
+.c2 {
+  position: relative;
+}
+
 .c0 {
   position: relative;
   border: none;
@@ -47,7 +51,7 @@ exports[`button snapshot 1`] = `
     type="submit"
   >
     <span
-      class="c1"
+      class="c1 c2"
     >
       test
     </span>
@@ -58,11 +62,11 @@ exports[`button snapshot 1`] = `
 exports[`button snapshot 2`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 bKLyoz"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-2 jNPUyY"
     type="button"
   >
     <span
-      class="Title-xde5hf-0 jeYcYn"
+      class="Title-xde5hf-0 LinkButton__StyledTitle-sc-4kilkf-0 jeYcYn gliPvF"
     >
       test
     </span>
@@ -73,7 +77,7 @@ exports[`button snapshot 2`] = `
 exports[`button snapshot 3`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-1 jpYQD"
+    class="LinkButton__ButtonWrapper-sc-4kilkf-2 kFgHME"
     type="button"
   >
     .c1 {
@@ -99,7 +103,7 @@ exports[`button snapshot 3`] = `
   transform: translate(0rem,0rem) scaleX(0);
 }
 
-.LinkButton__LinkWrapper-sc-4kilkf-0:active .c0 {
+.LinkButton__LinkWrapper-sc-4kilkf-1:active .c0 {
   -webkit-transform: translate(0rem,0rem) scaleX(0);
   -ms-transform: translate(0rem,0rem) scaleX(0);
   transform: translate(0rem,0rem) scaleX(0);
@@ -137,7 +141,7 @@ exports[`button snapshot 3`] = `
   transform: translate(-.3rem,0rem) scale(0);
 }
 
-.LinkButton__LinkWrapper-sc-4kilkf-0:active .c0 {
+.LinkButton__LinkWrapper-sc-4kilkf-1:active .c0 {
   -webkit-transform: translate(-.3rem,0rem) scale(0);
   -ms-transform: translate(-.3rem,0rem) scale(0);
   transform: translate(-.3rem,0rem) scale(0);
@@ -173,7 +177,7 @@ exports[`button snapshot 3`] = `
   transform: translate(0rem,0rem) scaleY(0);
 }
 
-.LinkButton__LinkWrapper-sc-4kilkf-0:active .c0 {
+.LinkButton__LinkWrapper-sc-4kilkf-1:active .c0 {
   -webkit-transform: translate(0rem,0rem) scaleY(0);
   -ms-transform: translate(0rem,0rem) scaleY(0);
   transform: translate(0rem,0rem) scaleY(0);
@@ -211,7 +215,7 @@ exports[`button snapshot 3`] = `
   transform: translate(0rem,-.3rem) scale(0);
 }
 
-.LinkButton__LinkWrapper-sc-4kilkf-0:active .c0 {
+.LinkButton__LinkWrapper-sc-4kilkf-1:active .c0 {
   -webkit-transform: translateY(-.3rem) scale(0);
   -ms-transform: translateY(-.3rem) scale(0);
   transform: translateY(-.3rem) scale(0);
@@ -225,7 +229,7 @@ exports[`button snapshot 3`] = `
       class="c0 c1"
     />
     <span
-      class="Title-xde5hf-0 jeYcYn"
+      class="Title-xde5hf-0 LinkButton__StyledTitle-sc-4kilkf-0 jeYcYn gliPvF"
     >
       test
     </span>
@@ -241,6 +245,10 @@ exports[`link snapshot 1`] = `
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 700;
   color: var(--white);
+}
+
+.c2 {
+  position: relative;
 }
 
 .c0 {
@@ -280,7 +288,7 @@ exports[`link snapshot 1`] = `
     href="/#"
   >
     <span
-      class="c1"
+      class="c1 c2"
     >
       test
     </span>
@@ -291,7 +299,7 @@ exports[`link snapshot 1`] = `
 exports[`link snapshot 2`] = `
 <div>
   <a
-    class="LinkButton__LinkWrapper-sc-4kilkf-0 kyCbcA"
+    class="LinkButton__LinkWrapper-sc-4kilkf-1 eZgQmJ"
     href="/#test2"
   >
     .c1 {
@@ -311,7 +319,7 @@ exports[`link snapshot 2`] = `
   transform: translate(.3rem,.3rem);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-1:active .c0 {
+.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c0 {
   -webkit-transform: translate(0rem,0rem) scaleX(0);
   -ms-transform: translate(0rem,0rem) scaleX(0);
   transform: translate(0rem,0rem) scaleX(0);
@@ -349,7 +357,7 @@ exports[`link snapshot 2`] = `
   transform: translate(0rem,.3rem) scale(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-1:active .c0 {
+.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c0 {
   -webkit-transform: translate(-.3rem,0rem) scale(0);
   -ms-transform: translate(-.3rem,0rem) scale(0);
   transform: translate(-.3rem,0rem) scale(0);
@@ -385,7 +393,7 @@ exports[`link snapshot 2`] = `
   transform: translate(.3rem,.3rem) scaleY(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-1:active .c0 {
+.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c0 {
   -webkit-transform: translate(0rem,0rem) scaleY(0);
   -ms-transform: translate(0rem,0rem) scaleY(0);
   transform: translate(0rem,0rem) scaleY(0);
@@ -423,7 +431,7 @@ exports[`link snapshot 2`] = `
   transform: translate(.3rem,0rem) scale(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-1:active .c0 {
+.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c0 {
   -webkit-transform: translate(0rem,-.3rem) scale(0);
   -ms-transform: translate(0rem,-.3rem) scale(0);
   transform: translate(0rem,-.3rem) scale(0);
@@ -443,7 +451,7 @@ exports[`link snapshot 2`] = `
       class="c0 c1"
     />
     <span
-      class="Title-xde5hf-0 jeYcYn"
+      class="Title-xde5hf-0 LinkButton__StyledTitle-sc-4kilkf-0 jeYcYn gliPvF"
     >
       test 2
     </span>
@@ -459,6 +467,10 @@ exports[`secondary button and link snapshot 1`] = `
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 700;
   color: var(--black);
+}
+
+.c2 {
+  position: relative;
 }
 
 .c0 {
@@ -495,7 +507,7 @@ exports[`secondary button and link snapshot 1`] = `
     href="/#"
   >
     <span
-      class="c1"
+      class="c1 c2"
     >
       test
     </span>
@@ -514,6 +526,10 @@ exports[`secondary button and link snapshot 2`] = `
   color: var(--black);
 }
 
+.c2 {
+  position: relative;
+}
+
 .c0 {
   position: relative;
   border: none;
@@ -547,7 +563,7 @@ exports[`secondary button and link snapshot 2`] = `
     type="button"
   >
     <span
-      class="c1"
+      class="c1 c2"
     >
       test 2
     </span>
@@ -563,6 +579,10 @@ exports[`secondary offset button and link snapshot 1`] = `
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 700;
   color: var(--black);
+}
+
+.c11 {
+  position: relative;
 }
 
 .c1 {
@@ -610,7 +630,7 @@ exports[`secondary offset button and link snapshot 1`] = `
   transform: translate(.3rem,.3rem);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-1:active .c2 {
+.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c2 {
   -webkit-transform: translate(0rem,0rem) scaleX(0);
   -ms-transform: translate(0rem,0rem) scaleX(0);
   transform: translate(0rem,0rem) scaleX(0);
@@ -639,7 +659,7 @@ exports[`secondary offset button and link snapshot 1`] = `
   transform: translate(.3rem,.3rem) scaleY(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-1:active .c6 {
+.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c6 {
   -webkit-transform: translate(0rem,0rem) scaleY(0);
   -ms-transform: translate(0rem,0rem) scaleY(0);
   transform: translate(0rem,0rem) scaleY(0);
@@ -670,7 +690,7 @@ exports[`secondary offset button and link snapshot 1`] = `
   transform: translate(0rem,.3rem) scale(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-1:active .c4 {
+.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c4 {
   -webkit-transform: translate(-.3rem,0rem) scale(0);
   -ms-transform: translate(-.3rem,0rem) scale(0);
   transform: translate(-.3rem,0rem) scale(0);
@@ -701,7 +721,7 @@ exports[`secondary offset button and link snapshot 1`] = `
   transform: translate(.3rem,0rem) scale(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-1:active .c8 {
+.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c8 {
   -webkit-transform: translate(0rem,-.3rem) scale(0);
   -ms-transform: translate(0rem,-.3rem) scale(0);
   transform: translate(0rem,-.3rem) scale(0);
@@ -735,7 +755,7 @@ exports[`secondary offset button and link snapshot 1`] = `
       class="c8 c9"
     />
     <span
-      class="c10"
+      class="c10 c11"
     >
       test
     </span>
@@ -754,6 +774,10 @@ exports[`secondary offset button and link snapshot 2`] = `
   color: var(--black);
 }
 
+.c11 {
+  position: relative;
+}
+
 .c1 {
   position: relative;
   border: none;
@@ -805,7 +829,7 @@ exports[`secondary offset button and link snapshot 2`] = `
   transform: translate(0rem,0rem) scaleX(0);
 }
 
-.c11:active .c2 {
+.c12:active .c2 {
   -webkit-transform: translate(0rem,0rem) scaleX(0);
   -ms-transform: translate(0rem,0rem) scaleX(0);
   transform: translate(0rem,0rem) scaleX(0);
@@ -834,7 +858,7 @@ exports[`secondary offset button and link snapshot 2`] = `
   transform: translate(0rem,0rem) scaleY(0);
 }
 
-.c11:active .c6 {
+.c12:active .c6 {
   -webkit-transform: translate(0rem,0rem) scaleY(0);
   -ms-transform: translate(0rem,0rem) scaleY(0);
   transform: translate(0rem,0rem) scaleY(0);
@@ -865,7 +889,7 @@ exports[`secondary offset button and link snapshot 2`] = `
   transform: translate(-.3rem,0rem) scale(0);
 }
 
-.c11:active .c4 {
+.c12:active .c4 {
   -webkit-transform: translate(-.3rem,0rem) scale(0);
   -ms-transform: translate(-.3rem,0rem) scale(0);
   transform: translate(-.3rem,0rem) scale(0);
@@ -896,7 +920,7 @@ exports[`secondary offset button and link snapshot 2`] = `
   transform: translate(0rem,-.3rem) scale(0);
 }
 
-.c11:active .c8 {
+.c12:active .c8 {
   -webkit-transform: translateY(-.3rem) scale(0);
   -ms-transform: translateY(-.3rem) scale(0);
   transform: translateY(-.3rem) scale(0);
@@ -923,7 +947,7 @@ exports[`secondary offset button and link snapshot 2`] = `
       class="c8 c9"
     />
     <span
-      class="c10"
+      class="c10 c11"
     >
       test 2
     </span>
@@ -939,6 +963,10 @@ exports[`tertiary button and link snapshot 1`] = `
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 700;
   color: var(--red-dark);
+}
+
+.c3 {
+  position: relative;
 }
 
 .c0 {
@@ -985,7 +1013,7 @@ exports[`tertiary button and link snapshot 1`] = `
     href="/#"
   >
     <span
-      class="c1 c2"
+      class="c1 c2 c3"
     >
       test
     </span>
@@ -1004,7 +1032,11 @@ exports[`tertiary button and link snapshot 2`] = `
   color: var(--red);
 }
 
-.c3 .c1::after {
+.c3 {
+  position: relative;
+}
+
+.c4 .c1::after {
   -webkit-transition: var(--transition-short);
   transition: var(--transition-short);
   content: '';
@@ -1018,8 +1050,8 @@ exports[`tertiary button and link snapshot 2`] = `
   background-color: currentColor;
 }
 
-.c3:hover .c1::after,
-.c3:focus .c1::after {
+.c4:hover .c1::after,
+.c4:focus .c1::after {
   max-width: 100%;
   top: 100%;
   left: 0;
@@ -1073,7 +1105,7 @@ exports[`tertiary button and link snapshot 2`] = `
     type="button"
   >
     <span
-      class="c1 c2"
+      class="c1 c2 c3"
     >
       test 2
     </span>

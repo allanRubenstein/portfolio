@@ -10,6 +10,7 @@ export interface UniversalLinkButtonProps {
   href?: string;
   buttonType?: 'button' | 'submit';
   onClick?: () => void;
+  fontSize?: number;
   // variants that don't need special props go here below
   variant?: 'primary' | 'offset';
 }
