@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from '../common/common';
 import styled from 'styled-components';
 import LinkButton from '../link-button/LinkButton';
@@ -6,6 +6,8 @@ import { ColorsEnum } from '../typography/types';
 import Image from 'next/image';
 import { BREAKPOINTS } from '../../util/constants';
 import useWindowSize from '../../util/hooks/useWindowSize';
+import ScreenReaderOnly from '../common/screen-reader-only/ScreenReaderOnly';
+import MobileModalMenu from './MobileModalMenu';
 
 export interface PrimaryNavProps {
   links?: Link[];
@@ -15,18 +17,24 @@ export interface PrimaryNavProps {
 
 const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
   const size = useWindowSize();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <PrimaryNavWrap>
       <LogoSection>
         <ImageWrap>
-          <Image
-            src="/images/nav/nav-logo.png"
-            alt="logo"
-            width={52}
-            height={60}
-            layout={'responsive'}
-          />
+          {/* 
+            // TODO: add home page link
+          */}
+          <a href="#">
+            <Image
+              src="/images/nav/nav-logo.png"
+              alt="logo"
+              width={52}
+              height={60}
+              layout={'responsive'}
+            />
+          </a>
         </ImageWrap>
       </LogoSection>
 
@@ -47,8 +55,30 @@ const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
           })}
         </LinksWrap>
       ) : (
-        // TODO: make this a hamburger menu
-        <p>hamburger</p>
+        <LinksWrap>
+          <LinkButton
+            // TODO: add home page link
+            href="#"
+            variant="tertiary"
+            fontSize={1.5}
+            fontColor="--black"
+          >
+            Allan Rubenstein{' '}
+            <ScreenReaderOnly>Go To Home Page</ScreenReaderOnly>
+          </LinkButton>
+          <HamburgerMenuButton
+            type="button"
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <HamburgerMenuButtonBar />
+            <HamburgerMenuButtonBar />
+            <HamburgerMenuButtonBar />
+            <ScreenReaderOnly>open nav menu</ScreenReaderOnly>
+          </HamburgerMenuButton>
+          {isMobileMenuOpen && (
+            <MobileModalMenu onExit={() => setIsMobileMenuOpen(false)} />
+          )}
+        </LinksWrap>
       )}
     </PrimaryNavWrap>
   );
@@ -68,18 +98,23 @@ const PrimaryNavWrap = styled.nav`
 `;
 const LinksWrap = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding-right: 1.5rem;
+  padding-left: 2rem;
   width: 100%;
   height: 100%;
   align-items: center;
   border-bottom: 1px solid var(${ColorsEnum.gray});
+  @media screen and (min-width: ${BREAKPOINTS.small}px) {
+    justify-content: flex-end;
+  }
   @media screen and (min-width: ${BREAKPOINTS.medium}px) {
     padding-left: 6.5rem;
     justify-content: flex-start;
   }
 `;
 const StyledLinkButton = styled(LinkButton)`
+  padding: 1rem 0;
   margin: 0 1rem;
 `;
 const ImageWrap = styled.div`
@@ -121,6 +156,24 @@ const LogoSection = styled.div`
       border-left: 6.5rem solid var(${ColorsEnum.red});
     }
   }
+`;
+
+const HamburgerMenuButton = styled.button`
+  width: 2.5rem;
+  height: 100%;
+  border: none;
+  background: none;
+  padding: 0;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+const HamburgerMenuButtonBar = styled.span`
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(${ColorsEnum.red});
+  display: block;
+  margin: 0.6rem 0;
 `;
 
 export default PrimaryNav;
