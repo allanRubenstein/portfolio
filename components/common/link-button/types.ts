@@ -1,4 +1,4 @@
-import { Colors } from '../typography/types';
+import { Colors } from '../../typography/types';
 
 export type LinkButtonProps =
   | UniversalLinkButtonProps

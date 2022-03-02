@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from '../common/common';
 import styled from 'styled-components';
-import LinkButton from '../link-button/LinkButton';
+import LinkButton from '../common/link-button/LinkButton';
 import { ColorsEnum } from '../typography/types';
 import Image from 'next/image';
 import { BREAKPOINTS } from '../../util/constants';

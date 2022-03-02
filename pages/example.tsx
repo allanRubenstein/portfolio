@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import LinkButton from '../components/link-button/LinkButton';
+import LinkButton from '../components/common/link-button/LinkButton';
 import Link from 'next/link';
 
 const Test = () => {

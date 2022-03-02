@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { LinkButtonProps } from './types';
 import Link from 'next/link';
-import { Title } from '../typography/Title';
+import { Title } from '../../typography/Title';
 
 const LinkButton = (props: LinkButtonProps): JSX.Element => {
   /**

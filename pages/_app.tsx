@@ -62,6 +62,13 @@ export const GlobalStyle = createGlobalStyle`
   [data-whatintent='mouse'] *:focus {
     outline: none;
   }
+
+  button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
 `;
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {

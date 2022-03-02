@@ -62,11 +62,11 @@ exports[`button snapshot 1`] = `
 exports[`button snapshot 2`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-2 jNPUyY"
+    class="LinkButton__ButtonWrapper-a4tpxg-2 hjHmHc"
     type="button"
   >
     <span
-      class="Title-xde5hf-0 LinkButton__StyledTitle-sc-4kilkf-0 jeYcYn gliPvF"
+      class="Title-xde5hf-0 LinkButton__StyledTitle-a4tpxg-0 jeYcYn dUjWXd"
     >
       test
     </span>
@@ -77,7 +77,7 @@ exports[`button snapshot 2`] = `
 exports[`button snapshot 3`] = `
 <div>
   <button
-    class="LinkButton__ButtonWrapper-sc-4kilkf-2 kFgHME"
+    class="LinkButton__ButtonWrapper-a4tpxg-2 rZBNg"
     type="button"
   >
     .c1 {
@@ -103,7 +103,7 @@ exports[`button snapshot 3`] = `
   transform: translate(0rem,0rem) scaleX(0);
 }
 
-.LinkButton__LinkWrapper-sc-4kilkf-1:active .c0 {
+.LinkButton__LinkWrapper-a4tpxg-1:active .c0 {
   -webkit-transform: translate(0rem,0rem) scaleX(0);
   -ms-transform: translate(0rem,0rem) scaleX(0);
   transform: translate(0rem,0rem) scaleX(0);
@@ -141,7 +141,7 @@ exports[`button snapshot 3`] = `
   transform: translate(-.3rem,0rem) scale(0);
 }
 
-.LinkButton__LinkWrapper-sc-4kilkf-1:active .c0 {
+.LinkButton__LinkWrapper-a4tpxg-1:active .c0 {
   -webkit-transform: translate(-.3rem,0rem) scale(0);
   -ms-transform: translate(-.3rem,0rem) scale(0);
   transform: translate(-.3rem,0rem) scale(0);
@@ -177,7 +177,7 @@ exports[`button snapshot 3`] = `
   transform: translate(0rem,0rem) scaleY(0);
 }
 
-.LinkButton__LinkWrapper-sc-4kilkf-1:active .c0 {
+.LinkButton__LinkWrapper-a4tpxg-1:active .c0 {
   -webkit-transform: translate(0rem,0rem) scaleY(0);
   -ms-transform: translate(0rem,0rem) scaleY(0);
   transform: translate(0rem,0rem) scaleY(0);
@@ -215,7 +215,7 @@ exports[`button snapshot 3`] = `
   transform: translate(0rem,-.3rem) scale(0);
 }
 
-.LinkButton__LinkWrapper-sc-4kilkf-1:active .c0 {
+.LinkButton__LinkWrapper-a4tpxg-1:active .c0 {
   -webkit-transform: translateY(-.3rem) scale(0);
   -ms-transform: translateY(-.3rem) scale(0);
   transform: translateY(-.3rem) scale(0);
@@ -229,7 +229,7 @@ exports[`button snapshot 3`] = `
       class="c0 c1"
     />
     <span
-      class="Title-xde5hf-0 LinkButton__StyledTitle-sc-4kilkf-0 jeYcYn gliPvF"
+      class="Title-xde5hf-0 LinkButton__StyledTitle-a4tpxg-0 jeYcYn dUjWXd"
     >
       test
     </span>
@@ -299,7 +299,7 @@ exports[`link snapshot 1`] = `
 exports[`link snapshot 2`] = `
 <div>
   <a
-    class="LinkButton__LinkWrapper-sc-4kilkf-1 eZgQmJ"
+    class="LinkButton__LinkWrapper-a4tpxg-1 bStzGh"
     href="/#test2"
   >
     .c1 {
@@ -319,7 +319,7 @@ exports[`link snapshot 2`] = `
   transform: translate(.3rem,.3rem);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c0 {
+.LinkButton__ButtonWrapper-a4tpxg-2:active .c0 {
   -webkit-transform: translate(0rem,0rem) scaleX(0);
   -ms-transform: translate(0rem,0rem) scaleX(0);
   transform: translate(0rem,0rem) scaleX(0);
@@ -357,7 +357,7 @@ exports[`link snapshot 2`] = `
   transform: translate(0rem,.3rem) scale(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c0 {
+.LinkButton__ButtonWrapper-a4tpxg-2:active .c0 {
   -webkit-transform: translate(-.3rem,0rem) scale(0);
   -ms-transform: translate(-.3rem,0rem) scale(0);
   transform: translate(-.3rem,0rem) scale(0);
@@ -393,7 +393,7 @@ exports[`link snapshot 2`] = `
   transform: translate(.3rem,.3rem) scaleY(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c0 {
+.LinkButton__ButtonWrapper-a4tpxg-2:active .c0 {
   -webkit-transform: translate(0rem,0rem) scaleY(0);
   -ms-transform: translate(0rem,0rem) scaleY(0);
   transform: translate(0rem,0rem) scaleY(0);
@@ -431,7 +431,7 @@ exports[`link snapshot 2`] = `
   transform: translate(.3rem,0rem) scale(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c0 {
+.LinkButton__ButtonWrapper-a4tpxg-2:active .c0 {
   -webkit-transform: translate(0rem,-.3rem) scale(0);
   -ms-transform: translate(0rem,-.3rem) scale(0);
   transform: translate(0rem,-.3rem) scale(0);
@@ -451,7 +451,7 @@ exports[`link snapshot 2`] = `
       class="c0 c1"
     />
     <span
-      class="Title-xde5hf-0 LinkButton__StyledTitle-sc-4kilkf-0 jeYcYn gliPvF"
+      class="Title-xde5hf-0 LinkButton__StyledTitle-a4tpxg-0 jeYcYn dUjWXd"
     >
       test 2
     </span>
@@ -630,7 +630,7 @@ exports[`secondary offset button and link snapshot 1`] = `
   transform: translate(.3rem,.3rem);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c2 {
+.LinkButton__ButtonWrapper-a4tpxg-2:active .c2 {
   -webkit-transform: translate(0rem,0rem) scaleX(0);
   -ms-transform: translate(0rem,0rem) scaleX(0);
   transform: translate(0rem,0rem) scaleX(0);
@@ -659,7 +659,7 @@ exports[`secondary offset button and link snapshot 1`] = `
   transform: translate(.3rem,.3rem) scaleY(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c6 {
+.LinkButton__ButtonWrapper-a4tpxg-2:active .c6 {
   -webkit-transform: translate(0rem,0rem) scaleY(0);
   -ms-transform: translate(0rem,0rem) scaleY(0);
   transform: translate(0rem,0rem) scaleY(0);
@@ -690,7 +690,7 @@ exports[`secondary offset button and link snapshot 1`] = `
   transform: translate(0rem,.3rem) scale(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c4 {
+.LinkButton__ButtonWrapper-a4tpxg-2:active .c4 {
   -webkit-transform: translate(-.3rem,0rem) scale(0);
   -ms-transform: translate(-.3rem,0rem) scale(0);
   transform: translate(-.3rem,0rem) scale(0);
@@ -721,7 +721,7 @@ exports[`secondary offset button and link snapshot 1`] = `
   transform: translate(.3rem,0rem) scale(1);
 }
 
-.LinkButton__ButtonWrapper-sc-4kilkf-2:active .c8 {
+.LinkButton__ButtonWrapper-a4tpxg-2:active .c8 {
   -webkit-transform: translate(0rem,-.3rem) scale(0);
   -ms-transform: translate(0rem,-.3rem) scale(0);
   transform: translate(0rem,-.3rem) scale(0);
