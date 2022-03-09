@@ -2,7 +2,6 @@ import React from 'react';
 import AriaModal from 'react-aria-modal';
 import styled, { css } from 'styled-components';
 import { ColorsEnum } from '../typography/types';
-import ScreenReaderOnly from '../common/screen-reader-only/ScreenReaderOnly';
 import XIcon from '../common/css-icons/XIcon';
 
 export interface ModalProps {
@@ -10,6 +9,9 @@ export interface ModalProps {
   titleText: string;
   onExit: () => void;
   className?: string;
+  widthVariant?: 'full' | 'windowed';
+  heightVariant?: 'full' | 'windowed';
+  verticallyCenter?: boolean;
 }
 
 const Modal = ({
@@ -17,13 +19,14 @@ const Modal = ({
   onExit,
   children,
   className,
+  verticallyCenter,
 }: ModalProps): JSX.Element => {
   return (
     <AriaModal
       titleText={titleText}
       onExit={onExit}
       dialogClass={className}
-      verticallyCenter={true}
+      verticallyCenter={verticallyCenter}
       // dialogStyle={dialogStyleProp}
     >
       {/* <StyledModalWrap>
@@ -48,9 +51,29 @@ const ModalHeaderWrap = styled.div`
 const CloseModalButton = styled.button``;
 
 const StyledModal = styled(Modal)`
-  width: calc(100vw - 5rem);
-  height: calc(100vh - 5rem);
   background-color: var(${ColorsEnum.white});
+
+  ${({ widthVariant }) =>
+    widthVariant === 'full'
+      ? css`
+          width: 100vw;
+        `
+      : widthVariant === 'windowed'
+      ? css`
+          width: calc(100vw - 5rem);
+        `
+      : null}
+
+  ${({ heightVariant }) =>
+    heightVariant === 'full'
+      ? css`
+          height: 100vh;
+        `
+      : heightVariant === 'windowed'
+      ? css`
+          height: calc(100vh - 5rem);
+        `
+      : null}
 `;
 
 export default StyledModal;

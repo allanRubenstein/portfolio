@@ -76,7 +76,10 @@ const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
             <ScreenReaderOnly>open nav menu</ScreenReaderOnly>
           </HamburgerMenuButton>
           {isMobileMenuOpen && (
-            <MobileModalMenu onExit={() => setIsMobileMenuOpen(false)} />
+            <MobileModalMenu
+              links={links}
+              onExit={() => setIsMobileMenuOpen(false)}
+            />
           )}
         </LinksWrap>
       )}
