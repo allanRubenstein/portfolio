@@ -8,6 +8,7 @@ module.exports = {
     '@testing-library/jest-dom/extend-expect',
     'jest-styled-components',
     'jest-axe/extend-expect',
+    './test/jest.setup.tsx',
   ],
   collectCoverageFrom: [
     '**/components/**/*.{tsx,ts,js}',

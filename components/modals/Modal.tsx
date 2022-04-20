@@ -14,6 +14,7 @@ export interface ModalProps {
   verticallyCenter?: boolean;
 }
 
+// TODO: use new modal. The AriaModal library does not handle modal in modal well at all
 const Modal = ({
   titleText,
   onExit,

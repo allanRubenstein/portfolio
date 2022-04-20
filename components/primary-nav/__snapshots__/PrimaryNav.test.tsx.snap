@@ -1,0 +1,1088 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`large screen size snapshot 1`] = `
+.c8 {
+  line-height: 1.2;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.c9 {
+  position: relative;
+}
+
+.c5 {
+  position: relative;
+  border: none;
+  display: block;
+  padding: 0;
+  background-color: transparent;
+}
+
+.c5:hover {
+  cursor: pointer;
+}
+
+.c5 .c7::after {
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  max-width: 0%;
+  right: 0;
+  left: auto;
+  background-color: currentColor;
+}
+
+.c5:hover .c7::after,
+.c5:focus .c7::after {
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  right: auto;
+}
+
+.c3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.c0 {
+  width: 100%;
+  height: 4.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+  padding-left: 2rem;
+  width: 100%;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+.c6 {
+  padding: 1rem 0;
+  margin: 0 1rem;
+}
+
+.c2 {
+  margin-left: 1rem;
+  width: 3rem;
+  height: auto;
+  display: block;
+}
+
+.c1 {
+  width: 4rem;
+  height: 100%;
+  background-color: var(--red);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 100%;
+  top: 0;
+  border-top: 0 solid transparent;
+  border-bottom: 4.5rem solid transparent;
+  border-left: 1rem solid var(--red);
+}
+
+@media (min-width:600px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    height: 6.5rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width:640px) {
+  .c4 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c4 {
+    padding-left: 6.5rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c2 {
+    margin-left: 5rem;
+    width: 5.2rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    width: 15rem;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .c1::after {
+    border-bottom: 6.5rem solid transparent;
+    border-left: 6.5rem solid var(--red);
+  }
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <a
+          href="#1"
+        >
+          <div
+            style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+          >
+            <div
+              style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
+            />
+            <img
+              alt="logo"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </div>
+          <span
+            class="c3"
+          >
+            Go To Home Page
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      class="c4"
+    >
+      <a
+        class="c5 c6"
+        href="/#1"
+      >
+        <span
+          class="c7 c8 c9"
+        >
+          home
+        </span>
+      </a>
+      <a
+        class="c5 c6"
+        href="/#2"
+      >
+        <span
+          class="c7 c8 c9"
+        >
+          about
+        </span>
+      </a>
+      <a
+        class="c5 c6"
+        href="/#3"
+      >
+        <span
+          class="c7 c8 c9"
+        >
+          portfolio
+        </span>
+      </a>
+      <a
+        class="c5 c6"
+        href="/#4"
+      >
+        <span
+          class="c7 c8 c9"
+        >
+          contact
+        </span>
+      </a>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`mobile modal functionality and a11y 1`] = `
+.c8 {
+  line-height: 1.2;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.c9 {
+  position: relative;
+}
+
+.c5 {
+  position: relative;
+  border: none;
+  display: block;
+  padding: 0;
+  background-color: transparent;
+}
+
+.c5:hover {
+  cursor: pointer;
+}
+
+.c5 .c7::after {
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  max-width: 0%;
+  right: 0;
+  left: auto;
+  background-color: currentColor;
+}
+
+.c5:hover .c7::after,
+.c5:focus .c7::after {
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  right: auto;
+}
+
+.c3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.c2 {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  display: block;
+}
+
+.c2::before {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 0.2rem;
+  content: '';
+  display: block;
+  background-color: var(--red);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c2::after {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 0.2rem;
+  content: '';
+  display: block;
+  background-color: var(--red);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.c0 {
+  background-color: var(--white);
+  width: 100vw;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0rem 0 2rem;
+}
+
+.c6 {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (min-width:600px) {
+
+}
+
+@media (min-width:600px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:640px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+<div
+  aria-label="Mobile Nav Menu"
+  class="c0"
+  id="react-aria-modal-dialog"
+  role="dialog"
+  style="display: inline-block; text-align: left; top: 0px; max-width: 100%; cursor: default;"
+>
+  <div
+    class="c1"
+  >
+    <button
+      class="Modal__CloseModalButton-sc-12z0vhz-1"
+    >
+      <span
+        class="c2"
+      >
+        <span
+          class="c3"
+        >
+          <p>
+            Close Modal
+          </p>
+        </span>
+      </span>
+    </button>
+  </div>
+  <div
+    class="c4"
+  >
+    <a
+      class="c5 c6"
+      font-size="2.5"
+      href="/home"
+    >
+      <span
+        class="c7 c8 c9"
+      >
+        home
+      </span>
+    </a>
+    <a
+      class="c5 c6"
+      font-size="2.5"
+      href="/about"
+    >
+      <span
+        class="c7 c8 c9"
+      >
+        about
+      </span>
+    </a>
+    <a
+      class="c5 c6"
+      font-size="2.5"
+      href="/portfolio"
+    >
+      <span
+        class="c7 c8 c9"
+      >
+        portfolio
+      </span>
+    </a>
+    <a
+      class="c5 c6"
+      font-size="2.5"
+      href="/contact"
+    >
+      <span
+        class="c7 c8 c9"
+      >
+        contact
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`small screen size snapshot 1`] = `
+.c8 {
+  line-height: 1.2;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.c9 {
+  position: relative;
+}
+
+.c5 {
+  position: relative;
+  border: none;
+  display: block;
+  padding: 0;
+  background-color: transparent;
+}
+
+.c5:hover {
+  cursor: pointer;
+}
+
+.c5 .c7::after {
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  max-width: 0%;
+  right: 0;
+  left: auto;
+  background-color: currentColor;
+}
+
+.c5:hover .c7::after,
+.c5:focus .c7::after {
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  right: auto;
+}
+
+.c3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.c0 {
+  width: 100%;
+  height: 4.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+  padding-left: 2rem;
+  width: 100%;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+.c6 {
+  padding: 1rem 0;
+  margin: 0 1rem;
+}
+
+.c2 {
+  margin-left: 1rem;
+  width: 3rem;
+  height: auto;
+  display: block;
+}
+
+.c1 {
+  width: 4rem;
+  height: 100%;
+  background-color: var(--red);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 100%;
+  top: 0;
+  border-top: 0 solid transparent;
+  border-bottom: 4.5rem solid transparent;
+  border-left: 1rem solid var(--red);
+}
+
+@media (min-width:600px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    height: 6.5rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width:640px) {
+  .c4 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c4 {
+    padding-left: 6.5rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c2 {
+    margin-left: 5rem;
+    width: 5.2rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    width: 15rem;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .c1::after {
+    border-bottom: 6.5rem solid transparent;
+    border-left: 6.5rem solid var(--red);
+  }
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <a
+          href="#1"
+        >
+          <div
+            style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+          >
+            <div
+              style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
+            />
+            <img
+              alt="logo"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </div>
+          <span
+            class="c3"
+          >
+            Go To Home Page
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      class="c4"
+    >
+      <a
+        class="c5 c6"
+        href="/#1"
+      >
+        <span
+          class="c7 c8 c9"
+        >
+          home
+        </span>
+      </a>
+      <a
+        class="c5 c6"
+        href="/#2"
+      >
+        <span
+          class="c7 c8 c9"
+        >
+          about
+        </span>
+      </a>
+      <a
+        class="c5 c6"
+        href="/#3"
+      >
+        <span
+          class="c7 c8 c9"
+        >
+          portfolio
+        </span>
+      </a>
+      <a
+        class="c5 c6"
+        href="/#4"
+      >
+        <span
+          class="c7 c8 c9"
+        >
+          contact
+        </span>
+      </a>
+    </div>
+  </nav>
+</div>
+`;
+
+exports[`xsmall screen size snapshot 1`] = `
+.c7 {
+  line-height: 1.2;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.c8 {
+  position: relative;
+}
+
+.c5 {
+  position: relative;
+  border: none;
+  display: block;
+  padding: 0;
+  background-color: transparent;
+}
+
+.c5:hover {
+  cursor: pointer;
+}
+
+.c5 .c6::after {
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  max-width: 0%;
+  right: 0;
+  left: auto;
+  background-color: currentColor;
+}
+
+.c5:hover .c6::after,
+.c5:focus .c6::after {
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  right: auto;
+}
+
+.c3 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.c0 {
+  width: 100%;
+  height: 4.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+  padding-left: 2rem;
+  width: 100%;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+.c2 {
+  margin-left: 1rem;
+  width: 3rem;
+  height: auto;
+  display: block;
+}
+
+.c1 {
+  width: 4rem;
+  height: 100%;
+  background-color: var(--red);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 100%;
+  top: 0;
+  border-top: 0 solid transparent;
+  border-bottom: 4.5rem solid transparent;
+  border-left: 1rem solid var(--red);
+}
+
+.c9 {
+  width: 2.5rem;
+  height: 100%;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.c9:hover {
+  cursor: pointer;
+}
+
+.c10 {
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--red);
+  display: block;
+  margin: 0.6rem 0;
+}
+
+@media (min-width:600px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    height: 6.5rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width:640px) {
+  .c4 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c4 {
+    padding-left: 6.5rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c2 {
+    margin-left: 5rem;
+    width: 5.2rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    width: 15rem;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .c1::after {
+    border-bottom: 6.5rem solid transparent;
+    border-left: 6.5rem solid var(--red);
+  }
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        <a
+          href="#1"
+        >
+          <div
+            style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+          >
+            <div
+              style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
+            />
+            <img
+              alt="logo"
+              decoding="async"
+              sizes="100vw"
+              src="/_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=3840&q=75 3840w"
+              style="visibility: inherit; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </div>
+          <span
+            class="c3"
+          >
+            Go To Home Page
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      class="c4"
+    >
+      <a
+        class="c5"
+        font-size="1.5"
+        href="/#2"
+      >
+        <span
+          class="c6 c7 c8"
+        >
+          Allan Rubenstein
+           
+          <span
+            class="c3"
+          >
+            Go To Home Page
+          </span>
+        </span>
+      </a>
+      <button
+        class="c9"
+        type="button"
+      >
+        <span
+          class="c10"
+        />
+        <span
+          class="c10"
+        />
+        <span
+          class="c10"
+        />
+        <span
+          class="c3"
+        >
+          open nav menu
+        </span>
+      </button>
+    </div>
+  </nav>
+</div>
+`;
