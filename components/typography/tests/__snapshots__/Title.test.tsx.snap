@@ -7,7 +7,7 @@ exports[`button snapshot 1`] = `
   text-transform: uppercase;
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 400;
-  color: var(--black);
+  color: inherit;
 }
 
 @media (min-width:600px) {
@@ -26,7 +26,7 @@ exports[`button snapshot 1`] = `
 exports[`button snapshot 2`] = `
 <div>
   <span
-    class="Title-xde5hf-0 kazauy"
+    class="Title-xde5hf-0 ialfFr"
   >
     test
   </span>
@@ -36,7 +36,7 @@ exports[`button snapshot 2`] = `
 exports[`button snapshot 3`] = `
 <div>
   <span
-    class="Title-xde5hf-0 DlKGM"
+    class="Title-xde5hf-0 jISprb"
   >
     test
   </span>
@@ -46,7 +46,7 @@ exports[`button snapshot 3`] = `
 exports[`button snapshot 4`] = `
 <div>
   <span
-    class="Title-xde5hf-0 ekAQle"
+    class="Title-xde5hf-0 buFXPF"
   >
     test
   </span>

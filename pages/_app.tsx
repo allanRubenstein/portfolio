@@ -2,14 +2,16 @@
 import { AppProps } from 'next/app';
 import 'what-input';
 import { createGlobalStyle } from 'styled-components';
+import { ColorsEnum } from '../components/typography/types';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --red-light: #e60000;
-    --red: #d70000;
-    --red-dark: #940000;
-    --white: #fff;
-    --black: #000000;
+    ${ColorsEnum.redLight}: #e60000;
+    ${ColorsEnum.red}: #d70000;
+    ${ColorsEnum.redDark}: #940000;
+    ${ColorsEnum.white}: #fff;
+    ${ColorsEnum.black}: #000000;
+    ${ColorsEnum.gray}: #e6e6e6;
 
     --transition-short: .1s;
   }
@@ -59,6 +61,13 @@ export const GlobalStyle = createGlobalStyle`
 
   [data-whatintent='mouse'] *:focus {
     outline: none;
+  }
+
+  button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
   }
 `;
 

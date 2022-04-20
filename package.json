@@ -18,7 +18,7 @@
     "test:watch": "jest --watch",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
     "test:coverage-open": "npm run test:coverage && open coverage/lcov-report/index.html",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook",
     "prepare": "husky install"
   },
@@ -37,8 +37,9 @@
     "babel-plugin-styled-components": "^1.12.0",
     "next": "10.0.6",
     "react": "17.0.1",
+    "react-aria-modal": "^4.0.1",
     "react-dom": "17.0.1",
-    "styled-components": "^5.3.0",
+    "styled-components": "^5.3.3",
     "what-input": "^5.2.10"
   },
   "devDependencies": {
@@ -54,7 +55,8 @@
     "@types/jest-axe": "^3.5.1",
     "@types/node": "^14.17.4",
     "@types/react": "^17.0.11",
-    "@types/styled-components": "^5.1.10",
+    "@types/react-aria-modal": "^4.0.6",
+    "@types/styled-components": "^5.1.19",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
     "babel-loader": "^8.2.2",

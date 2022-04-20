@@ -18,7 +18,7 @@ test('button snapshot', () => {
 
   // different color
   rerender(
-    <Title $fontSize={5} $color="--red">
+    <Title $fontSize={5} $fontColor="--red">
       test
     </Title>,
   );
@@ -26,7 +26,7 @@ test('button snapshot', () => {
 
   // text shadow
   rerender(
-    <Title $fontSize={5} $color="--red" $hasTextShadow={true}>
+    <Title $fontSize={5} $fontColor="--red" $hasTextShadow={true}>
       test
     </Title>,
   );
