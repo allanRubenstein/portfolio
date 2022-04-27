@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+.c2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.c0 {
+  width: 100%;
+  background-color: var(--white);
+  border-top: 1px solid var(--gray);
+}
+
+.c1 {
+  padding: 3rem 0;
+  width: 3rem;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+<div>
+  <footer
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <a
+        href="/"
+      >
+        <div
+          style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+        >
+          <div
+            style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
+          />
+          <img
+            alt="logo"
+            decoding="async"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+          />
+        </div>
+        <span
+          class="c2"
+        >
+          Home Page
+        </span>
+      </a>
+    </div>
+  </footer>
+</div>
+`;
