@@ -40,7 +40,7 @@ const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
       </LogoSection>
 
       {/* main nav links */}
-      {links && size.breakpoints.includes('small') ? (
+      {links && size?.breakpoints.includes('small') ? (
         <LinksWrap>
           {links.map((link) => {
             return (
@@ -56,33 +56,36 @@ const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
           })}
         </LinksWrap>
       ) : (
-        <LinksWrap>
-          <LinkButton
-            // TODO: add home page link
-            href="#2"
-            variant="tertiary"
-            fontSize={1.5}
-            fontColor="--black"
-          >
-            Allan Rubenstein{' '}
-            <ScreenReaderOnly>Go To Home Page</ScreenReaderOnly>
-          </LinkButton>
-          <HamburgerMenuButton
-            type="button"
-            onClick={() => setIsMobileMenuOpen(true)}
-          >
-            <HamburgerMenuButtonBar />
-            <HamburgerMenuButtonBar />
-            <HamburgerMenuButtonBar />
-            <ScreenReaderOnly>open nav menu</ScreenReaderOnly>
-          </HamburgerMenuButton>
-          {isMobileMenuOpen && (
-            <MobileModalMenu
-              links={links}
-              onExit={() => setIsMobileMenuOpen(false)}
-            />
-          )}
-        </LinksWrap>
+        size &&
+        links && (
+          <LinksWrap>
+            <LinkButton
+              // TODO: add home page link
+              href="#2"
+              variant="tertiary"
+              fontSize={1.5}
+              fontColor="--black"
+            >
+              Allan Rubenstein{' '}
+              <ScreenReaderOnly>Go To Home Page</ScreenReaderOnly>
+            </LinkButton>
+            <HamburgerMenuButton
+              type="button"
+              onClick={() => setIsMobileMenuOpen(true)}
+            >
+              <HamburgerMenuButtonBar />
+              <HamburgerMenuButtonBar />
+              <HamburgerMenuButtonBar />
+              <ScreenReaderOnly>open nav menu</ScreenReaderOnly>
+            </HamburgerMenuButton>
+            {isMobileMenuOpen && (
+              <MobileModalMenu
+                links={links}
+                onExit={() => setIsMobileMenuOpen(false)}
+              />
+            )}
+          </LinksWrap>
+        )
       )}
     </PrimaryNavWrap>
   );

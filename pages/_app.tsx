@@ -3,6 +3,8 @@ import { AppProps } from 'next/app';
 import 'what-input';
 import { createGlobalStyle } from 'styled-components';
 import { ColorsEnum } from '../components/typography/types';
+import PrimaryNav from '../components/primary-nav/PrimaryNav';
+import Footer from '../components/footer/Footer';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -45,6 +47,10 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: normal;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   ol,
   ul {
     list-style: none;
@@ -72,10 +78,32 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
+  // TODO: fix this, make it dynamic
   return (
     <>
       <GlobalStyle />
+      <PrimaryNav
+        links={[
+          {
+            text: 'home',
+            href: '#',
+          },
+          {
+            text: 'about',
+            href: '#',
+          },
+          {
+            text: 'portfolio',
+            href: '#',
+          },
+          {
+            text: 'contact',
+            href: '#',
+          },
+        ]}
+      ></PrimaryNav>
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

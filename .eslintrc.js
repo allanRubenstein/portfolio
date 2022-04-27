@@ -48,7 +48,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  ignorePatterns: ['_document.js'],
+  ignorePatterns: ['_document.js', '_document.tsx'],
   settings: {
     react: {
       version: 'latest',
