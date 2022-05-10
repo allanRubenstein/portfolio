@@ -4,10 +4,10 @@ exports[`button snapshot 1`] = `
 .c0 {
   line-height: 1.2;
   font-size: 5rem;
-  text-transform: uppercase;
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 400;
   color: inherit;
+  text-transform: uppercase;
 }
 
 @media (min-width:600px) {
@@ -26,7 +26,7 @@ exports[`button snapshot 1`] = `
 exports[`button snapshot 2`] = `
 <div>
   <span
-    class="Title-xde5hf-0 ialfFr"
+    class="Title-xde5hf-0 bBEOkM"
   >
     test
   </span>
@@ -36,7 +36,7 @@ exports[`button snapshot 2`] = `
 exports[`button snapshot 3`] = `
 <div>
   <span
-    class="Title-xde5hf-0 jISprb"
+    class="Title-xde5hf-0 jnSYdk"
   >
     test
   </span>
@@ -46,7 +46,7 @@ exports[`button snapshot 3`] = `
 exports[`button snapshot 4`] = `
 <div>
   <span
-    class="Title-xde5hf-0 buFXPF"
+    class="Title-xde5hf-0 gAGAUi"
   >
     test
   </span>

@@ -27,4 +27,5 @@ export enum ColorsEnum {
 export interface TitleTypographyProps extends TypographyProps {
   $isBold?: boolean;
   $hasTextShadow?: boolean;
+  $textTransform?: 'none' | 'uppercase';
 }
