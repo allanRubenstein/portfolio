@@ -119,6 +119,7 @@ const LinkAndButtonCss = css<LinkButtonProps>`
   border: none;
   display: block;
   padding: 0;
+  text-align: center;
   &:hover {
     cursor: pointer;
   }

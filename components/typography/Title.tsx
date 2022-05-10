@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { BREAKPOINTS } from '../../util/constants';
 import { TitleTypographyProps } from './types';
 
 export const Title = styled.span<TitleTypographyProps>`
-  line-height: 1.2;
+  line-height: 0.9;
   font-size: ${(props) => props.$fontSize}rem;
 
   font-family: 'Roboto Condensed', sans-serif;
@@ -19,7 +20,7 @@ export const Title = styled.span<TitleTypographyProps>`
   /* text-transform: uppercase; */
   text-transform: ${(props) => `${props.$textTransform || 'uppercase'}`};
   /* TODO: come up with breakpoints */
-  @media (min-width: 600px) {
+  @media (min-width: ${BREAKPOINTS.medium}px) {
     ${(props) =>
       props.$desktopFontSize ? `font-size: ${props.$desktopFontSize}rem` : ''}
   }
