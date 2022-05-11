@@ -33,12 +33,13 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
    * @returns
    */
   const renderLinkOrButton = () => {
-    if (props.href) {
+    const { href, className, ...linkButtonWrapperProps } = props;
+    if (href) {
       return (
         // render a link with an href
-        <MarginOffsetWrapper {...props}>
-          <Link href={props.href} passHref>
-            <LinkWrapper {...props}>
+        <MarginOffsetWrapper className={className}>
+          <Link href={href} passHref>
+            <LinkWrapper {...linkButtonWrapperProps}>
               {props.variant === 'offset' && (
                 <>
                   <BorderRight></BorderRight>
@@ -74,7 +75,7 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
         <MarginOffsetWrapper {...props}>
           <ButtonWrapper
             type={props.buttonType || 'button'}
-            {...props}
+            {...linkButtonWrapperProps}
             onClick={props.onClick}
           >
             {props.variant === 'offset' && (
@@ -255,6 +256,7 @@ const LinkAndButtonCss = css<LinkButtonProps>`
 
 const StyledTitle = styled(Title)`
   position: relative;
+  line-height: inherit;
 `;
 const LinkWrapper = styled.a`
   ${LinkAndButtonCss}/* link specific styles */

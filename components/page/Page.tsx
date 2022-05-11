@@ -17,9 +17,8 @@ const Page = ({ pageTitle, children }: PageProps): JSX.Element => {
       {/* 
         // TODO: set up nav skip here
       */}
-      <main id="main" tabIndex={-1}>
-        {children}
-      </main>
+
+      {children}
     </div>
   );
 };

@@ -13,6 +13,7 @@ export interface UniversalLinkButtonProps {
   fontSize?: number;
   // variants that don't need special props go here below
   variant?: 'primary' | 'offset';
+  className?: string;
 }
 
 // secondary variant can have a colors prop

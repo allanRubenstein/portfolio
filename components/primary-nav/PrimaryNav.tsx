@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from '../common/common';
+import { LinkInterface } from '../common/common';
 import styled from 'styled-components';
 import LinkButton from '../common/link-button/LinkButton';
 import { ColorsEnum } from '../typography/types';
@@ -8,88 +8,102 @@ import { BREAKPOINTS } from '../../util/constants';
 import useWindowSize from '../../util/hooks/useWindowSize';
 import ScreenReaderOnly from '../common/screen-reader-only/ScreenReaderOnly';
 import MobileModalMenu from './MobileModalMenu';
+import { Title } from '../typography/Title';
 
 export interface PrimaryNavProps {
-  links?: Link[];
+  links?: LinkInterface[];
+  mainId?: string;
 }
 
 // TODO: mobile, tablet
 
-const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
+const PrimaryNav = ({ links, mainId }: PrimaryNavProps): JSX.Element => {
   const size = useWindowSize();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <PrimaryNavWrap>
-      <LogoSection>
-        <ImageWrap>
-          {/* 
+    <RelativeWrap>
+      <SkipToMain href={`#${mainId}`}>
+        <Title $fontSize={3} $fontColor="--black" $isBold>
+          skip to main content
+        </Title>
+      </SkipToMain>
+
+      <PrimaryNavWrap>
+        <LogoSection>
+          <ImageWrap>
+            {/* 
             // TODO: add home page link
           */}
-          <a href="/">
-            <Image
-              src="/images/nav/nav-logo.png"
-              alt="logo"
-              width={52}
-              height={60}
-              layout={'responsive'}
-            />
-            <ScreenReaderOnly>Go To Home Page</ScreenReaderOnly>
-          </a>
-        </ImageWrap>
-      </LogoSection>
-
-      {/* main nav links */}
-      {links && size?.breakpoints.includes('small') ? (
-        <LinksWrap>
-          {links.map((link) => {
-            return (
-              <StyledLinkButton
-                key={`top-nav-link-${link.text}`}
-                variant="tertiary"
-                fontColor="--black"
-                href={link.href}
-              >
-                {link.text}
-              </StyledLinkButton>
-            );
-          })}
-        </LinksWrap>
-      ) : (
-        size &&
-        links && (
-          <LinksWrap>
-            <LinkButton
-              // TODO: add home page link
-              href="/"
-              variant="tertiary"
-              fontSize={1.5}
-              fontColor="--black"
-            >
-              Allan Rubenstein{' '}
-              <ScreenReaderOnly>Go To Home Page</ScreenReaderOnly>
-            </LinkButton>
-            <HamburgerMenuButton
-              type="button"
-              onClick={() => setIsMobileMenuOpen(true)}
-            >
-              <HamburgerMenuButtonBar />
-              <HamburgerMenuButtonBar />
-              <HamburgerMenuButtonBar />
-              <ScreenReaderOnly>open nav menu</ScreenReaderOnly>
-            </HamburgerMenuButton>
-            {isMobileMenuOpen && (
-              <MobileModalMenu
-                links={links}
-                onExit={() => setIsMobileMenuOpen(false)}
+            <a href="/">
+              <Image
+                src="/images/nav/nav-logo.png"
+                alt="logo"
+                width={52}
+                height={60}
+                layout={'responsive'}
               />
-            )}
+              <ScreenReaderOnly>Go To Home Page</ScreenReaderOnly>
+            </a>
+          </ImageWrap>
+        </LogoSection>
+
+        {/* main nav links */}
+        {links && size?.breakpoints.includes('small') ? (
+          <LinksWrap>
+            {links.map((link) => {
+              return (
+                <StyledLinkButton
+                  key={`top-nav-link-${link.text}`}
+                  variant="tertiary"
+                  fontColor="--black"
+                  href={link.href}
+                >
+                  {link.text}
+                </StyledLinkButton>
+              );
+            })}
           </LinksWrap>
-        )
-      )}
-    </PrimaryNavWrap>
+        ) : (
+          size &&
+          links && (
+            <LinksWrap>
+              <LinkButton
+                // TODO: add home page link
+                href="/"
+                variant="tertiary"
+                fontSize={1.5}
+                fontColor="--black"
+              >
+                Allan Rubenstein{' '}
+                <ScreenReaderOnly>Go To Home Page</ScreenReaderOnly>
+              </LinkButton>
+              <HamburgerMenuButton
+                type="button"
+                onClick={() => setIsMobileMenuOpen(true)}
+              >
+                <HamburgerMenuButtonBar />
+                <HamburgerMenuButtonBar />
+                <HamburgerMenuButtonBar />
+                <ScreenReaderOnly>open nav menu</ScreenReaderOnly>
+              </HamburgerMenuButton>
+              {isMobileMenuOpen && (
+                <MobileModalMenu
+                  links={links}
+                  onExit={() => setIsMobileMenuOpen(false)}
+                />
+              )}
+            </LinksWrap>
+          )
+        )}
+      </PrimaryNavWrap>
+    </RelativeWrap>
   );
 };
+
+const RelativeWrap = styled.div`
+  position: relative;
+`;
 
 const PrimaryNavWrap = styled.nav`
   width: 100%;
@@ -181,6 +195,27 @@ const HamburgerMenuButtonBar = styled.span`
   background-color: var(${ColorsEnum.red});
   display: block;
   margin: 0.6rem 0;
+`;
+
+const SkipToMain = styled.a`
+  background-color: var(${ColorsEnum.white});
+  left: 1rem;
+  right: 1rem;
+  top: -100%;
+  margin: auto;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.1s;
+  font-size: 3rem;
+  z-index: 11;
+  text-align: center;
+  &:focus,
+  &:focus-within {
+    top: 0.5rem;
+    transform: translateY(0);
+    outline: 1px dashed #3d3935;
+    outline-offset: -5px;
+  }
 `;
 
 export default PrimaryNav;

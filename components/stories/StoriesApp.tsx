@@ -7,9 +7,11 @@ const StoriesApp = ({
 }: {
   children: React.ReactNode;
 }): JSX.Element => {
+  const mainDivId = 'main';
   return (
     <>
       <PrimaryNav
+        mainId={mainDivId}
         links={[
           {
             text: 'home',
@@ -29,7 +31,9 @@ const StoriesApp = ({
           },
         ]}
       ></PrimaryNav>
-      {children}
+      <main id={mainDivId} tabIndex={-1}>
+        {children}
+      </main>
       <Footer />
     </>
   );

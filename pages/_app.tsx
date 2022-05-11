@@ -79,14 +79,17 @@ export const GlobalStyle = createGlobalStyle`
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   // TODO: fix this, make it dynamic
+
+  const mainDivId = 'main';
   return (
     <>
       <GlobalStyle />
       <PrimaryNav
+        mainId={mainDivId}
         links={[
           {
             text: 'home',
-            href: '/',
+            href: '/#main',
           },
           {
             text: 'about',
@@ -102,7 +105,10 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
           },
         ]}
       ></PrimaryNav>
-      <Component {...pageProps} />
+      <main id={mainDivId} tabIndex={-1}>
+        <Component {...pageProps} />
+      </main>
+
       <Footer />
     </>
   );

@@ -288,10 +288,12 @@ exports[`mobile modal functionality and a11y 1`] = `
 
 .c5 {
   display: inline-block;
+  padding-bottom: 4px;
 }
 
 .c10 {
   position: relative;
+  line-height: inherit;
 }
 
 .c7 {
@@ -430,6 +432,10 @@ exports[`mobile modal functionality and a11y 1`] = `
 
 }
 
+@media (min-width:768px) {
+
+}
+
 @media screen and (min-width:768px) {
 
 }
@@ -481,11 +487,9 @@ exports[`mobile modal functionality and a11y 1`] = `
   >
     <span
       class="c5 c6"
-      font-size="2.5"
-      href="home"
     >
       <a
-        class="c7 c6"
+        class="c7"
         font-size="2.5"
         href="/home"
       >
@@ -498,11 +502,9 @@ exports[`mobile modal functionality and a11y 1`] = `
     </span>
     <span
       class="c5 c6"
-      font-size="2.5"
-      href="about"
     >
       <a
-        class="c7 c6"
+        class="c7"
         font-size="2.5"
         href="/about"
       >
@@ -515,11 +517,9 @@ exports[`mobile modal functionality and a11y 1`] = `
     </span>
     <span
       class="c5 c6"
-      font-size="2.5"
-      href="portfolio"
     >
       <a
-        class="c7 c6"
+        class="c7"
         font-size="2.5"
         href="/portfolio"
       >
@@ -532,11 +532,9 @@ exports[`mobile modal functionality and a11y 1`] = `
     </span>
     <span
       class="c5 c6"
-      font-size="2.5"
-      href="contact"
     >
       <a
-        class="c7 c6"
+        class="c7"
         font-size="2.5"
         href="/contact"
       >

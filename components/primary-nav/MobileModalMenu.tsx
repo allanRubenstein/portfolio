@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from '../common/common';
+import { LinkInterface } from '../common/common';
 import LinkButton from '../common/link-button/LinkButton';
 import Modal from '../modals/Modal';
 
 export interface MobileModalMenuProps {
   onExit: () => void;
-  links?: Link[];
+  links?: LinkInterface[];
 }
 // TODO: finish this
 const MobileModalMenu = ({
