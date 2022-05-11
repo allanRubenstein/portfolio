@@ -13,19 +13,19 @@ const StoriesApp = ({
         links={[
           {
             text: 'home',
-            href: '#',
+            href: '/',
           },
           {
             text: 'about',
-            href: '#',
+            href: '/about',
           },
           {
             text: 'portfolio',
-            href: '#',
+            href: '/portfolio',
           },
           {
             text: 'contact',
-            href: '#',
+            href: '/contact',
           },
         ]}
       ></PrimaryNav>

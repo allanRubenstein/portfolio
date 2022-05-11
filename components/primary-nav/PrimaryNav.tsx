@@ -26,7 +26,7 @@ const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
           {/* 
             // TODO: add home page link
           */}
-          <a href="#1">
+          <a href="/">
             <Image
               src="/images/nav/nav-logo.png"
               alt="logo"
@@ -61,7 +61,7 @@ const PrimaryNav = ({ links }: PrimaryNavProps): JSX.Element => {
           <LinksWrap>
             <LinkButton
               // TODO: add home page link
-              href="#2"
+              href="/"
               variant="tertiary"
               fontSize={1.5}
               fontColor="--black"

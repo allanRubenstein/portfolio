@@ -3,6 +3,7 @@ import Page from '../components/page/Page';
 import { Title } from '../components/typography/Title';
 import LinkButton from '../components/common/link-button/LinkButton';
 import { ColorsEnum } from '../components/typography/types';
+import { BREAKPOINTS } from '../util/constants';
 
 const Home = (): JSX.Element => {
   return (
@@ -22,15 +23,14 @@ const Home = (): JSX.Element => {
               {`(roo-ben-steen)`}
             </StyledTitle>
           </TitleWrap>
-          <Title $fontSize={3} $isBold>
-            Portfolio
-          </Title>
           <ButtonGroup>
+            <LinkButton variant="offset" href="/portfolio/web-dev">
+              Web Development
+            </LinkButton>
             <LinkButton href="/portfolio/graphic-design">
               Graphic Design
             </LinkButton>
             <LinkButton href="/portfolio/photography">Photography</LinkButton>
-            <LinkButton href="/portfolio/web-dev">Web Development</LinkButton>
           </ButtonGroup>
         </div>
       </MainWrap>
@@ -43,24 +43,32 @@ const MainWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10rem 2rem;
+  padding: 5rem 2rem;
   min-height: 80vh;
   /* background-color: var(${ColorsEnum.gray}); */
+  @media (min-width: ${BREAKPOINTS.small}px) {
+    padding: 10rem 2rem;
+  }
 `;
 const TitleWrap = styled.h1`
   margin-bottom: 5rem;
 `;
 const StyledTitle = styled(Title)`
   display: block;
+  margin-bottom: 0.5rem;
 `;
 
 const ButtonGroup = styled.div`
   display: grid;
+  align-items: center;
   grid-template-rows: 1fr;
-  column-gap: 2rem;
-  column-gap: 2rem;
+  /* column-gap: 2rem; */
+  grid-gap: 2rem;
   grid-auto-columns: 1fr;
-  grid-auto-flow: column;
+  grid-auto-flow: row;
+  @media (min-width: ${BREAKPOINTS.medium}px) {
+    grid-auto-flow: column;
+  }
 `;
 
 export default Home;

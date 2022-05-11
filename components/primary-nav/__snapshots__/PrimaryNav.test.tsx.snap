@@ -277,7 +277,7 @@ exports[`large screen size snapshot 1`] = `
 `;
 
 exports[`mobile modal functionality and a11y 1`] = `
-.c8 {
+.c9 {
   line-height: 0.9;
   font-size: 2.5rem;
   font-family: 'Roboto Condensed',sans-serif;
@@ -286,11 +286,15 @@ exports[`mobile modal functionality and a11y 1`] = `
   text-transform: uppercase;
 }
 
-.c9 {
+.c5 {
+  display: inline-block;
+}
+
+.c10 {
   position: relative;
 }
 
-.c5 {
+.c7 {
   position: relative;
   border: none;
   display: block;
@@ -299,11 +303,11 @@ exports[`mobile modal functionality and a11y 1`] = `
   background-color: transparent;
 }
 
-.c5:hover {
+.c7:hover {
   cursor: pointer;
 }
 
-.c5 .c7::after {
+.c7 .c8::after {
   -webkit-transition: var(--transition-short);
   transition: var(--transition-short);
   content: '';
@@ -317,8 +321,8 @@ exports[`mobile modal functionality and a11y 1`] = `
   background-color: currentColor;
 }
 
-.c5:hover .c7::after,
-.c5:focus .c7::after {
+.c7:hover .c8::after,
+.c7:focus .c8::after {
   max-width: 100%;
   top: 100%;
   left: 0;
@@ -475,50 +479,74 @@ exports[`mobile modal functionality and a11y 1`] = `
   <div
     class="c4"
   >
-    <a
+    <span
       class="c5 c6"
       font-size="2.5"
-      href="/home"
+      href="home"
     >
-      <span
-        class="c7 c8 c9"
+      <a
+        class="c7 c6"
+        font-size="2.5"
+        href="/home"
       >
-        home
-      </span>
-    </a>
-    <a
+        <span
+          class="c8 c9 c10"
+        >
+          home
+        </span>
+      </a>
+    </span>
+    <span
       class="c5 c6"
       font-size="2.5"
-      href="/about"
+      href="about"
     >
-      <span
-        class="c7 c8 c9"
+      <a
+        class="c7 c6"
+        font-size="2.5"
+        href="/about"
       >
-        about
-      </span>
-    </a>
-    <a
+        <span
+          class="c8 c9 c10"
+        >
+          about
+        </span>
+      </a>
+    </span>
+    <span
       class="c5 c6"
       font-size="2.5"
-      href="/portfolio"
+      href="portfolio"
     >
-      <span
-        class="c7 c8 c9"
+      <a
+        class="c7 c6"
+        font-size="2.5"
+        href="/portfolio"
       >
-        portfolio
-      </span>
-    </a>
-    <a
+        <span
+          class="c8 c9 c10"
+        >
+          portfolio
+        </span>
+      </a>
+    </span>
+    <span
       class="c5 c6"
       font-size="2.5"
-      href="/contact"
+      href="contact"
     >
-      <span
-        class="c7 c8 c9"
+      <a
+        class="c7 c6"
+        font-size="2.5"
+        href="/contact"
       >
-        contact
-      </span>
-    </a>
+        <span
+          class="c8 c9 c10"
+        >
+          contact
+        </span>
+      </a>
+    </span>
   </div>
 </div>
 `;

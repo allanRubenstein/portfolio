@@ -36,9 +36,47 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
     if (props.href) {
       return (
         // render a link with an href
-
-        <Link href={props.href} passHref>
-          <LinkWrapper {...props}>
+        <MarginOffsetWrapper {...props}>
+          <Link href={props.href} passHref>
+            <LinkWrapper {...props}>
+              {props.variant === 'offset' && (
+                <>
+                  <BorderRight></BorderRight>
+                  <BorderCornerBottomLeft></BorderCornerBottomLeft>
+                  <BorderBottom></BorderBottom>
+                  <BorderCornerTopRight></BorderCornerTopRight>
+                </>
+              )}
+              {props.variant === 'secondary-offset' && (
+                <>
+                  <BorderRight {...props} href={undefined}>
+                    {undefined}
+                  </BorderRight>
+                  <BorderCornerBottomLeft {...props} href={undefined}>
+                    {undefined}
+                  </BorderCornerBottomLeft>
+                  <BorderBottom {...props} href={undefined}>
+                    {undefined}
+                  </BorderBottom>
+                  <BorderCornerTopRight {...props} href={undefined}>
+                    {undefined}
+                  </BorderCornerTopRight>
+                </>
+              )}
+              {renderButtonInnerContents()}
+            </LinkWrapper>
+          </Link>
+        </MarginOffsetWrapper>
+      );
+    } else {
+      return (
+        // render a button
+        <MarginOffsetWrapper {...props}>
+          <ButtonWrapper
+            type={props.buttonType || 'button'}
+            {...props}
+            onClick={props.onClick}
+          >
             {props.variant === 'offset' && (
               <>
                 <BorderRight></BorderRight>
@@ -64,43 +102,8 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
               </>
             )}
             {renderButtonInnerContents()}
-          </LinkWrapper>
-        </Link>
-      );
-    } else {
-      return (
-        // render a button
-        <ButtonWrapper
-          type={props.buttonType || 'button'}
-          {...props}
-          onClick={props.onClick}
-        >
-          {props.variant === 'offset' && (
-            <>
-              <BorderRight></BorderRight>
-              <BorderCornerBottomLeft></BorderCornerBottomLeft>
-              <BorderBottom></BorderBottom>
-              <BorderCornerTopRight></BorderCornerTopRight>
-            </>
-          )}
-          {props.variant === 'secondary-offset' && (
-            <>
-              <BorderRight {...props} href={undefined}>
-                {undefined}
-              </BorderRight>
-              <BorderCornerBottomLeft {...props} href={undefined}>
-                {undefined}
-              </BorderCornerBottomLeft>
-              <BorderBottom {...props} href={undefined}>
-                {undefined}
-              </BorderBottom>
-              <BorderCornerTopRight {...props} href={undefined}>
-                {undefined}
-              </BorderCornerTopRight>
-            </>
-          )}
-          {renderButtonInnerContents()}
-        </ButtonWrapper>
+          </ButtonWrapper>
+        </MarginOffsetWrapper>
       );
     }
   };
@@ -111,6 +114,24 @@ export default LinkButton;
 
 const buttonYPadding = 1;
 const buttonHeight = '.3rem';
+
+// this offset wrapper makes up for the space from the button shadow or offset, aka the "push down" parts
+const MarginOffsetWrapper = styled.span<LinkButtonProps>`
+  display: inline-block;
+  ${(props) =>
+    (props.variant === 'offset' || props.variant === 'secondary-offset') &&
+    css`
+      padding-top: ${buttonHeight};
+      padding-left: ${buttonHeight};
+    `}
+  ${(props) =>
+    (props.variant === 'primary' ||
+      props.variant === 'secondary' ||
+      !props.variant) &&
+    css`
+      padding-bottom: 4px;
+    `}
+`;
 
 // shared css for button and link
 const LinkAndButtonCss = css<LinkButtonProps>`
