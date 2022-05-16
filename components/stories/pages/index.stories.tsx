@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import Home from '../../pages/index';
+import Home from '../../../pages/index';
 import StoriesApp from './StoriesApp';
 // import { indexProps } from './index';
 

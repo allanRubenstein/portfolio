@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     ${ColorsEnum.gray}: #e6e6e6;
 
     --transition-short: .1s;
+    --transition: .3s;
   }
 
   html {
