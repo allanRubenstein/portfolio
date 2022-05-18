@@ -76,7 +76,7 @@ exports[`button snapshot 2`] = `
     class="LinkButton__MarginOffsetWrapper-a4tpxg-0 inEIOG"
   >
     <button
-      class="LinkButton__ButtonWrapper-a4tpxg-3 imHETC"
+      class="LinkButton__ButtonWrapper-a4tpxg-3 iUzdnT"
       type="button"
     >
       <span
@@ -95,7 +95,7 @@ exports[`button snapshot 3`] = `
     class="LinkButton__MarginOffsetWrapper-a4tpxg-0 kiNtZs"
   >
     <button
-      class="LinkButton__ButtonWrapper-a4tpxg-3 dBuVmu"
+      class="LinkButton__ButtonWrapper-a4tpxg-3 izSATr"
       type="button"
     >
       .c1 {
@@ -332,7 +332,7 @@ exports[`link snapshot 2`] = `
     class="LinkButton__MarginOffsetWrapper-a4tpxg-0 inEIOG"
   >
     <a
-      class="LinkButton__LinkWrapper-a4tpxg-2 czGSqd"
+      class="LinkButton__LinkWrapper-a4tpxg-2 bFzphM"
       href="/#test2"
     >
       .c1 {

@@ -15,6 +15,7 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
         $fontColor={
           props.variant === 'secondary' ||
           props.variant === 'tertiary' ||
+          props.variant === 'tertiary-active' ||
           props.variant === 'secondary-offset'
             ? props.fontColor || '--white'
             : '--white'
@@ -226,32 +227,50 @@ const LinkAndButtonCss = css<LinkButtonProps>`
   ${({ variant }) =>
     variant === 'tertiary' &&
     css`
-      background-color: transparent;
+      ${TertiaryCss}
+    `}
 
+    /* tertiary active button variant */
+  ${({ variant }) =>
+    variant === 'tertiary-active' &&
+    css`
+      ${TertiaryCss}
       ${Title}::after {
-        transition: var(--transition-short);
-        content: '';
-        display: block;
-        position: absolute;
-        height: 1px;
-        /* visibility: hidden; */
-        width: 100%;
-        max-width: 0%;
-        right: 0;
-        left: auto;
-        background-color: currentColor;
-      }
-      &:hover,
-      &:focus {
-        ${Title}::after {
-          /* visibility: visible; */
-          max-width: 100%;
-          top: 100%;
-          left: 0;
-          right: auto;
-        }
+        /* visibility: visible; */
+        max-width: 100%;
+        top: 100%;
+        left: 0;
+        right: auto;
       }
     `}
+`;
+
+const TertiaryCss = css`
+  background-color: transparent;
+
+  ${Title}::after {
+    transition: var(--transition-short);
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    /* visibility: hidden; */
+    width: 100%;
+    max-width: 0%;
+    right: 0;
+    left: auto;
+    background-color: currentColor;
+  }
+  &:hover,
+  &:focus {
+    ${Title}::after {
+      /* visibility: visible; */
+      max-width: 100%;
+      top: 100%;
+      left: 0;
+      right: auto;
+    }
+  }
 `;
 
 const StyledTitle = styled(Title)`

@@ -9,6 +9,7 @@ import useWindowSize from '../../util/hooks/useWindowSize';
 import ScreenReaderOnly from '../common/screen-reader-only/ScreenReaderOnly';
 import MobileModalMenu from './MobileModalMenu';
 import { Title } from '../typography/Title';
+import { useRouter } from 'next/router';
 
 export interface PrimaryNavProps {
   links?: LinkInterface[];
@@ -20,9 +21,10 @@ export interface PrimaryNavProps {
 const PrimaryNav = ({ links, mainId }: PrimaryNavProps): JSX.Element => {
   const size = useWindowSize();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   return (
-    <RelativeWrap>
+    <StickyWrap>
       <SkipToMain href={`#${mainId}`}>
         <Title $fontSize={3} $fontColor="--black" $isBold>
           skip to main content
@@ -55,7 +57,11 @@ const PrimaryNav = ({ links, mainId }: PrimaryNavProps): JSX.Element => {
               return (
                 <StyledLinkButton
                   key={`top-nav-link-${link.text}`}
-                  variant="tertiary"
+                  variant={
+                    router?.pathname === link.href
+                      ? 'tertiary-active'
+                      : 'tertiary'
+                  }
                   fontColor="--black"
                   href={link.href}
                 >
@@ -97,12 +103,14 @@ const PrimaryNav = ({ links, mainId }: PrimaryNavProps): JSX.Element => {
           )
         )}
       </PrimaryNavWrap>
-    </RelativeWrap>
+    </StickyWrap>
   );
 };
 
-const RelativeWrap = styled.div`
-  position: relative;
+const StickyWrap = styled.div`
+  position: sticky;
+  top: 0;
+  background-color: var(${ColorsEnum.white});
 `;
 
 const PrimaryNavWrap = styled.nav`

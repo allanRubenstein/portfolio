@@ -4,6 +4,7 @@ import { Title } from '../components/typography/Title';
 import LinkButton from '../components/common/link-button/LinkButton';
 import { ColorsEnum } from '../components/typography/types';
 import { BREAKPOINTS } from '../util/constants';
+import PageTitle from '../components/typography/page-main-header/PageMainHeader';
 
 const Home = (): JSX.Element => {
   return (
@@ -11,17 +12,15 @@ const Home = (): JSX.Element => {
       <MainWrap>
         <div>
           <TitleWrap>
-            <StyledTitle $isBold={true} $fontSize={5} $desktopFontSize={8}>
-              Allan Rubenstein
-            </StyledTitle>
-            <StyledTitle
+            <StyledPageTitle>Allan Rubenstein</StyledPageTitle>
+            <StyledSubTitle
               $textTransform="none"
               $isBold={false}
               $fontSize={3}
               $desktopFontSize={5}
             >
               {`(roo-ben-steen)`}
-            </StyledTitle>
+            </StyledSubTitle>
           </TitleWrap>
           <ButtonGroup>
             <LinkButton href="/portfolio/web-dev">Web Development</LinkButton>
@@ -51,7 +50,11 @@ const MainWrap = styled.div`
 const TitleWrap = styled.h1`
   margin-bottom: 5rem;
 `;
-const StyledTitle = styled(Title)`
+const StyledPageTitle = styled(PageTitle)`
+  display: block;
+  margin-bottom: 0.5rem;
+`;
+const StyledSubTitle = styled(Title)`
   display: block;
   margin-bottom: 0.5rem;
 `;

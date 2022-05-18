@@ -90,7 +90,7 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         links={[
           {
             text: 'home',
-            href: '/#main',
+            href: '/',
           },
           {
             text: 'about',
