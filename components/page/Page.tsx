@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import PageMainHeader from '../typography/page-main-header/PageMainHeader';
 import styled from 'styled-components';
+import { BREAKPOINTS } from '../../util/constants';
 
 export interface PageProps {
   pageTitle: string;
@@ -33,12 +34,18 @@ const Page = ({
 };
 
 const PageWrap = styled.div`
-  padding: 2rem 2rem;
+  padding: 3rem 3rem;
   max-width: 1440px;
   margin: auto;
   text-align: center;
+  @media (min-width: ${BREAKPOINTS.medium}px) {
+    padding: 4rem 3rem;
+  }
 `;
 const MainPageHeader = styled(PageMainHeader)`
-  /* padding: 5rem 2rem; */
+  margin: 0rem 0 3rem;
+  @media (min-width: ${BREAKPOINTS.medium}px) {
+    margin: 0rem 0 4rem;
+  }
 `;
 export default Page;

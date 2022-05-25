@@ -110,6 +110,7 @@ const PrimaryNav = ({ links, mainId }: PrimaryNavProps): JSX.Element => {
 const StickyWrap = styled.div`
   position: sticky;
   top: 0;
+  z-index: 10;
   background-color: var(${ColorsEnum.white});
 `;
 

@@ -5,13 +5,14 @@ import { ImageInterface } from '../common/common';
 import Image from '../common/image/Image';
 import { Title } from '../typography/Title';
 import { ColorsEnum } from '../typography/types';
+import { BoxShadow } from '../css/styled-components-global-css';
 
 export interface PortfolioCardProps {
   image?: ImageInterface;
   href: string;
 }
 
-const PortfolioCard = ({ image, href }: PortfolioCardProps) => {
+const PortfolioCard = ({ image, href }: PortfolioCardProps): JSX.Element => {
   return (
     <Link href={href} passHref>
       <MainWrapper>
@@ -33,9 +34,11 @@ const StyledTitle = styled(Title)`
   padding: 1rem 0 0;
   display: block;
   transition: var(--transition);
+  text-align: left;
 `;
 const StyledImage = styled(Image)`
   transition: var(--transition);
+  width: 100%;
 `;
 const MainWrapper = styled.a`
   position: relative;
@@ -46,7 +49,9 @@ const MainWrapper = styled.a`
     }
 
     ${StyledImage} {
-      transform: scale(1.01);
+      /* transform: scale(1.01); */
+      transform: translateY(-0.3rem);
+      ${BoxShadow}
     }
   }
 `;
