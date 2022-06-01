@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import Page from '../components/page/Page';
-import { Title } from '../components/typography/Title';
-import LinkButton from '../components/common/link-button/LinkButton';
-import { ColorsEnum } from '../components/typography/types';
-import { BREAKPOINTS } from '../util/constants';
-import PageTitle from '../components/typography/page-main-header/PageMainHeader';
-import PortfolioCard from '../components/portfolio-card/PortfolioCard';
+import Page from '../../components/page/Page';
+import { Title } from '../../components/typography/Title';
+import LinkButton from '../../components/common/link-button/LinkButton';
+import { ColorsEnum } from '../../components/typography/types';
+import { BREAKPOINTS } from '../../util/constants';
+import PageTitle from '../../components/typography/page-main-header/PageMainHeader';
+import PortfolioCard from '../../components/portfolio-card/PortfolioCard';
 
 const Portfolio = (): JSX.Element => {
   return (
@@ -23,6 +23,9 @@ const Portfolio = (): JSX.Element => {
             }}
           />
 
+          {/* 
+            // TODO: loop through this eventually 
+          */}
           <PortfolioCard
             href="#testHref"
             image={{

@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export interface ImageProps
+export interface GenericImageProps
   extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'alt'> {
   alt: string;
   src: string;
 }
 
-const Image = (props: ImageProps): JSX.Element => {
+const GenericImage = (props: GenericImageProps): JSX.Element => {
   return <StyledImg {...props} />;
 };
 
-export default Image;
+export default GenericImage;
 
 const StyledImg = styled.img`
   display: block;

@@ -2,10 +2,10 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import { ImageInterface } from '../common/common';
-import Image from '../common/image/Image';
 import { Title } from '../typography/Title';
 import { ColorsEnum } from '../typography/types';
 import { BoxShadow } from '../css/styled-components-global-css';
+import GenericImage from '../common/image/GenericImage';
 
 export interface PortfolioCardProps {
   image?: ImageInterface;
@@ -36,7 +36,7 @@ const StyledTitle = styled(Title)`
   transition: var(--transition);
   text-align: left;
 `;
-const StyledImage = styled(Image)`
+const StyledImage = styled(GenericImage)`
   transition: var(--transition);
   width: 100%;
 `;
