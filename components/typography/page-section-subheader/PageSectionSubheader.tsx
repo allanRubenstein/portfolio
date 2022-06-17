@@ -1,21 +1,21 @@
 import React from 'react';
 import { Title } from '../Title';
 
-export interface PageMainHeaderProps {
+export interface PageSectionSubheaderProps {
   children?: React.ReactNode;
   className?: string;
   asElement?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
-const PageMainHeader = ({
+const PageSectionSubheader = ({
   children,
   className,
-  asElement = 'h1',
-}: PageMainHeaderProps): JSX.Element => {
+  asElement = 'h2',
+}: PageSectionSubheaderProps): JSX.Element => {
   return (
     <Title
-      $fontSize={5}
-      $desktopFontSize={8}
+      $fontSize={3}
+      $desktopFontSize={6}
       $fontColor={'--black'}
       $isBold
       as={asElement}
@@ -26,4 +26,4 @@ const PageMainHeader = ({
   );
 };
 
-export default PageMainHeader;
+export default PageSectionSubheader;

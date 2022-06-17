@@ -6,6 +6,7 @@ import { ColorsEnum } from '../../components/typography/types';
 import { BREAKPOINTS } from '../../util/constants';
 import PageTitle from '../../components/typography/page-main-header/PageMainHeader';
 import PortfolioCard from '../../components/portfolio-card/PortfolioCard';
+import PageSectionSubheader from '../../components/typography/page-section-subheader/PageSectionSubheader';
 
 const Portfolio = (): JSX.Element => {
   return (
@@ -14,74 +15,69 @@ const Portfolio = (): JSX.Element => {
       mainPageHeaderText="Portfolio"
     >
       <MainWrap>
-        <PortfolioResultsGrid>
-          <PortfolioCard
-            href="#testHref"
-            image={{
-              src: 'https://placekitten.com/500/300',
-              alt: 'CAT ALT TEXT WOO',
-            }}
-          />
+        <PortfolioSection>
+          <StyledPageSectionSubheader>Web</StyledPageSectionSubheader>
+          <PortfolioResultsGrid>
+            <li>
+              <PortfolioCard
+                href="#testHref"
+                image={{
+                  src: 'https://placekitten.com/500/300',
+                  alt: 'CAT ALT TEXT WOO',
+                }}
+              />
+            </li>
 
-          {/* 
+            {/* 
             // TODO: loop through this eventually 
           */}
-          <PortfolioCard
-            href="#testHref"
-            image={{
-              src: 'https://placekitten.com/500/300',
-              alt: 'CAT ALT TEXT WOO',
-            }}
-          />
-
-          <PortfolioCard
-            href="#testHref"
-            image={{
-              src: 'https://placekitten.com/500/300',
-              alt: 'CAT ALT TEXT WOO',
-            }}
-          />
-
-          <PortfolioCard
-            href="#testHref"
-            image={{
-              src: 'https://placekitten.com/500/300',
-              alt: 'CAT ALT TEXT WOO',
-            }}
-          />
-
-          <PortfolioCard
-            href="#testHref"
-            image={{
-              src: 'https://placekitten.com/500/300',
-              alt: 'CAT ALT TEXT WOO',
-            }}
-          />
-
-          <PortfolioCard
-            href="#testHref"
-            image={{
-              src: 'https://placekitten.com/500/300',
-              alt: 'CAT ALT TEXT WOO',
-            }}
-          />
-
-          <PortfolioCard
-            href="#testHref"
-            image={{
-              src: 'https://placekitten.com/500/300',
-              alt: 'CAT ALT TEXT WOO',
-            }}
-          />
-
-          <PortfolioCard
-            href="#testHref"
-            image={{
-              src: 'https://placekitten.com/500/300',
-              alt: 'CAT ALT TEXT WOO',
-            }}
-          />
-        </PortfolioResultsGrid>
+            <li>
+              <PortfolioCard
+                href="#testHref"
+                image={{
+                  src: 'https://placekitten.com/500/300',
+                  alt: 'CAT ALT TEXT WOO',
+                }}
+              />
+            </li>
+            <li>
+              <PortfolioCard
+                href="#testHref"
+                image={{
+                  src: 'https://placekitten.com/500/300',
+                  alt: 'CAT ALT TEXT WOO',
+                }}
+              />
+            </li>
+            <li>
+              <PortfolioCard
+                href="#testHref"
+                image={{
+                  src: 'https://placekitten.com/500/300',
+                  alt: 'CAT ALT TEXT WOO',
+                }}
+              />
+            </li>
+            <li>
+              <PortfolioCard
+                href="#testHref"
+                image={{
+                  src: 'https://placekitten.com/500/300',
+                  alt: 'CAT ALT TEXT WOO',
+                }}
+              />
+            </li>
+            <li>
+              <PortfolioCard
+                href="#testHref"
+                image={{
+                  src: 'https://placekitten.com/500/300',
+                  alt: 'CAT ALT TEXT WOO',
+                }}
+              />
+            </li>
+          </PortfolioResultsGrid>
+        </PortfolioSection>
       </MainWrap>
     </Page>
   );
@@ -91,7 +87,8 @@ const MainWrap = styled.div`
   display: block;
 `;
 
-const PortfolioResultsGrid = styled.div`
+const PortfolioSection = styled.section``;
+const PortfolioResultsGrid = styled.ol`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
@@ -101,6 +98,11 @@ const PortfolioResultsGrid = styled.div`
   @media (min-width: ${BREAKPOINTS.large}px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+`;
+
+const StyledPageSectionSubheader = styled(PageSectionSubheader)`
+  margin: 2rem 0;
+  text-align: left;
 `;
 
 export default Portfolio;
