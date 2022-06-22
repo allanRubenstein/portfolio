@@ -11,26 +11,42 @@ import Image from '../../common/image/GenericImage';
 import GenericImage from '../../common/image/GenericImage';
 
 export interface PortfolioItemProps {
-  portfolioItem: PortfolioItem;
-  headerImage?: ImageInterface;
-  images?: ImageInterface[];
-  description?: string[];
-  portfolioLink?: string;
-}
-
-export interface PortfolioItem {
+  portfolioTextAndImages: PortfolioItemTextAndImage[];
+  // headerImage?: PortfolioItemImage[];
+  // images?: ImageInterface[];
+  // description?: string[];
+  // portfolioLink?: string;
   name: string;
 }
 
-const PortfolioItem = ({ portfolioItem }: PortfolioItemProps): JSX.Element => {
+export interface PortfolioItemImage extends ImageInterface {
+  caption?: string;
+}
+export interface PortfolioItemTextAndImage {
+  bodyCopyParagraphs?: string[];
+  images: PortfolioItemImage[];
+}
+
+const PortfolioItem = ({
+  name,
+  portfolioTextAndImages,
+}: PortfolioItemProps): JSX.Element => {
   return (
-    <Page
-      pageTitle={`${portfolioItem.name}`}
-      mainPageHeaderText={`${portfolioItem.name}`}
-    >
+    <Page pageTitle={`${name}`} mainPageHeaderText={`${name}`}>
       <MainWrap>
         {/* <GenericImage /> */}
         {/* TODO: add description here */}
+        {portfolioTextAndImages.map((portfolioTextAndImage) => {
+          return (
+            <PortfolioTextAndImageWrap
+              // TODO: src for key ok?
+              key={portfolioTextAndImage.images[0].src}
+            >
+              <LeftWrap>{'test'}</LeftWrap>
+              <RightWrap>{'test'}</RightWrap>
+            </PortfolioTextAndImageWrap>
+          );
+        })}
       </MainWrap>
     </Page>
   );
@@ -39,5 +55,9 @@ const PortfolioItem = ({ portfolioItem }: PortfolioItemProps): JSX.Element => {
 const MainWrap = styled.div`
   display: block;
 `;
+
+const PortfolioTextAndImageWrap = styled.div``;
+const LeftWrap = styled.div``;
+const RightWrap = styled.div``;
 
 export default PortfolioItem;

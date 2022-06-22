@@ -26,7 +26,18 @@ const Template: Story<PortfolioItemProps> = (args: PortfolioItemProps) => (
 // Template.bind({}) is a standard JavaScript technique for making a copy of a function. We use this technique to allow each exported story to set its own properties, but use the same implementation.
 export const Default: Story<PortfolioItemProps> = Template.bind({});
 Default.args = {
-  portfolioItem: {
-    name: 'Test Item',
-  },
+  name: 'Test Item',
+  portfolioTextAndImages: [
+    {
+      bodyCopyParagraphs: ['Test first copy.'],
+      images: [
+        {
+          src: 'https://placekitten.com/500/300',
+          alt: 'CAT ALT TEXT WOO',
+          // TODO: add caption
+          caption: 'test',
+        },
+      ],
+    },
+  ],
 };

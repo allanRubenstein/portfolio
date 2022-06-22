@@ -14,8 +14,8 @@ const PageSectionSubheader = ({
 }: PageSectionSubheaderProps): JSX.Element => {
   return (
     <Title
-      $fontSize={3}
-      $desktopFontSize={6}
+      $fontSize={4}
+      $desktopFontSize={5}
       $fontColor={'--black'}
       $isBold
       as={asElement}
