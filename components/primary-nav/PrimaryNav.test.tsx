@@ -50,7 +50,7 @@ test('xsmall screen size snapshot', async () => {
   resizeWindow('xSmall');
 
   const { container } = render(<PrimaryNav links={defaultNavLinks} />);
-  await screen.findByRole('button', { name: /open nav menu/i });
+  await screen.findByRole('button', { name: /open nav menusss/i });
   await waitFor(() => {
     expect(container).toMatchSnapshot();
   });
