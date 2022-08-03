@@ -1,32 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`large screen size snapshot 1`] = `
-.c8 {
-  line-height: 1.2;
-  font-size: 2rem;
-  text-transform: uppercase;
+.c3 {
+  line-height: 0.9;
+  font-size: 3rem;
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 700;
   color: var(--black);
+  text-transform: uppercase;
+}
+
+.c12 {
+  line-height: 0.9;
+  font-size: 2rem;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--black);
+  text-transform: uppercase;
 }
 
 .c9 {
-  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
-.c5 {
+.c13 {
+  position: relative;
+  line-height: inherit;
+}
+
+.c11 {
   position: relative;
   border: none;
   display: block;
   padding: 0;
+  text-align: center;
   background-color: transparent;
 }
 
-.c5:hover {
+.c11:hover {
   cursor: pointer;
 }
 
-.c5 .c7::after {
+.c11 .c2::after {
   -webkit-transition: var(--transition-short);
   transition: var(--transition-short);
   content: '';
@@ -40,15 +56,15 @@ exports[`large screen size snapshot 1`] = `
   background-color: currentColor;
 }
 
-.c5:hover .c7::after,
-.c5:focus .c7::after {
+.c11:hover .c2::after,
+.c11:focus .c2::after {
   max-width: 100%;
   top: 100%;
   left: 0;
   right: auto;
 }
 
-.c3 {
+.c7 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -62,6 +78,14 @@ exports[`large screen size snapshot 1`] = `
 }
 
 .c0 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--white);
+}
+
+.c4 {
   width: 100%;
   height: 4.5rem;
   -webkit-box-pack: justify;
@@ -78,7 +102,7 @@ exports[`large screen size snapshot 1`] = `
   align-items: center;
 }
 
-.c4 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -98,19 +122,19 @@ exports[`large screen size snapshot 1`] = `
   border-bottom: 1px solid var(--gray);
 }
 
-.c6 {
+.c10 {
   padding: 1rem 0;
   margin: 0 1rem;
 }
 
-.c2 {
+.c6 {
   margin-left: 1rem;
   width: 3rem;
   height: auto;
   display: block;
 }
 
-.c1 {
+.c5 {
   width: 4rem;
   height: 100%;
   background-color: var(--red);
@@ -129,7 +153,7 @@ exports[`large screen size snapshot 1`] = `
   align-items: center;
 }
 
-.c1::after {
+.c5::after {
   content: '';
   position: absolute;
   display: block;
@@ -140,12 +164,43 @@ exports[`large screen size snapshot 1`] = `
   border-left: 1rem solid var(--red);
 }
 
-@media (min-width:600px) {
+.c1 {
+  background-color: var(--white);
+  left: 1rem;
+  right: 1rem;
+  top: -100%;
+  margin: auto;
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  font-size: 3rem;
+  z-index: 11;
+  text-align: center;
+}
+
+.c1:focus,
+.c1:focus-within {
+  top: 0.5rem;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  outline: 1px dashed #3d3935;
+  outline-offset: -5px;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
 
 }
 
 @media screen and (min-width:768px) {
-  .c0 {
+  .c4 {
     height: 6.5rem;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -155,7 +210,7 @@ exports[`large screen size snapshot 1`] = `
 }
 
 @media screen and (min-width:640px) {
-  .c4 {
+  .c8 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -164,7 +219,7 @@ exports[`large screen size snapshot 1`] = `
 }
 
 @media screen and (min-width:768px) {
-  .c4 {
+  .c8 {
     padding-left: 6.5rem;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -174,105 +229,143 @@ exports[`large screen size snapshot 1`] = `
 }
 
 @media screen and (min-width:768px) {
-  .c2 {
+  .c6 {
     margin-left: 5rem;
     width: 5.2rem;
   }
 }
 
 @media screen and (min-width:768px) {
-  .c1 {
+  .c5 {
     width: 15rem;
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
   }
 
-  .c1::after {
+  .c5::after {
     border-bottom: 6.5rem solid transparent;
     border-left: 6.5rem solid var(--red);
   }
 }
 
 <div>
-  <nav
+  <div
     class="c0"
   >
-    <div
+    <a
       class="c1"
+      href="#undefined"
     >
-      <div
-        class="c2"
+      <span
+        class="c2 c3"
       >
-        <a
-          href="#1"
-        >
-          <div
-            style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
-          >
-            <div
-              style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
-            />
-            <img
-              alt="logo"
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
-          </div>
-          <span
-            class="c3"
-          >
-            Go To Home Page
-          </span>
-        </a>
-      </div>
-    </div>
-    <div
+        skip to main content
+      </span>
+    </a>
+    <nav
       class="c4"
     >
-      <a
-        class="c5 c6"
-        href="/#1"
+      <div
+        class="c5"
       >
-        <span
-          class="c7 c8 c9"
+        <div
+          class="c6"
         >
-          home
-        </span>
-      </a>
-      <a
-        class="c5 c6"
-        href="/#2"
+          <a
+            href="/"
+          >
+            <div
+              style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+            >
+              <div
+                style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
+              />
+              <img
+                alt="logo"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+            </div>
+            <span
+              class="c7"
+            >
+              Go To Home Page
+            </span>
+          </a>
+        </div>
+      </div>
+      <ul
+        class="c8"
       >
-        <span
-          class="c7 c8 c9"
-        >
-          about
-        </span>
-      </a>
-      <a
-        class="c5 c6"
-        href="/#3"
-      >
-        <span
-          class="c7 c8 c9"
-        >
-          portfolio
-        </span>
-      </a>
-      <a
-        class="c5 c6"
-        href="/#4"
-      >
-        <span
-          class="c7 c8 c9"
-        >
-          contact
-        </span>
-      </a>
-    </div>
-  </nav>
+        <li>
+          <span
+            class="c9 c10"
+          >
+            <a
+              class="c11"
+              href="/#1"
+            >
+              <span
+                class="c2 c12 c13"
+              >
+                home
+              </span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span
+            class="c9 c10"
+          >
+            <a
+              class="c11"
+              href="/#2"
+            >
+              <span
+                class="c2 c12 c13"
+              >
+                about
+              </span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span
+            class="c9 c10"
+          >
+            <a
+              class="c11"
+              href="/#3"
+            >
+              <span
+                class="c2 c12 c13"
+              >
+                portfolio
+              </span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span
+            class="c9 c10"
+          >
+            <a
+              class="c11"
+              href="/#4"
+            >
+              <span
+                class="c2 c12 c13"
+              >
+                contact
+              </span>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </div>
 `;
 
@@ -482,100 +575,124 @@ exports[`mobile modal functionality and a11y 1`] = `
       </span>
     </button>
   </div>
-  <div
+  <ul
     class="c4"
   >
-    <span
-      class="c5 c6"
-    >
-      <a
-        class="c7"
-        font-size="2.5"
-        href="/home"
+    <li>
+      <span
+        class="c5 c6"
       >
-        <span
-          class="c8 c9 c10"
+        <a
+          class="c7"
+          font-size="2.5"
+          href="/home"
         >
-          home
-        </span>
-      </a>
-    </span>
-    <span
-      class="c5 c6"
-    >
-      <a
-        class="c7"
-        font-size="2.5"
-        href="/about"
+          <span
+            class="c8 c9 c10"
+          >
+            home
+          </span>
+        </a>
+      </span>
+    </li>
+    <li>
+      <span
+        class="c5 c6"
       >
-        <span
-          class="c8 c9 c10"
+        <a
+          class="c7"
+          font-size="2.5"
+          href="/about"
         >
-          about
-        </span>
-      </a>
-    </span>
-    <span
-      class="c5 c6"
-    >
-      <a
-        class="c7"
-        font-size="2.5"
-        href="/portfolio"
+          <span
+            class="c8 c9 c10"
+          >
+            about
+          </span>
+        </a>
+      </span>
+    </li>
+    <li>
+      <span
+        class="c5 c6"
       >
-        <span
-          class="c8 c9 c10"
+        <a
+          class="c7"
+          font-size="2.5"
+          href="/portfolio"
         >
-          portfolio
-        </span>
-      </a>
-    </span>
-    <span
-      class="c5 c6"
-    >
-      <a
-        class="c7"
-        font-size="2.5"
-        href="/contact"
+          <span
+            class="c8 c9 c10"
+          >
+            portfolio
+          </span>
+        </a>
+      </span>
+    </li>
+    <li>
+      <span
+        class="c5 c6"
       >
-        <span
-          class="c8 c9 c10"
+        <a
+          class="c7"
+          font-size="2.5"
+          href="/contact"
         >
-          contact
-        </span>
-      </a>
-    </span>
-  </div>
+          <span
+            class="c8 c9 c10"
+          >
+            contact
+          </span>
+        </a>
+      </span>
+    </li>
+  </ul>
 </div>
 `;
 
 exports[`small screen size snapshot 1`] = `
-.c8 {
-  line-height: 1.2;
-  font-size: 2rem;
-  text-transform: uppercase;
+.c3 {
+  line-height: 0.9;
+  font-size: 3rem;
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: 700;
   color: var(--black);
+  text-transform: uppercase;
+}
+
+.c12 {
+  line-height: 0.9;
+  font-size: 2rem;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--black);
+  text-transform: uppercase;
 }
 
 .c9 {
-  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
-.c5 {
+.c13 {
+  position: relative;
+  line-height: inherit;
+}
+
+.c11 {
   position: relative;
   border: none;
   display: block;
   padding: 0;
+  text-align: center;
   background-color: transparent;
 }
 
-.c5:hover {
+.c11:hover {
   cursor: pointer;
 }
 
-.c5 .c7::after {
+.c11 .c2::after {
   -webkit-transition: var(--transition-short);
   transition: var(--transition-short);
   content: '';
@@ -589,15 +706,15 @@ exports[`small screen size snapshot 1`] = `
   background-color: currentColor;
 }
 
-.c5:hover .c7::after,
-.c5:focus .c7::after {
+.c11:hover .c2::after,
+.c11:focus .c2::after {
   max-width: 100%;
   top: 100%;
   left: 0;
   right: auto;
 }
 
-.c3 {
+.c7 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -611,6 +728,14 @@ exports[`small screen size snapshot 1`] = `
 }
 
 .c0 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--white);
+}
+
+.c4 {
   width: 100%;
   height: 4.5rem;
   -webkit-box-pack: justify;
@@ -627,7 +752,378 @@ exports[`small screen size snapshot 1`] = `
   align-items: center;
 }
 
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+  padding-left: 2rem;
+  width: 100%;
+  height: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+.c10 {
+  padding: 1rem 0;
+  margin: 0 1rem;
+}
+
+.c6 {
+  margin-left: 1rem;
+  width: 3rem;
+  height: auto;
+  display: block;
+}
+
+.c5 {
+  width: 4rem;
+  height: 100%;
+  background-color: var(--red);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5::after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 100%;
+  top: 0;
+  border-top: 0 solid transparent;
+  border-bottom: 4.5rem solid transparent;
+  border-left: 1rem solid var(--red);
+}
+
+.c1 {
+  background-color: var(--white);
+  left: 1rem;
+  right: 1rem;
+  top: -100%;
+  margin: auto;
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  font-size: 3rem;
+  z-index: 11;
+  text-align: center;
+}
+
+.c1:focus,
+.c1:focus-within {
+  top: 0.5rem;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  outline: 1px dashed #3d3935;
+  outline-offset: -5px;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c4 {
+    height: 6.5rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width:640px) {
+  .c8 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c8 {
+    padding-left: 6.5rem;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c6 {
+    margin-left: 5rem;
+    width: 5.2rem;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c5 {
+    width: 15rem;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .c5::after {
+    border-bottom: 6.5rem solid transparent;
+    border-left: 6.5rem solid var(--red);
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <a
+      class="c1"
+      href="#undefined"
+    >
+      <span
+        class="c2 c3"
+      >
+        skip to main content
+      </span>
+    </a>
+    <nav
+      class="c4"
+    >
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+        >
+          <a
+            href="/"
+          >
+            <div
+              style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+            >
+              <div
+                style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
+              />
+              <img
+                alt="logo"
+                decoding="async"
+                sizes="100vw"
+                src="/_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=3840&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=3840&q=75 3840w"
+                style="visibility: inherit; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+            </div>
+            <span
+              class="c7"
+            >
+              Go To Home Page
+            </span>
+          </a>
+        </div>
+      </div>
+      <ul
+        class="c8"
+      >
+        <li>
+          <span
+            class="c9 c10"
+          >
+            <a
+              class="c11"
+              href="/#1"
+            >
+              <span
+                class="c2 c12 c13"
+              >
+                home
+              </span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span
+            class="c9 c10"
+          >
+            <a
+              class="c11"
+              href="/#2"
+            >
+              <span
+                class="c2 c12 c13"
+              >
+                about
+              </span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span
+            class="c9 c10"
+          >
+            <a
+              class="c11"
+              href="/#3"
+            >
+              <span
+                class="c2 c12 c13"
+              >
+                portfolio
+              </span>
+            </a>
+          </span>
+        </li>
+        <li>
+          <span
+            class="c9 c10"
+          >
+            <a
+              class="c11"
+              href="/#4"
+            >
+              <span
+                class="c2 c12 c13"
+              >
+                contact
+              </span>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`xsmall screen size snapshot 1`] = `
+.c3 {
+  line-height: 0.9;
+  font-size: 3rem;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.c11 {
+  line-height: 0.9;
+  font-size: 1.5rem;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 700;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.c9 {
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.c12 {
+  position: relative;
+  line-height: inherit;
+}
+
+.c10 {
+  position: relative;
+  border: none;
+  display: block;
+  padding: 0;
+  text-align: center;
+  background-color: transparent;
+}
+
+.c10:hover {
+  cursor: pointer;
+}
+
+.c10 .c2::after {
+  -webkit-transition: var(--transition-short);
+  transition: var(--transition-short);
+  content: '';
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  max-width: 0%;
+  right: 0;
+  left: auto;
+  background-color: currentColor;
+}
+
+.c10:hover .c2::after,
+.c10:focus .c2::after {
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  right: auto;
+}
+
+.c7 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  -webkit-clip: rect(0,0,0,0);
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.c0 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--white);
+}
+
 .c4 {
+  width: 100%;
+  height: 4.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -648,289 +1144,13 @@ exports[`small screen size snapshot 1`] = `
 }
 
 .c6 {
-  padding: 1rem 0;
-  margin: 0 1rem;
-}
-
-.c2 {
   margin-left: 1rem;
   width: 3rem;
   height: auto;
   display: block;
-}
-
-.c1 {
-  width: 4rem;
-  height: 100%;
-  background-color: var(--red);
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c1::after {
-  content: '';
-  position: absolute;
-  display: block;
-  left: 100%;
-  top: 0;
-  border-top: 0 solid transparent;
-  border-bottom: 4.5rem solid transparent;
-  border-left: 1rem solid var(--red);
-}
-
-@media (min-width:600px) {
-
-}
-
-@media screen and (min-width:768px) {
-  .c0 {
-    height: 6.5rem;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media screen and (min-width:640px) {
-  .c4 {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c4 {
-    padding-left: 6.5rem;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c2 {
-    margin-left: 5rem;
-    width: 5.2rem;
-  }
-}
-
-@media screen and (min-width:768px) {
-  .c1 {
-    width: 15rem;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-  }
-
-  .c1::after {
-    border-bottom: 6.5rem solid transparent;
-    border-left: 6.5rem solid var(--red);
-  }
-}
-
-<div>
-  <nav
-    class="c0"
-  >
-    <div
-      class="c1"
-    >
-      <div
-        class="c2"
-      >
-        <a
-          href="#1"
-        >
-          <div
-            style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
-          >
-            <div
-              style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
-            />
-            <img
-              alt="logo"
-              decoding="async"
-              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-              style="visibility: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
-          </div>
-          <span
-            class="c3"
-          >
-            Go To Home Page
-          </span>
-        </a>
-      </div>
-    </div>
-    <div
-      class="c4"
-    >
-      <a
-        class="c5 c6"
-        href="/#1"
-      >
-        <span
-          class="c7 c8 c9"
-        >
-          home
-        </span>
-      </a>
-      <a
-        class="c5 c6"
-        href="/#2"
-      >
-        <span
-          class="c7 c8 c9"
-        >
-          about
-        </span>
-      </a>
-      <a
-        class="c5 c6"
-        href="/#3"
-      >
-        <span
-          class="c7 c8 c9"
-        >
-          portfolio
-        </span>
-      </a>
-      <a
-        class="c5 c6"
-        href="/#4"
-      >
-        <span
-          class="c7 c8 c9"
-        >
-          contact
-        </span>
-      </a>
-    </div>
-  </nav>
-</div>
-`;
-
-exports[`xsmall screen size snapshot 1`] = `
-.c7 {
-  line-height: 1.2;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-family: 'Roboto Condensed',sans-serif;
-  font-weight: 700;
-  color: var(--black);
-}
-
-.c8 {
-  position: relative;
 }
 
 .c5 {
-  position: relative;
-  border: none;
-  display: block;
-  padding: 0;
-  background-color: transparent;
-}
-
-.c5:hover {
-  cursor: pointer;
-}
-
-.c5 .c6::after {
-  -webkit-transition: var(--transition-short);
-  transition: var(--transition-short);
-  content: '';
-  display: block;
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  max-width: 0%;
-  right: 0;
-  left: auto;
-  background-color: currentColor;
-}
-
-.c5:hover .c6::after,
-.c5:focus .c6::after {
-  max-width: 100%;
-  top: 100%;
-  left: 0;
-  right: auto;
-}
-
-.c3 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  -webkit-clip: rect(0,0,0,0);
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.c0 {
-  width: 100%;
-  height: 4.5rem;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-right: 1.5rem;
-  padding-left: 2rem;
-  width: 100%;
-  height: 100%;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-bottom: 1px solid var(--gray);
-}
-
-.c2 {
-  margin-left: 1rem;
-  width: 3rem;
-  height: auto;
-  display: block;
-}
-
-.c1 {
   width: 4rem;
   height: 100%;
   background-color: var(--red);
@@ -949,7 +1169,7 @@ exports[`xsmall screen size snapshot 1`] = `
   align-items: center;
 }
 
-.c1::after {
+.c5::after {
   content: '';
   position: absolute;
   display: block;
@@ -960,7 +1180,7 @@ exports[`xsmall screen size snapshot 1`] = `
   border-left: 1rem solid var(--red);
 }
 
-.c9 {
+.c13 {
   width: 2.5rem;
   height: 100%;
   border: none;
@@ -968,11 +1188,11 @@ exports[`xsmall screen size snapshot 1`] = `
   padding: 0;
 }
 
-.c9:hover {
+.c13:hover {
   cursor: pointer;
 }
 
-.c10 {
+.c14 {
   width: 100%;
   height: 0.2rem;
   background-color: var(--red);
@@ -980,12 +1200,43 @@ exports[`xsmall screen size snapshot 1`] = `
   margin: 0.6rem 0;
 }
 
-@media (min-width:600px) {
+.c1 {
+  background-color: var(--white);
+  left: 1rem;
+  right: 1rem;
+  top: -100%;
+  margin: auto;
+  position: absolute;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  font-size: 3rem;
+  z-index: 11;
+  text-align: center;
+}
+
+.c1:focus,
+.c1:focus-within {
+  top: 0.5rem;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  outline: 1px dashed #3d3935;
+  outline-offset: -5px;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
 
 }
 
 @media screen and (min-width:768px) {
-  .c0 {
+  .c4 {
     height: 6.5rem;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -995,7 +1246,7 @@ exports[`xsmall screen size snapshot 1`] = `
 }
 
 @media screen and (min-width:640px) {
-  .c4 {
+  .c8 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -1004,7 +1255,7 @@ exports[`xsmall screen size snapshot 1`] = `
 }
 
 @media screen and (min-width:768px) {
-  .c4 {
+  .c8 {
     padding-left: 6.5rem;
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -1014,102 +1265,120 @@ exports[`xsmall screen size snapshot 1`] = `
 }
 
 @media screen and (min-width:768px) {
-  .c2 {
+  .c6 {
     margin-left: 5rem;
     width: 5.2rem;
   }
 }
 
 @media screen and (min-width:768px) {
-  .c1 {
+  .c5 {
     width: 15rem;
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
   }
 
-  .c1::after {
+  .c5::after {
     border-bottom: 6.5rem solid transparent;
     border-left: 6.5rem solid var(--red);
   }
 }
 
 <div>
-  <nav
+  <div
     class="c0"
   >
-    <div
+    <a
       class="c1"
+      href="#undefined"
     >
-      <div
-        class="c2"
+      <span
+        class="c2 c3"
       >
-        <a
-          href="#1"
-        >
-          <div
-            style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
-          >
-            <div
-              style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
-            />
-            <img
-              alt="logo"
-              decoding="async"
-              sizes="100vw"
-              src="/_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=3840&q=75"
-              srcset="/_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=3840&q=75 3840w"
-              style="visibility: inherit; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-            />
-          </div>
-          <span
-            class="c3"
-          >
-            Go To Home Page
-          </span>
-        </a>
-      </div>
-    </div>
-    <div
+        skip to main content
+      </span>
+    </a>
+    <nav
       class="c4"
     >
-      <a
+      <div
         class="c5"
-        font-size="1.5"
-        href="/#2"
       >
-        <span
-          class="c6 c7 c8"
+        <div
+          class="c6"
         >
-          Allan Rubenstein
-           
-          <span
-            class="c3"
+          <a
+            href="/"
           >
-            Go To Home Page
-          </span>
-        </span>
-      </a>
-      <button
-        class="c9"
-        type="button"
+            <div
+              style="display: block; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
+            >
+              <div
+                style="display: block; box-sizing: border-box; padding-top: 115.38461538461537%;"
+              />
+              <img
+                alt="logo"
+                decoding="async"
+                sizes="100vw"
+                src="/_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=3840&q=75"
+                srcset="/_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fnav%2Fnav-logo.png&w=3840&q=75 3840w"
+                style="visibility: inherit; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+              />
+            </div>
+            <span
+              class="c7"
+            >
+              Go To Home Page
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="c8"
       >
         <span
-          class="c10"
-        />
-        <span
-          class="c10"
-        />
-        <span
-          class="c10"
-        />
-        <span
-          class="c3"
+          class="c9"
         >
-          open nav menu
+          <a
+            class="c10"
+            font-size="1.5"
+            href="/"
+          >
+            <span
+              class="c2 c11 c12"
+            >
+              Allan Rubenstein
+               
+              <span
+                class="c7"
+              >
+                Go To Home Page
+              </span>
+            </span>
+          </a>
         </span>
-      </button>
-    </div>
-  </nav>
+        <button
+          class="c13"
+          type="button"
+        >
+          <span
+            class="c14"
+          />
+          <span
+            class="c14"
+          />
+          <span
+            class="c14"
+          />
+          <span
+            class="c7"
+          >
+            open nav menu
+          </span>
+        </button>
+      </div>
+    </nav>
+  </div>
 </div>
 `;

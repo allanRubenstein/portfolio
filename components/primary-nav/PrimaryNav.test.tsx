@@ -50,7 +50,7 @@ test('xsmall screen size snapshot', async () => {
   resizeWindow('xSmall');
 
   const { container } = render(<PrimaryNav links={defaultNavLinks} />);
-  await screen.findByRole('button', { name: /open nav menusss/i });
+  await screen.findByRole('button', { name: /open nav menu/i });
   await waitFor(() => {
     expect(container).toMatchSnapshot();
   });
@@ -85,7 +85,7 @@ test('xSmall a11y', async () => {
   expect(results).toHaveNoViolations();
 });
 
-test.only('mobile modal functionality and a11y', async () => {
+test('mobile modal functionality and a11y', async () => {
   resizeWindow('xSmall');
   render(<PrimaryNav links={defaultNavLinks} />);
 

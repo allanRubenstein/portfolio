@@ -53,21 +53,22 @@ const PrimaryNav = ({ links, mainId }: PrimaryNavProps): JSX.Element => {
 
         {/* main nav links */}
         {links && size?.breakpoints.includes('small') ? (
-          <LinksWrap>
+          <LinksWrap as="ul">
             {links.map((link) => {
               return (
-                <StyledLinkButton
-                  key={`top-nav-link-${link.text}`}
-                  variant={
-                    router?.pathname === link.href
-                      ? 'tertiary-active'
-                      : 'tertiary'
-                  }
-                  fontColor="--black"
-                  href={link.href}
-                >
-                  {link.text}
-                </StyledLinkButton>
+                <li key={`top-nav-link-${link.text}`}>
+                  <StyledLinkButton
+                    variant={
+                      router?.pathname === link.href
+                        ? 'tertiary-active'
+                        : 'tertiary'
+                    }
+                    fontColor="--black"
+                    href={link.href}
+                  >
+                    {link.text}
+                  </StyledLinkButton>
+                </li>
               );
             })}
           </LinksWrap>

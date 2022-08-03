@@ -24,16 +24,17 @@ const MobileModalMenu = ({
         <ModalLinksWrap>
           {links.map((link) => {
             return (
-              <StyledLinkButton
-                key={link.text}
-                href={link.text}
-                variant="tertiary"
-                // variant="secondary"
-                fontColor="--black"
-                fontSize={2.5}
-              >
-                {link.text}
-              </StyledLinkButton>
+              <li key={link.text}>
+                <StyledLinkButton
+                  href={link.text}
+                  variant="tertiary"
+                  // variant="secondary"
+                  fontColor="--black"
+                  fontSize={2.5}
+                >
+                  {link.text}
+                </StyledLinkButton>
+              </li>
             );
           })}
         </ModalLinksWrap>
@@ -42,7 +43,7 @@ const MobileModalMenu = ({
   );
 };
 
-const ModalLinksWrap = styled.div`
+const ModalLinksWrap = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
