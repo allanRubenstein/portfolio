@@ -39,5 +39,16 @@ Default.args = {
         },
       ],
     },
+    {
+      bodyCopyParagraphs: ['Test first copy.'],
+      images: [
+        {
+          src: 'https://placekitten.com/800/2000',
+          alt: 'CAT ALT TEXT WOO',
+          // TODO: add caption
+          caption: 'test',
+        },
+      ],
+    },
   ],
 };

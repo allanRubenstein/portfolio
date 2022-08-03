@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Page from '../../../components/page/Page';
 import { Title } from '../../../components/typography/Title';
 import LinkButton from '../../../components/common/link-button/LinkButton';
@@ -9,6 +9,7 @@ import PortfolioCard from '../../../components/portfolio-card/PortfolioCard';
 import { ImageInterface } from '../../common/common';
 import Image from '../../common/image/GenericImage';
 import GenericImage from '../../common/image/GenericImage';
+import { NAV_HEIGHTS_OFFSET_STYLES } from '../../primary-nav/PrimaryNav';
 
 export interface PortfolioItemProps {
   portfolioTextAndImages: PortfolioItemTextAndImage[];
@@ -42,8 +43,20 @@ const PortfolioItem = ({
               // TODO: src for key ok?
               key={portfolioTextAndImage.images[0].src}
             >
-              <LeftWrap>{'test'}</LeftWrap>
-              <RightWrap>{'test'}</RightWrap>
+              <LeftWrap>
+                <LeftInnerWrap>test</LeftInnerWrap>
+              </LeftWrap>
+              <RightWrap>
+                {portfolioTextAndImage.images.map((image, index) => {
+                  return (
+                    <StyledImage
+                      key={`${image.src}-${index}`}
+                      {...image}
+                      alt={image.alt || ''}
+                    />
+                  );
+                })}
+              </RightWrap>
             </PortfolioTextAndImageWrap>
           );
         })}
@@ -56,8 +69,32 @@ const MainWrap = styled.div`
   display: block;
 `;
 
-const PortfolioTextAndImageWrap = styled.div``;
-const LeftWrap = styled.div``;
-const RightWrap = styled.div``;
+const PortfolioTextAndImageWrap = styled.div`
+  display: flex;
+`;
+
+const LeftAndRightStyles = css`
+  flex: 1 1 50%;
+`;
+const LeftWrap = styled.div`
+  ${LeftAndRightStyles}
+`;
+const RightWrap = styled.div`
+  ${LeftAndRightStyles}
+`;
+
+const InnerWrapStyles = css`
+  position: sticky;
+  top: 300px;
+  ${NAV_HEIGHTS_OFFSET_STYLES}
+`;
+
+const LeftInnerWrap = styled.div`
+  ${InnerWrapStyles}
+`;
+
+const StyledImage = styled(GenericImage)`
+  width: 100%;
+`;
 
 export default PortfolioItem;

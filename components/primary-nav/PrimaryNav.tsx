@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { LinkInterface } from '../common/common';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import LinkButton from '../common/link-button/LinkButton';
 import { ColorsEnum } from '../typography/types';
 import Image from 'next/image';
@@ -10,6 +10,7 @@ import ScreenReaderOnly from '../common/screen-reader-only/ScreenReaderOnly';
 import MobileModalMenu from './MobileModalMenu';
 import { Title } from '../typography/Title';
 import { useRouter } from 'next/router';
+import { minWidthMediaQuery } from '../css/styled-components-global-css';
 
 export interface PrimaryNavProps {
   links?: LinkInterface[];
@@ -114,17 +115,38 @@ const StickyWrap = styled.div`
   background-color: var(${ColorsEnum.white});
 `;
 
+export const NAV_HEIGHTS = {
+  default: '4.5rem',
+  medium: '6.5rem',
+};
+
+/**
+ * This is the offset styles for things that are position fixed so they aren't covered by the nav
+ */
+export const NAV_HEIGHTS_OFFSET_STYLES = css`
+  top: ${NAV_HEIGHTS.default};
+
+  ${minWidthMediaQuery(
+    'medium',
+    css`
+      top: ${NAV_HEIGHTS.medium};
+    `,
+  )}
+`;
 const PrimaryNavWrap = styled.nav`
   width: 100%;
-  height: 4.5rem;
+  height: ${NAV_HEIGHTS.default};
   justify-content: space-between;
   display: flex;
   align-items: center;
 
-  @media screen and (min-width: ${BREAKPOINTS.medium}px) {
-    height: 6.5rem;
-    justify-content: flex-start;
-  }
+  ${minWidthMediaQuery(
+    'medium',
+    css`
+      height: ${NAV_HEIGHTS.medium};
+      justify-content: flex-start;
+    `,
+  )}
 `;
 const LinksWrap = styled.div`
   display: flex;
@@ -135,13 +157,21 @@ const LinksWrap = styled.div`
   height: 100%;
   align-items: center;
   border-bottom: 1px solid var(${ColorsEnum.gray});
-  @media screen and (min-width: ${BREAKPOINTS.small}px) {
-    justify-content: flex-end;
-  }
-  @media screen and (min-width: ${BREAKPOINTS.medium}px) {
-    padding-left: 6.5rem;
-    justify-content: flex-start;
-  }
+
+  ${minWidthMediaQuery(
+    'small',
+    css`
+      justify-content: flex-end;
+    `,
+  )}
+
+  ${minWidthMediaQuery(
+    'medium',
+    css`
+      padding-left: 6.5rem;
+      justify-content: flex-start;
+    `,
+  )}
 `;
 const StyledLinkButton = styled(LinkButton)`
   padding: 1rem 0;
@@ -153,10 +183,13 @@ const ImageWrap = styled.div`
   height: auto;
   display: block;
 
-  @media screen and (min-width: ${BREAKPOINTS.medium}px) {
-    margin-left: 5rem;
-    width: 5.2rem;
-  }
+  ${minWidthMediaQuery(
+    'medium',
+    css`
+      margin-left: 5rem;
+      width: 5.2rem;
+    `,
+  )}
 `;
 const LogoSection = styled.div`
   width: 4rem;
@@ -177,15 +210,18 @@ const LogoSection = styled.div`
     border-left: 1rem solid var(${ColorsEnum.red});
   }
 
-  @media screen and (min-width: ${BREAKPOINTS.medium}px) {
-    width: 15rem;
-    flex-shrink: 0;
+  ${minWidthMediaQuery(
+    'medium',
+    css`
+      width: 15rem;
+      flex-shrink: 0;
 
-    ::after {
-      border-bottom: 6.5rem solid transparent;
-      border-left: 6.5rem solid var(${ColorsEnum.red});
-    }
-  }
+      ::after {
+        border-bottom: 6.5rem solid transparent;
+        border-left: 6.5rem solid var(${ColorsEnum.red});
+      }
+    `,
+  )}
 `;
 
 const HamburgerMenuButton = styled.button`
