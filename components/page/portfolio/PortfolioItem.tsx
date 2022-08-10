@@ -9,7 +9,9 @@ import PortfolioCard from '../../../components/portfolio-card/PortfolioCard';
 import { ImageInterface } from '../../common/common';
 import Image from '../../common/image/GenericImage';
 import GenericImage from '../../common/image/GenericImage';
-import { NAV_HEIGHTS_OFFSET_STYLES } from '../../primary-nav/PrimaryNav';
+import { navHeightsOffsetStyles } from '../../primary-nav/PrimaryNav';
+import { Paragraph } from '../../typography/Paragraph';
+import { minWidthMediaQuery } from '../../css/styled-components-global-css';
 
 export interface PortfolioItemProps {
   portfolioTextAndImages: PortfolioItemTextAndImage[];
@@ -44,18 +46,30 @@ const PortfolioItem = ({
               key={portfolioTextAndImage.images[0].src}
             >
               <LeftWrap>
-                <LeftInnerWrap>test</LeftInnerWrap>
+                <InnerWrap>
+                  {portfolioTextAndImage.bodyCopyParagraphs?.map(
+                    (paragraph) => {
+                      return (
+                        <Paragraph includeDefaultMargins key={paragraph}>
+                          {paragraph}
+                        </Paragraph>
+                      );
+                    },
+                  )}
+                </InnerWrap>
               </LeftWrap>
               <RightWrap>
-                {portfolioTextAndImage.images.map((image, index) => {
-                  return (
-                    <StyledImage
-                      key={`${image.src}-${index}`}
-                      {...image}
-                      alt={image.alt || ''}
-                    />
-                  );
-                })}
+                <InnerWrap>
+                  {portfolioTextAndImage.images.map((image, index) => {
+                    return (
+                      <StyledImage
+                        key={`${image.src}-${index}`}
+                        {...image}
+                        alt={image.alt || ''}
+                      />
+                    );
+                  })}
+                </InnerWrap>
               </RightWrap>
             </PortfolioTextAndImageWrap>
           );
@@ -71,25 +85,50 @@ const MainWrap = styled.div`
 
 const PortfolioTextAndImageWrap = styled.div`
   display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 2rem;
+  margin-bottom: 4rem;
+
+  ${minWidthMediaQuery(
+    'medium',
+    css`
+      flex-wrap: nowrap;
+    `,
+  )}
 `;
 
 const LeftAndRightStyles = css`
-  flex: 1 1 50%;
+  flex: 1 1 100%;
+  /* margin: 0 0 2rem 0; */
+
+  ${minWidthMediaQuery(
+    'medium',
+    css`
+      flex: 1 1 50%;
+    `,
+  )}
 `;
 const LeftWrap = styled.div`
   ${LeftAndRightStyles}
+  text-align: left;
+  /* padding: 0 2rem 0 0; */
 `;
 const RightWrap = styled.div`
   ${LeftAndRightStyles}
 `;
 
 const InnerWrapStyles = css`
-  position: sticky;
-  top: 300px;
-  ${NAV_HEIGHTS_OFFSET_STYLES}
+  /* top: 300px; */
+  ${navHeightsOffsetStyles(2)}
+  ${minWidthMediaQuery(
+    'medium',
+    css`
+      position: sticky;
+    `,
+  )}
 `;
 
-const LeftInnerWrap = styled.div`
+const InnerWrap = styled.div`
   ${InnerWrapStyles}
 `;
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { LinkInterface } from '../common/common';
-import styled, { css } from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import LinkButton from '../common/link-button/LinkButton';
 import { ColorsEnum } from '../typography/types';
 import Image from 'next/image';
@@ -124,15 +124,21 @@ export const NAV_HEIGHTS = {
 /**
  * This is the offset styles for things that are position fixed so they aren't covered by the nav
  */
-export const NAV_HEIGHTS_OFFSET_STYLES = css`
-  top: ${NAV_HEIGHTS.default};
-
+export const navHeightsOffsetStyles = (
+  additionalOffsetNumber = 0,
+  offsetUnit = 'rem',
+): FlattenSimpleInterpolation => css`
+  top: calc(
+    ${NAV_HEIGHTS.default} + ${`${additionalOffsetNumber}${offsetUnit}`}
+  );
   ${minWidthMediaQuery(
     'medium',
     css`
-      top: ${NAV_HEIGHTS.medium};
+      top: calc(
+        ${NAV_HEIGHTS.medium} + ${`${additionalOffsetNumber}${offsetUnit}`}
+      );
     `,
-  )}
+  )};
 `;
 const PrimaryNavWrap = styled.nav`
   width: 100%;
