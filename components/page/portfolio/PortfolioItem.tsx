@@ -43,9 +43,17 @@ const PortfolioItem = ({
               <LeftWrap>
                 <InnerWrap>
                   {portfolioTextAndImage.bodyCopyParagraphs?.map(
-                    (paragraph) => {
+                    (paragraph, index) => {
                       return (
-                        <Paragraph includeDefaultMargins key={paragraph}>
+                        <Paragraph
+                          includeDefaultMargins={
+                            index + 1 ===
+                            portfolioTextAndImage.bodyCopyParagraphs?.length
+                              ? false
+                              : true
+                          }
+                          key={paragraph}
+                        >
                           {paragraph}
                         </Paragraph>
                       );
