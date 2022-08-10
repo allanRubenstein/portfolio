@@ -1,17 +1,12 @@
 import styled, { css } from 'styled-components';
 import Page from '../../../components/page/Page';
-import { Title } from '../../../components/typography/Title';
-import LinkButton from '../../../components/common/link-button/LinkButton';
-import { ColorsEnum } from '../../../components/typography/types';
-import { BREAKPOINTS } from '../../../util/constants';
-import PageTitle from '../../../components/typography/page-main-header/PageMainHeader';
-import PortfolioCard from '../../../components/portfolio-card/PortfolioCard';
 import { ImageInterface } from '../../common/common';
-import Image from '../../common/image/GenericImage';
 import GenericImage from '../../common/image/GenericImage';
 import { navHeightsOffsetStyles } from '../../primary-nav/PrimaryNav';
 import { Paragraph } from '../../typography/Paragraph';
 import { minWidthMediaQuery } from '../../css/styled-components-global-css';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 export interface PortfolioItemProps {
   portfolioTextAndImages: PortfolioItemTextAndImage[];
@@ -62,11 +57,9 @@ const PortfolioItem = ({
                 <InnerWrap>
                   {portfolioTextAndImage.images.map((image, index) => {
                     return (
-                      <StyledImage
-                        key={`${image.src}-${index}`}
-                        {...image}
-                        alt={image.alt || ''}
-                      />
+                      <Zoom key={`${image.src}-${index}`}>
+                        <StyledImage {...image} alt={image.alt || ''} />
+                      </Zoom>
                     );
                   })}
                 </InnerWrap>

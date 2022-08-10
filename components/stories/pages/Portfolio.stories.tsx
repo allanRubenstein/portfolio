@@ -3,6 +3,7 @@ import { Story } from '@storybook/react';
 import Portfolio from '../../../pages/portfolio';
 import StoriesApp from './StoriesApp';
 // import { indexProps } from './index';
+import { ComponentMeta } from '@storybook/react';
 
 export default {
   component: Portfolio,
@@ -11,11 +12,11 @@ export default {
     layout: 'fullscreen',
   },
   decorators: [
-    (story: any) => {
-      return <StoriesApp>{story()}</StoriesApp>;
+    (Story) => {
+      return <StoriesApp>{Story()}</StoriesApp>;
     },
   ],
-};
+} as ComponentMeta<typeof StoriesApp>;
 
 // TYPES IN STORYBOOK: This is how you do it
 // see https://storybook.js.org/tutorials/intro-to-storybook/react/en/simple-component/
