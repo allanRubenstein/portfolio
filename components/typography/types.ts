@@ -3,6 +3,7 @@ export interface TypographyProps {
   $fontSize: number;
   $desktopFontSize?: number;
   $fontColor?: Colors;
+  className?: string;
 }
 
 // match css color variables
