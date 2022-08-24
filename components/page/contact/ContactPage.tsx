@@ -20,7 +20,7 @@ const ContactPage = ({
       mainPageHeaderText={mainPageHeaderText || 'Contact'}
     >
       <MainWrap>
-        <StyledParagraph hasMaxCharacterLimit>
+        {/* <StyledParagraph hasMaxCharacterLimit>
           At vero eos et accusamus et iusto odio dignissimos ducimus qui
           blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
           et quas molestias excepturi sint occaecati cupiditate non provident,
@@ -34,7 +34,7 @@ const ContactPage = ({
           Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
           voluptatibus maiores alias consequatur aut perferendis doloribus
           asperiores repellat.
-        </StyledParagraph>
+        </StyledParagraph> */}
         <ul>
           <StyledParagraph forwardedAs="li">
             <a
@@ -44,28 +44,20 @@ const ContactPage = ({
             >
               GitHub
             </a>
-            test
+          </StyledParagraph>
+          <StyledParagraph forwardedAs="li">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/allanrubenstein/"
+            >
+              LinkedIn
+            </a>
+          </StyledParagraph>
+          <StyledParagraph forwardedAs="li">
+            Email: rubensteinallan@yahoo.com
           </StyledParagraph>
         </ul>
-        <StyledParagraph forwardedAs="h2">test</StyledParagraph>
-        {/* <StyledParagraph2>test red</StyledParagraph2>
-        <StyledParagraph2 forwardedAs="h2">test red 2</StyledParagraph2> */}
-        <StyledParagraph>
-          {/* //TODO: this */}
-          GitHub
-        </StyledParagraph>
-        <StyledParagraph>
-          {/* //TODO: this */}
-          email
-        </StyledParagraph>
-        <StyledParagraph>
-          {/* //TODO: this */}
-          linkedin
-        </StyledParagraph>
-        <StyledParagraph>
-          {/* //TODO: this */}
-          Youtube video thing
-        </StyledParagraph>
       </MainWrap>
     </Page>
   );

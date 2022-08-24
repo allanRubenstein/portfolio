@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { BREAKPOINTS } from '../../util/constants';
-import { TypographyProps } from './types';
+import { ColorsEnum, TypographyProps } from './types';
 
 export interface ParagraphProps extends Partial<TypographyProps> {
   includeDefaultMargins?: boolean;
@@ -15,6 +15,11 @@ const StyledParagraph = styled.p<Partial<ParagraphProps>>`
   ${(props) => (props.hasMaxCharacterLimit ? `max-width: 60ch;` : '')}
   color: ${(props) =>
     `${props.$fontColor ? `var(${props.$fontColor})` : 'inherit'}`};
+
+  a {
+    text-decoration: underline;
+    color: var(${ColorsEnum.red});
+  }
 
   /* TODO: come up with breakpoints */
   @media (min-width: ${BREAKPOINTS.medium}px) {
