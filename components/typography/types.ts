@@ -3,6 +3,7 @@ export interface TypographyProps {
   $fontSize: number;
   $desktopFontSize?: number;
   $fontColor?: Colors;
+  className?: string;
 }
 
 // match css color variables
@@ -27,4 +28,5 @@ export enum ColorsEnum {
 export interface TitleTypographyProps extends TypographyProps {
   $isBold?: boolean;
   $hasTextShadow?: boolean;
+  $textTransform?: 'none' | 'uppercase';
 }

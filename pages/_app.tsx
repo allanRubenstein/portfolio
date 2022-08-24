@@ -3,6 +3,8 @@ import { AppProps } from 'next/app';
 import 'what-input';
 import { createGlobalStyle } from 'styled-components';
 import { ColorsEnum } from '../components/typography/types';
+import PrimaryNav from '../components/primary-nav/PrimaryNav';
+import Footer from '../components/footer/Footer';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -14,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     ${ColorsEnum.gray}: #e6e6e6;
 
     --transition-short: .1s;
+    --transition: .3s;
   }
 
   html {
@@ -45,6 +48,10 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: normal;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   ol,
   ul {
     list-style: none;
@@ -72,10 +79,38 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
+  // TODO: fix this, make it dynamic
+
+  const mainDivId = 'main';
   return (
     <>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <PrimaryNav
+        mainId={mainDivId}
+        links={[
+          {
+            text: 'home',
+            href: '/',
+          },
+          {
+            text: 'about',
+            href: '/about',
+          },
+          {
+            text: 'portfolio',
+            href: '/portfolio',
+          },
+          {
+            text: 'contact',
+            href: '/contact',
+          },
+        ]}
+      ></PrimaryNav>
+      <main id={mainDivId} tabIndex={-1}>
+        <Component {...pageProps} />
+      </main>
+
+      <Footer />
     </>
   );
 }

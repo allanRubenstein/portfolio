@@ -1,67 +1,75 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import Button from '../components/common/link-button/LinkButton';
+import styled from 'styled-components';
+import Page from '../components/page/Page';
+import { Title } from '../components/typography/Title';
+import LinkButton from '../components/common/link-button/LinkButton';
+import { ColorsEnum } from '../components/typography/types';
+import { BREAKPOINTS } from '../util/constants';
+import PageTitle from '../components/typography/page-main-header/PageMainHeader';
 
-export default function Home() {
+const Home = (): JSX.Element => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-        <Button>test button</Button>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <Page pageTitle="Allan Rubenstein - Home Page">
+      <MainWrap>
+        <div>
+          <TitleWrap>
+            <StyledPageTitle>Allan Rubenstein</StyledPageTitle>
+            <StyledSubTitle
+              $textTransform="none"
+              $isBold={false}
+              $fontSize={3}
+              $desktopFontSize={5}
+            >
+              {`(roo-ben-steen)`}
+            </StyledSubTitle>
+          </TitleWrap>
+          <ButtonGroup>
+            <LinkButton href="/portfolio/web-dev">Web Development</LinkButton>
+            <LinkButton href="/portfolio/graphic-design">
+              Graphic Design
+            </LinkButton>
+            <LinkButton href="/portfolio/photography">Photography</LinkButton>
+          </ButtonGroup>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      </MainWrap>
+    </Page>
   );
-}
+};
+
+const MainWrap = styled.div`
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem;
+  min-height: 80vh;
+  /* background-color: var(${ColorsEnum.gray}); */
+  @media (min-width: ${BREAKPOINTS.small}px) {
+    padding: 10rem 2rem;
+  }
+`;
+const TitleWrap = styled.h1`
+  margin-bottom: 5rem;
+`;
+const StyledPageTitle = styled(PageTitle)`
+  display: block;
+  margin-bottom: 0.5rem;
+`;
+const StyledSubTitle = styled(Title)`
+  display: block;
+  margin-bottom: 0.5rem;
+`;
+
+const ButtonGroup = styled.div`
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr;
+  /* column-gap: 2rem; */
+  grid-gap: 2rem;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: row;
+  @media (min-width: ${BREAKPOINTS.medium}px) {
+    grid-auto-flow: column;
+  }
+`;
+
+export default Home;

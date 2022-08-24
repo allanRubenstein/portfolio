@@ -15,6 +15,7 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
         $fontColor={
           props.variant === 'secondary' ||
           props.variant === 'tertiary' ||
+          props.variant === 'tertiary-active' ||
           props.variant === 'secondary-offset'
             ? props.fontColor || '--white'
             : '--white'
@@ -33,12 +34,51 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
    * @returns
    */
   const renderLinkOrButton = () => {
-    if (props.href) {
+    const { href, className, ...linkButtonWrapperProps } = props;
+    if (href) {
       return (
         // render a link with an href
-
-        <Link href={props.href} passHref>
-          <LinkWrapper {...props}>
+        <MarginOffsetWrapper className={className}>
+          <Link href={href} passHref>
+            <LinkWrapper {...linkButtonWrapperProps}>
+              {props.variant === 'offset' && (
+                <>
+                  <BorderRight></BorderRight>
+                  <BorderCornerBottomLeft></BorderCornerBottomLeft>
+                  <BorderBottom></BorderBottom>
+                  <BorderCornerTopRight></BorderCornerTopRight>
+                </>
+              )}
+              {props.variant === 'secondary-offset' && (
+                <>
+                  <BorderRight {...props} href={undefined}>
+                    {undefined}
+                  </BorderRight>
+                  <BorderCornerBottomLeft {...props} href={undefined}>
+                    {undefined}
+                  </BorderCornerBottomLeft>
+                  <BorderBottom {...props} href={undefined}>
+                    {undefined}
+                  </BorderBottom>
+                  <BorderCornerTopRight {...props} href={undefined}>
+                    {undefined}
+                  </BorderCornerTopRight>
+                </>
+              )}
+              {renderButtonInnerContents()}
+            </LinkWrapper>
+          </Link>
+        </MarginOffsetWrapper>
+      );
+    } else {
+      return (
+        // render a button
+        <MarginOffsetWrapper {...props}>
+          <ButtonWrapper
+            type={props.buttonType || 'button'}
+            {...linkButtonWrapperProps}
+            onClick={props.onClick}
+          >
             {props.variant === 'offset' && (
               <>
                 <BorderRight></BorderRight>
@@ -64,43 +104,8 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
               </>
             )}
             {renderButtonInnerContents()}
-          </LinkWrapper>
-        </Link>
-      );
-    } else {
-      return (
-        // render a button
-        <ButtonWrapper
-          type={props.buttonType || 'button'}
-          {...props}
-          onClick={props.onClick}
-        >
-          {props.variant === 'offset' && (
-            <>
-              <BorderRight></BorderRight>
-              <BorderCornerBottomLeft></BorderCornerBottomLeft>
-              <BorderBottom></BorderBottom>
-              <BorderCornerTopRight></BorderCornerTopRight>
-            </>
-          )}
-          {props.variant === 'secondary-offset' && (
-            <>
-              <BorderRight {...props} href={undefined}>
-                {undefined}
-              </BorderRight>
-              <BorderCornerBottomLeft {...props} href={undefined}>
-                {undefined}
-              </BorderCornerBottomLeft>
-              <BorderBottom {...props} href={undefined}>
-                {undefined}
-              </BorderBottom>
-              <BorderCornerTopRight {...props} href={undefined}>
-                {undefined}
-              </BorderCornerTopRight>
-            </>
-          )}
-          {renderButtonInnerContents()}
-        </ButtonWrapper>
+          </ButtonWrapper>
+        </MarginOffsetWrapper>
       );
     }
   };
@@ -112,6 +117,24 @@ export default LinkButton;
 const buttonYPadding = 1;
 const buttonHeight = '.3rem';
 
+// this offset wrapper makes up for the space from the button shadow or offset, aka the "push down" parts
+const MarginOffsetWrapper = styled.span<LinkButtonProps>`
+  display: inline-block;
+  ${(props) =>
+    (props.variant === 'offset' || props.variant === 'secondary-offset') &&
+    css`
+      padding-top: ${buttonHeight};
+      padding-left: ${buttonHeight};
+    `}
+  ${(props) =>
+    (props.variant === 'primary' ||
+      props.variant === 'secondary' ||
+      !props.variant) &&
+    css`
+      padding-bottom: 4px;
+    `}
+`;
+
 // shared css for button and link
 const LinkAndButtonCss = css<LinkButtonProps>`
   /* Base styles */
@@ -119,6 +142,7 @@ const LinkAndButtonCss = css<LinkButtonProps>`
   border: none;
   display: block;
   padding: 0;
+  text-align: center;
   &:hover {
     cursor: pointer;
   }
@@ -203,36 +227,55 @@ const LinkAndButtonCss = css<LinkButtonProps>`
   ${({ variant }) =>
     variant === 'tertiary' &&
     css`
-      background-color: transparent;
+      ${TertiaryCss}
+    `}
 
+    /* tertiary active button variant */
+  ${({ variant }) =>
+    variant === 'tertiary-active' &&
+    css`
+      ${TertiaryCss}
       ${Title}::after {
-        transition: var(--transition-short);
-        content: '';
-        display: block;
-        position: absolute;
-        height: 1px;
-        /* visibility: hidden; */
-        width: 100%;
-        max-width: 0%;
-        right: 0;
-        left: auto;
-        background-color: currentColor;
-      }
-      &:hover,
-      &:focus {
-        ${Title}::after {
-          /* visibility: visible; */
-          max-width: 100%;
-          top: 100%;
-          left: 0;
-          right: auto;
-        }
+        /* visibility: visible; */
+        max-width: 100%;
+        top: 100%;
+        left: 0;
+        right: auto;
       }
     `}
 `;
 
+const TertiaryCss = css`
+  background-color: transparent;
+
+  ${Title}::after {
+    transition: var(--transition-short);
+    content: '';
+    display: block;
+    position: absolute;
+    height: 1px;
+    /* visibility: hidden; */
+    width: 100%;
+    max-width: 0%;
+    right: 0;
+    left: auto;
+    background-color: currentColor;
+  }
+  &:hover,
+  &:focus {
+    ${Title}::after {
+      /* visibility: visible; */
+      max-width: 100%;
+      top: 100%;
+      left: 0;
+      right: auto;
+    }
+  }
+`;
+
 const StyledTitle = styled(Title)`
   position: relative;
+  line-height: inherit;
 `;
 const LinkWrapper = styled.a`
   ${LinkAndButtonCss}/* link specific styles */

@@ -5,11 +5,11 @@ import styled from 'styled-components';
 import ScreenReaderOnly from '../common/screen-reader-only/ScreenReaderOnly';
 import { ColorsEnum } from '../typography/types';
 
-export interface FooterProps {
-  classes?: string;
-}
+// export interface FooterProps {
+//   classes?: string;
+// }
 
-const Footer = ({ classes }: FooterProps) => {
+const Footer = (): JSX.Element => {
   return (
     <FooterWrap>
       <ImageWrap>

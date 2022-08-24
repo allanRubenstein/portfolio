@@ -33,14 +33,17 @@
 //     },
 //   },
 // };
-
 module.exports = {
   env: {
     browser: true,
     es2021: true,
     node: true,
   },
-  extends: ['eslint:recommended', 'eslint-config-prettier'],
+  extends: [
+    'eslint:recommended',
+    'eslint-config-prettier',
+    'plugin:storybook/recommended',
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -48,7 +51,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  ignorePatterns: ['_document.js'],
+  ignorePatterns: ['_document.js', '_document.tsx'],
   settings: {
     react: {
       version: 'latest',

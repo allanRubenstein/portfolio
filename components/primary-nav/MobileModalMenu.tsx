@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from '../common/common';
+import { LinkInterface } from '../common/common';
 import LinkButton from '../common/link-button/LinkButton';
 import Modal from '../modals/Modal';
 
 export interface MobileModalMenuProps {
   onExit: () => void;
-  links?: Link[];
+  links?: LinkInterface[];
 }
 // TODO: finish this
 const MobileModalMenu = ({
@@ -24,16 +24,17 @@ const MobileModalMenu = ({
         <ModalLinksWrap>
           {links.map((link) => {
             return (
-              <StyledLinkButton
-                key={link.text}
-                href={link.text}
-                variant="tertiary"
-                // variant="secondary"
-                fontColor="--black"
-                fontSize={2.5}
-              >
-                {link.text}
-              </StyledLinkButton>
+              <li key={link.text}>
+                <StyledLinkButton
+                  href={link.text}
+                  variant="tertiary"
+                  // variant="secondary"
+                  fontColor="--black"
+                  fontSize={2.5}
+                >
+                  {link.text}
+                </StyledLinkButton>
+              </li>
             );
           })}
         </ModalLinksWrap>
@@ -42,7 +43,7 @@ const MobileModalMenu = ({
   );
 };
 
-const ModalLinksWrap = styled.div`
+const ModalLinksWrap = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;

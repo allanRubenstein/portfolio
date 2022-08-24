@@ -10,6 +10,7 @@ module.exports = {
     '<rootDir>/**/*.{tsx,ts,js}',
     '!**/.next/**/*',
     '!**/_document.js',
+    '!**/_document.tsx',
     '!**/coverage/**/*',
   ],
 };

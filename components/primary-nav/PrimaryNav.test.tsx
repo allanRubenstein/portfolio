@@ -85,7 +85,7 @@ test('xSmall a11y', async () => {
   expect(results).toHaveNoViolations();
 });
 
-test.only('mobile modal functionality and a11y', async () => {
+test('mobile modal functionality and a11y', async () => {
   resizeWindow('xSmall');
   render(<PrimaryNav links={defaultNavLinks} />);
 

@@ -3,7 +3,8 @@ import { Colors } from '../../typography/types';
 export type LinkButtonProps =
   | UniversalLinkButtonProps
   | SecondaryLinkButtonProps
-  | TertiaryLinkButtonProps;
+  | TertiaryLinkButtonProps
+  | TertiaryActiveLinkButtonProps;
 
 export interface UniversalLinkButtonProps {
   children?: any;
@@ -13,6 +14,7 @@ export interface UniversalLinkButtonProps {
   fontSize?: number;
   // variants that don't need special props go here below
   variant?: 'primary' | 'offset';
+  className?: string;
 }
 
 // secondary variant can have a colors prop
@@ -28,5 +30,11 @@ export interface SecondaryLinkButtonProps
 export interface TertiaryLinkButtonProps
   extends Omit<UniversalLinkButtonProps, 'variant'> {
   variant: 'tertiary';
+  fontColor?: Colors;
+}
+
+export interface TertiaryActiveLinkButtonProps
+  extends Omit<UniversalLinkButtonProps, 'variant'> {
+  variant: 'tertiary-active';
   fontColor?: Colors;
 }
