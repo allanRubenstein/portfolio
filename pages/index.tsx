@@ -4,7 +4,7 @@ import { Title } from '../components/typography/Title';
 import LinkButton from '../components/common/link-button/LinkButton';
 import { ColorsEnum } from '../components/typography/types';
 import { BREAKPOINTS } from '../util/constants';
-import PageTitle from '../components/typography/page-main-header/PageMainHeader';
+import PageMainHeader from '../components/typography/page-main-header/PageMainHeader';
 
 const Home = (): JSX.Element => {
   return (
@@ -12,15 +12,17 @@ const Home = (): JSX.Element => {
       <MainWrap>
         <div>
           <TitleWrap>
-            <StyledPageTitle>Allan Rubenstein</StyledPageTitle>
-            <StyledSubTitle
-              $textTransform="none"
-              $isBold={false}
-              $fontSize={3}
-              $desktopFontSize={5}
-            >
-              {`(roo-ben-steen)`}
-            </StyledSubTitle>
+            <StyledPageMainHeader>
+              Allan Rubenstein
+              <StyledSubTitle
+                $textTransform="none"
+                $isBold={false}
+                $fontSize={3}
+                $desktopFontSize={5}
+              >
+                {`(roo-ben-steen)`}
+              </StyledSubTitle>
+            </StyledPageMainHeader>
           </TitleWrap>
           <ButtonGroup>
             <LinkButton href="/portfolio/web-dev">Web Development</LinkButton>
@@ -47,10 +49,10 @@ const MainWrap = styled.div`
     padding: 10rem 2rem;
   }
 `;
-const TitleWrap = styled.h1`
+const TitleWrap = styled.div`
   margin-bottom: 5rem;
 `;
-const StyledPageTitle = styled(PageTitle)`
+const StyledPageMainHeader = styled(PageMainHeader)`
   display: block;
   margin-bottom: 0.5rem;
 `;
