@@ -1,5 +1,5 @@
 import React from 'react';
-import AriaModal from 'react-aria-modal';
+import ReactModal from 'react-modal';
 import styled, { css } from 'styled-components';
 import { ColorsEnum } from '../typography/types';
 import XIcon from '../common/css-icons/XIcon';
@@ -12,6 +12,7 @@ export interface ModalProps {
   widthVariant?: 'full' | 'windowed';
   heightVariant?: 'full' | 'windowed';
   verticallyCenter?: boolean;
+  isOpen: boolean;
 }
 
 // TODO: use new modal. The AriaModal library does not handle modal in modal well at all
@@ -20,14 +21,15 @@ const Modal = ({
   onExit,
   children,
   className,
-  verticallyCenter,
+  isOpen,
 }: ModalProps): JSX.Element => {
   return (
-    <AriaModal
-      titleText={titleText}
-      onExit={onExit}
-      dialogClass={className}
-      verticallyCenter={verticallyCenter}
+    // TODO: update these styles since we switched to react-modal
+    <ReactModal
+      contentLabel={titleText}
+      onAfterClose={onExit}
+      className={className}
+      isOpen={isOpen}
       // dialogStyle={dialogStyleProp}
     >
       {/* <StyledModalWrap>
@@ -40,7 +42,7 @@ const Modal = ({
         </CloseModalButton>
       </ModalHeaderWrap>
       {children}
-    </AriaModal>
+    </ReactModal>
   );
 };
 const ModalHeaderWrap = styled.div`

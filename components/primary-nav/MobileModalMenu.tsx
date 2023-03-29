@@ -7,11 +7,13 @@ import Modal from '../modals/Modal';
 export interface MobileModalMenuProps {
   onExit: () => void;
   links?: LinkInterface[];
+  isOpen: boolean;
 }
 // TODO: finish this
 const MobileModalMenu = ({
   onExit,
   links,
+  isOpen,
 }: MobileModalMenuProps): JSX.Element => {
   return (
     <Modal
@@ -19,6 +21,7 @@ const MobileModalMenu = ({
       titleText="Mobile Nav Menu"
       verticallyCenter={false}
       onExit={onExit}
+      isOpen={isOpen}
     >
       {links && (
         <ModalLinksWrap>

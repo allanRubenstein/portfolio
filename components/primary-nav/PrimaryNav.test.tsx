@@ -5,8 +5,33 @@ import { axe } from 'jest-axe';
 import PrimaryNav from './PrimaryNav';
 import { resizeWindow } from '../../util/testing/testUtils';
 
+beforeEach(() => {
+  jest.mock('next/router', () => ({
+    userRouter: jest.fn(),
+  }));
+});
+
+beforeEach(() => {
+  // TODO: can we make this mocking global without breaking anything??
+  const actual = jest.requireActual('next/router');
+  const useRouter = jest.spyOn(actual, 'useRouter');
+  useRouter.mockImplementation(() => ({
+    route: '/',
+    pathname: '',
+    query: '',
+    asPath: '',
+    push: jest.fn(),
+    events: {
+      on: jest.fn(),
+      off: jest.fn(),
+    },
+    beforePopState: jest.fn(() => null),
+    prefetch: jest.fn(() => null),
+  }));
+});
 afterEach(() => {
   resizeWindow();
+  jest.restoreAllMocks();
 });
 
 const defaultNavLinks = [

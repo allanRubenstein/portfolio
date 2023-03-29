@@ -24,9 +24,28 @@ exports[`button snapshot 1`] = `
 `;
 
 exports[`button snapshot 2`] = `
+.c0 {
+  line-height: 0.9;
+  font-size: 5rem;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 400;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+  .c0 {
+    font-size: 10rem;
+  }
+}
+
 <div>
   <span
-    class="Title-xde5hf-0 cKlSwu"
+    class="c0"
   >
     test
   </span>
@@ -34,9 +53,30 @@ exports[`button snapshot 2`] = `
 `;
 
 exports[`button snapshot 3`] = `
+.c0 {
+  line-height: 0.9;
+  font-size: 5rem;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 400;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
 <div>
   <span
-    class="Title-xde5hf-0 ZCDQm"
+    class="c0"
   >
     test
   </span>
@@ -44,9 +84,35 @@ exports[`button snapshot 3`] = `
 `;
 
 exports[`button snapshot 4`] = `
+.c0 {
+  line-height: 0.9;
+  font-size: 5rem;
+  font-family: 'Roboto Condensed',sans-serif;
+  font-weight: 400;
+  text-shadow: 1px 2px 0px rgba(0,0,0,.8);
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
 <div>
   <span
-    class="Title-xde5hf-0 cENZZw"
+    class="c0"
   >
     test
   </span>

@@ -5,6 +5,10 @@ import { createGlobalStyle } from 'styled-components';
 import { ColorsEnum } from '../components/typography/types';
 import PrimaryNav from '../components/primary-nav/PrimaryNav';
 import Footer from '../components/footer/Footer';
+import Modal from 'react-modal';
+
+// needed for react-modal
+Modal.setAppElement('#__next');
 
 export const GlobalStyle = createGlobalStyle`
   :root {

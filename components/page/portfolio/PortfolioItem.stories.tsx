@@ -9,6 +9,11 @@ export default {
   title: 'Pages/Portfolio/PortfolioItem',
   parameters: {
     layout: 'fullscreen',
+    nextjs: {
+      router: {
+        basePath: '/profile',
+      },
+    },
   },
   decorators: [
     (story: any) => {

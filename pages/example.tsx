@@ -13,7 +13,7 @@ const Test = () => {
       <LinkButton>test button</LinkButton>
       <LinkButton href="/">test link</LinkButton>
       <Link href="/">
-        <a>test anchor</a>
+        test anchor
       </Link>
     </div>
   );
