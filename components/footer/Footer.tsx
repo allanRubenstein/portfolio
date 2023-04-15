@@ -17,7 +17,6 @@ const Footer = (): JSX.Element => {
           // TODO: add real link
           href="/"
         >
-          <a>
             <Image
               src="/images/nav/nav-logo.png"
               alt="logo"
@@ -26,7 +25,6 @@ const Footer = (): JSX.Element => {
               layout={'responsive'}
             />
             <ScreenReaderOnly>Home Page</ScreenReaderOnly>
-          </a>
         </Link>
       </ImageWrap>
     </FooterWrap>

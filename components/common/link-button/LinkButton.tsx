@@ -39,7 +39,10 @@ const LinkButton = (props: LinkButtonProps): JSX.Element => {
       return (
         // render a link with an href
         <MarginOffsetWrapper className={className}>
-          <Link href={href} passHref>
+          {/* 
+            // TODO: get rid of legacyBehavior?
+          */}
+          <Link href={href} passHref legacyBehavior>
             <LinkWrapper {...linkButtonWrapperProps}>
               {props.variant === 'offset' && (
                 <>

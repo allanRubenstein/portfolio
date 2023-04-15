@@ -1,6 +1,45 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": ["Rubenstein", "testname"],
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
-}
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorCustomizations": {
+      "editor.lineHighlightBackground": "#1073cf2d",
+      "editor.lineHighlightBorder": "#9fced11f"
+    },
+    "editor.wordWrap": "off",
+    "diffEditor.wordWrap": "off",
+    "editor.inlayHints.enabled": false,
+    "editor.renderLineHighlight": "none",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 2,
+    "snyk.yesWelcomeNotification": false,
+    "editor.cursorBlinking": "expand",
+    "terminal.integrated.cursorBlinking": true,
+    "cSpell.userWords": [
+      "alllocations",
+      "bday",
+      "Braintree",
+      "browsealllocations",
+      "dompurify",
+      "Favorited",
+      "Formik",
+      "Geocode",
+      "gtin",
+      "instockonly",
+      "lotties",
+      "Prefs",
+      "recaptcha",
+      "selectedagencyid",
+      "signin",
+      "sitekey",
+      "subnav",
+      "testid",
+      "Textbox",
+      "unhover",
+      "whatinput"
+    ],
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.accessibilitySupport": "off",
+    "editor.inlineSuggest.enabled": true,
+    "eslint.codeActionsOnSave.rules": null
+  }

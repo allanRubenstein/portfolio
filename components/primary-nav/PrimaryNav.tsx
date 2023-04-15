@@ -95,9 +95,13 @@ const PrimaryNav = ({ links, mainId }: PrimaryNavProps): JSX.Element => {
                 <HamburgerMenuButtonBar />
                 <ScreenReaderOnly>open nav menu</ScreenReaderOnly>
               </HamburgerMenuButton>
+              {/* 
+                // TODO: can I remove conditional rendering?
+              */}
               {isMobileMenuOpen && (
                 <MobileModalMenu
                   links={links}
+                  isOpen={isMobileMenuOpen}
                   onExit={() => setIsMobileMenuOpen(false)}
                 />
               )}

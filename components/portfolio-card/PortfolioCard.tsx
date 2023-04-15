@@ -14,7 +14,7 @@ export interface PortfolioCardProps {
 
 const PortfolioCard = ({ image, href }: PortfolioCardProps): JSX.Element => {
   return (
-    <Link href={href} passHref>
+    <Link href={href} passHref legacyBehavior>
       <MainWrapper>
         {/* 
           // TODO: make object-fit

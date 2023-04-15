@@ -5,6 +5,7 @@ import { createGlobalStyle } from 'styled-components';
 import { ColorsEnum } from '../components/typography/types';
 import PrimaryNav from '../components/primary-nav/PrimaryNav';
 import Footer from '../components/footer/Footer';
+import Modal from 'react-modal';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -80,6 +81,11 @@ export const GlobalStyle = createGlobalStyle`
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   // TODO: fix this, make it dynamic
+
+  // needed for react-modal
+  // TODO: maybe do #main?
+  // TODO: should use ref?
+  Modal.setAppElement('#__next');
 
   const mainDivId = 'main';
   return (

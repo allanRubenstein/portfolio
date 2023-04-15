@@ -4,7 +4,7 @@ import Portfolio from '../../../pages/portfolio';
 import StoriesApp from './StoriesApp';
 // import { indexProps } from './index';
 import { ComponentMeta } from '@storybook/react';
-import ContactPage, { ContactPageProps } from '../../page/contact/ContactPage';
+import ContactPage, { ContactPageProps } from '../../../pages/contact/index';
 
 export default {
   component: Portfolio,
