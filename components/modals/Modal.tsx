@@ -15,7 +15,6 @@ export interface ModalProps {
   isOpen: boolean;
 }
 
-// TODO: use new modal. The AriaModal library does not handle modal in modal well at all
 const Modal = ({
   titleText,
   onExit,
@@ -24,18 +23,15 @@ const Modal = ({
   isOpen,
 }: ModalProps): JSX.Element => {
   return (
-    // TODO: update these styles since we switched to react-modal
     <ReactModal
       contentLabel={titleText}
       onAfterClose={onExit}
       className={className}
       isOpen={isOpen}
-      // dialogStyle={dialogStyleProp}
+      style={{ overlay: { zIndex: '11' } }}
+      shouldCloseOnOverlayClick={true}
+      onRequestClose={onExit}
     >
-      {/* <StyledModalWrap>
-        <button onClick={onExit}>close</button>
-        {children}
-      </StyledModalWrap> */}
       <ModalHeaderWrap>
         <CloseModalButton onClick={onExit}>
           <XIcon screenReaderText="Close Modal" />
@@ -64,6 +60,7 @@ const StyledModal = styled(Modal)`
       : widthVariant === 'windowed'
       ? css`
           width: calc(100vw - 5rem);
+          margin: auto;
         `
       : null}
 

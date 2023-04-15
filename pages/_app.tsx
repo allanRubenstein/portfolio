@@ -7,9 +7,6 @@ import PrimaryNav from '../components/primary-nav/PrimaryNav';
 import Footer from '../components/footer/Footer';
 import Modal from 'react-modal';
 
-// needed for react-modal
-Modal.setAppElement('#__next');
-
 export const GlobalStyle = createGlobalStyle`
   :root {
     ${ColorsEnum.redLight}: #e60000;
@@ -84,6 +81,11 @@ export const GlobalStyle = createGlobalStyle`
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   // TODO: fix this, make it dynamic
+
+  // needed for react-modal
+  // TODO: maybe do #main?
+  // TODO: should use ref?
+  Modal.setAppElement('#__next');
 
   const mainDivId = 'main';
   return (
