@@ -10,9 +10,14 @@ import GenericImage from '../common/image/GenericImage';
 export interface PortfolioCardProps {
   image?: ImageInterface;
   href: string;
+  title: string;
 }
 
-const PortfolioCard = ({ image, href }: PortfolioCardProps): JSX.Element => {
+const PortfolioCard = ({
+  image,
+  href,
+  title,
+}: PortfolioCardProps): JSX.Element => {
   return (
     <Link href={href} passHref legacyBehavior>
       <MainWrapper>
@@ -21,7 +26,7 @@ const PortfolioCard = ({ image, href }: PortfolioCardProps): JSX.Element => {
         */}
         {image && <StyledImage src={image?.src} alt={image?.alt || ''} />}
         <StyledTitle $fontSize={3} $fontColor={'--black'} $isBold>
-          Text Here
+          {title}
         </StyledTitle>
       </MainWrapper>
     </Link>

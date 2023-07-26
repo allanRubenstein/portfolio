@@ -9,12 +9,18 @@ import PortfolioCard, {
   PortfolioCardProps,
 } from '../../components/portfolio-card/PortfolioCard';
 import PageSectionSubheader from '../../components/typography/page-section-subheader/PageSectionSubheader';
+import { NAV_HEIGHTS } from '../../components/primary-nav/PrimaryNav';
 
 const Portfolio = (): JSX.Element => {
   // TODO: make this props or hardcode
 
+  // TODO: TEST ITEMS TO ADD
+  // what's up marysville, cultured swine
+  // abercrombie, WT
+  // photography
   const testItems: PortfolioCardProps[] = [
     {
+      title: 'Text Here',
       href: '#',
       image: {
         src: 'https://placekitten.com/500/300',
@@ -22,6 +28,7 @@ const Portfolio = (): JSX.Element => {
       },
     },
     {
+      title: 'Text Here',
       href: '#',
       image: {
         src: 'https://placekitten.com/500/300',
@@ -29,6 +36,7 @@ const Portfolio = (): JSX.Element => {
       },
     },
     {
+      title: 'Text Here',
       href: '#',
       image: {
         src: 'https://placekitten.com/500/300',
@@ -36,6 +44,7 @@ const Portfolio = (): JSX.Element => {
       },
     },
     {
+      title: 'Text Here',
       href: '#',
       image: {
         src: 'https://placekitten.com/500/300',
@@ -43,6 +52,7 @@ const Portfolio = (): JSX.Element => {
       },
     },
     {
+      title: 'Text Here',
       href: '#',
       image: {
         src: 'https://placekitten.com/500/300',
@@ -50,6 +60,7 @@ const Portfolio = (): JSX.Element => {
       },
     },
     {
+      title: 'Text Here',
       href: '#',
       image: {
         src: 'https://placekitten.com/500/300',
@@ -72,13 +83,7 @@ const Portfolio = (): JSX.Element => {
             {testItems.map((portfolioItem) => {
               return (
                 <li key={portfolioItem.href}>
-                  <PortfolioCard
-                    href="#testHref"
-                    image={{
-                      src: 'https://placekitten.com/500/300',
-                      alt: 'CAT ALT TEXT WOO',
-                    }}
-                  />
+                  <PortfolioCard {...portfolioItem} href="#testHref" />
                 </li>
               );
             })}
@@ -95,13 +100,7 @@ const Portfolio = (): JSX.Element => {
             {testItems.map((portfolioItem) => {
               return (
                 <li key={portfolioItem.href}>
-                  <PortfolioCard
-                    href="#testHref"
-                    image={{
-                      src: 'https://placekitten.com/500/300',
-                      alt: 'CAT ALT TEXT WOO',
-                    }}
-                  />
+                  <PortfolioCard {...portfolioItem} />
                 </li>
               );
             })}
@@ -116,13 +115,7 @@ const Portfolio = (): JSX.Element => {
             {testItems.map((portfolioItem) => {
               return (
                 <li key={portfolioItem.href}>
-                  <PortfolioCard
-                    href="#testHref"
-                    image={{
-                      src: 'https://placekitten.com/500/300',
-                      alt: 'CAT ALT TEXT WOO',
-                    }}
-                  />
+                  <PortfolioCard {...portfolioItem} />
                 </li>
               );
             })}
@@ -141,6 +134,7 @@ const PortfolioSection = styled.section`
   margin-bottom: 10rem;
 `;
 const PortfolioResultsGrid = styled.ol`
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
@@ -153,12 +147,36 @@ const PortfolioResultsGrid = styled.ol`
 `;
 
 const StyledPageSectionSubheader = styled(PageSectionSubheader)`
-  padding: 0 0 0.5rem;
-  margin: 1rem 0 2rem;
+  position: sticky;
+  top: ${NAV_HEIGHTS.default};
+  background-color: var(${ColorsEnum.white});
+  z-index: 1;
+
+  /* this code below makes sure the images underneath and their hover box shadow don't show when sticky */
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    background-color: var(${ColorsEnum.white});
+    height: 100%;
+    width: 1rem;
+    top: 0;
+  }
+  &::before {
+    right: 100%;
+  }
+  &::after {
+    left: 100%;
+  }
+
+  padding: 1rem 0 0.5rem;
+  /* margin: 1rem 0 2rem; */
+  /* margin: 1rem 0 0rem; */
 
   @media (min-width: ${BREAKPOINTS.medium}px) {
-    padding: 0 0 1rem;
-    margin: 2rem 0 3rem;
+    padding: 1rem 0 1rem;
+    /* margin: 2rem 0 3rem; */
+    top: ${NAV_HEIGHTS.medium};
   }
   text-align: left;
   border-bottom: 1px solid var(${ColorsEnum.gray});
