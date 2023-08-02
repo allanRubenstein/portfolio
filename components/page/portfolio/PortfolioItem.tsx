@@ -7,6 +7,7 @@ import { Paragraph } from '../../typography/Paragraph';
 import { minWidthMediaQuery } from '../../css/styled-components-global-css';
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import { ColorsEnum } from '../../typography/types';
 
 export interface PortfolioItemProps {
   portfolioTextAndImages: PortfolioItemTextAndImage[];
@@ -135,6 +136,7 @@ const InnerWrap = styled.div`
 
 const StyledImage = styled(GenericImage)`
   width: 100%;
+  outline: 1px solid var(${ColorsEnum.gray});
 `;
 
 export default PortfolioItem;

@@ -42,7 +42,7 @@ Default.args = {
         {
           src: 'https://placekitten.com/800/2000',
           alt: 'CAT ALT TEXT WOO',
-          // TODO: add caption
+          // TODO: add caption. caption go on photo library?
           caption: 'test',
         },
       ],
@@ -57,7 +57,7 @@ Default.args = {
         {
           src: 'https://placekitten.com/500/300',
           alt: 'CAT ALT TEXT WOO',
-          // TODO: add caption
+          // TODO: add caption. caption go on photo library?
           caption: 'test',
         },
       ],

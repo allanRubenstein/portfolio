@@ -11,116 +11,96 @@ import PortfolioCard, {
 import PageSectionSubheader from '../../components/typography/page-section-subheader/PageSectionSubheader';
 import { NAV_HEIGHTS } from '../../components/primary-nav/PrimaryNav';
 
-const Portfolio = (): JSX.Element => {
-  // TODO: make this props or hardcode
+export interface PortfolioProps {
+  web?: PortfolioCardProps[];
+  graphicDesign?: PortfolioCardProps[];
+  photography?: PortfolioCardProps[];
+}
 
-  // TODO: TEST ITEMS TO ADD
-  // what's up marysville, cultured swine
-  // abercrombie, WT
-  // photography
-  const testItems: PortfolioCardProps[] = [
-    {
-      title: 'Text Here',
-      href: '#',
-      image: {
-        src: 'https://placekitten.com/500/300',
-        alt: 'CAT ALT TEXT WOO',
-      },
+// TODO: make this props or hardcode
+
+// TODO: TEST ITEMS TO ADD
+// what's up marysville, cultured swine
+// abercrombie, WT
+// photography
+
+const hardcodedWebProps: PortfolioCardProps[] = [
+  {
+    title: 'My Site',
+    href: '/portfolio/web-dev/my-site',
+    image: {
+      src: '/images/portfolio/web-dev/my-site/site-screenshot.png',
+      alt: 'CAT ALT TEXT WOO',
     },
-    {
-      title: 'Text Here',
-      href: '#',
-      image: {
-        src: 'https://placekitten.com/500/300',
-        alt: 'CAT ALT TEXT WOO',
-      },
-    },
-    {
-      title: 'Text Here',
-      href: '#',
-      image: {
-        src: 'https://placekitten.com/500/300',
-        alt: 'CAT ALT TEXT WOO',
-      },
-    },
-    {
-      title: 'Text Here',
-      href: '#',
-      image: {
-        src: 'https://placekitten.com/500/300',
-        alt: 'CAT ALT TEXT WOO',
-      },
-    },
-    {
-      title: 'Text Here',
-      href: '#',
-      image: {
-        src: 'https://placekitten.com/500/300',
-        alt: 'CAT ALT TEXT WOO',
-      },
-    },
-    {
-      title: 'Text Here',
-      href: '#',
-      image: {
-        src: 'https://placekitten.com/500/300',
-        alt: 'CAT ALT TEXT WOO',
-      },
-    },
-  ];
+  },
+];
+
+const Portfolio = ({
+  // TODO: remove this hardcoded as default, do this some other way, maybe with static or serverside props
+  web = hardcodedWebProps,
+  graphicDesign,
+  photography,
+}: PortfolioProps): JSX.Element => {
   return (
     <Page
       pageTitle="Allan Rubenstein - Portfolio"
       mainPageHeaderText="Portfolio"
     >
       <MainWrap>
-        <PortfolioSection>
-          <StyledPageSectionSubheader>Web</StyledPageSectionSubheader>
-          <PortfolioResultsGrid>
-            {/* 
+        {web && (
+          <PortfolioSection>
+            <StyledPageSectionSubheader>Web</StyledPageSectionSubheader>
+            <PortfolioResultsGrid>
+              {/* 
             // TODO: loop through real items eventually 
           */}
-            {testItems.map((portfolioItem) => {
-              return (
-                <li key={portfolioItem.href}>
-                  <PortfolioCard {...portfolioItem} href="#testHref" />
-                </li>
-              );
-            })}
-          </PortfolioResultsGrid>
-        </PortfolioSection>
-        <PortfolioSection>
-          <StyledPageSectionSubheader>
-            Graphic Design
-          </StyledPageSectionSubheader>
-          <PortfolioResultsGrid>
-            {/* 
+              {web?.map((webPortfolioItem) => {
+                return (
+                  <li key={webPortfolioItem.href}>
+                    <PortfolioCard {...webPortfolioItem} />
+                  </li>
+                );
+              })}
+            </PortfolioResultsGrid>
+          </PortfolioSection>
+        )}
+
+        {graphicDesign && (
+          <PortfolioSection>
+            <StyledPageSectionSubheader>
+              Graphic Design
+            </StyledPageSectionSubheader>
+            <PortfolioResultsGrid>
+              {/* 
             // TODO: loop through real items eventually 
           */}
-            {testItems.map((portfolioItem) => {
-              return (
-                <li key={portfolioItem.href}>
-                  <PortfolioCard {...portfolioItem} />
-                </li>
-              );
-            })}
-          </PortfolioResultsGrid>
-        </PortfolioSection>
-        <PortfolioSection>
-          <StyledPageSectionSubheader>Photography</StyledPageSectionSubheader>
-          <PortfolioResultsGrid>
-            {/* 
+              {graphicDesign?.map((graphicDesignPortfolioItem) => {
+                return (
+                  <li key={graphicDesignPortfolioItem.href}>
+                    <PortfolioCard {...graphicDesignPortfolioItem} />
+                  </li>
+                );
+              })}
+            </PortfolioResultsGrid>
+          </PortfolioSection>
+        )}
+        {photography && (
+          <PortfolioSection>
+            <StyledPageSectionSubheader>Photography</StyledPageSectionSubheader>
+            <PortfolioResultsGrid>
+              {/* 
             // TODO: loop through real items eventually 
           */}
-            {testItems.map((portfolioItem) => {
-              return (
-                <li key={portfolioItem.href}>
-                  <PortfolioCard {...portfolioItem} />
-                </li>
-              );
-            })}
-          </PortfolioResultsGrid>
-        </PortfolioSection>
+              {photography?.map((photographyPortfolioItem) => {
+                return (
+                  <li key={photographyPortfolioItem.href}>
+                    <PortfolioCard {...photographyPortfolioItem} />
+                  </li>
+                );
+              })}
+            </PortfolioResultsGrid>
+          </PortfolioSection>
+        )}
       </MainWrap>
     </Page>
   );

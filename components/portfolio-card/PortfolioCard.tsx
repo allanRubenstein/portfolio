@@ -42,6 +42,7 @@ const StyledTitle = styled(Title)`
   text-align: left;
 `;
 const StyledImage = styled(GenericImage)`
+  outline: 1px solid var(${ColorsEnum.gray});
   transition: var(--transition);
   width: 100%;
 `;
@@ -54,6 +55,7 @@ const MainWrapper = styled.a`
     }
 
     ${StyledImage} {
+      outline-color: transparent;
       /* transform: scale(1.01); */
       transform: translateY(-0.3rem);
       ${BoxShadow}
